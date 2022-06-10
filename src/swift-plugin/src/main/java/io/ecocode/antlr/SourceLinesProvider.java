@@ -1,4 +1,4 @@
-package io.ecocode;
+package io.ecocode.antlr;
 
 import org.apache.commons.io.input.BOMInputStream;
 import org.sonar.api.utils.log.Logger;

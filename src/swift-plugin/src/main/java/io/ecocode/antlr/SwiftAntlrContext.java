@@ -1,7 +1,5 @@
 package io.ecocode.antlr;
 
-import io.ecocode.SourceLine;
-import io.ecocode.SourceLinesProvider;
 import io.ecocode.antlr.generated.Swift5Lexer;
 import io.ecocode.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.CharStream;

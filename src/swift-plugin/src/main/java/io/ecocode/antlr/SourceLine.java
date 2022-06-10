@@ -1,4 +1,4 @@
-package io.ecocode;
+package io.ecocode.antlr;
 
 public final class SourceLine {
 

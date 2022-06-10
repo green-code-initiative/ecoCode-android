@@ -1,6 +1,5 @@
 package io.ecocode.antlr;
 
-import io.ecocode.SourceLine;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
