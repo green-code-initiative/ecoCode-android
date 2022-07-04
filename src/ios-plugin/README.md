@@ -1,6 +1,6 @@
-# ecoCode Swift SonarQube plugin
+# ecoCode iOS SonarQube plugin
 
-ecoCode Swift SonarQube plugin is an "eco-responsibility" static code analyzer for native iOS/macOS projects written in Swift. Its aim is to detect code smells to indicate weither the source code can be improved to reduce their environmental and social impact.
+ecoCode iOS SonarQube plugin is an "eco-responsibility" static code analyzer for iOS projects written in Swift. Its aim is to detect code smells indicating how the source code can be improved to reduce their environmental and social impact.
 
 ## Requirements
 
