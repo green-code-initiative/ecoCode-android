@@ -9,7 +9,8 @@
   "tags": [
     "optimized-api",
     "environment",
-    "ecocode"
+    "ecocode",
+    "android"
   ],
   "defaultSeverity": "Critical"
 }

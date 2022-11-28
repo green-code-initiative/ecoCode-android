@@ -9,7 +9,8 @@
   "tags": [
     "leakage",
     "environment",
-    "ecocode"
+    "ecocode",
+    "android"
   ],
   "defaultSeverity": "Critical"
 }

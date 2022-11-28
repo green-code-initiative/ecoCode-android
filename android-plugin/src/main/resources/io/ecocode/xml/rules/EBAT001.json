@@ -9,7 +9,8 @@
   "tags": [
     "batch",
     "environment",
-    "ecocode"
+    "ecocode",
+    "android"
   ],
   "defaultSeverity": "Major"
 }
