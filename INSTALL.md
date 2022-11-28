@@ -13,11 +13,7 @@ Ecocode              # Root directory of "native" linter
 |
 +--android-plugin    # Android
 |
-+--java-plugin       # JAVA
-|
-+--php-plugin        # PHP
-|
-+--python-plugin     # Python
++--python-plugin     # codenarc-converter
 |
 \--docker-compose.yml   # Docker compose file installing available analyzer // TODO
 ```
@@ -42,7 +38,7 @@ CodeNarc must be built separately. Please see the following steps:
 Build CodeNarc (Gradle 6.9.2, Java 11), then add this custom-built CodeNarc to Maven dependencies: 
 
 ```sh
-./prepare-codenarc
+./tool_prepare-codenarc
 ```
 
 
@@ -73,7 +69,7 @@ You must have built the plugins (see the steps above).
 Run the SonarQube + PostgreSQL stack:
 
 ```sh 
-./init_reinit.sh
+./tools_init-reinit.sh
 
 # execute `docker-compose up --build -d`
 ```
@@ -119,8 +115,8 @@ When you are connected, generate a new token:
 
 `My Account -> Security -> Generate Tokens`
 
-![img.png](images/img.png)
-![img_1.png](images/img_1.png)
+![img.png](docs/resources/img.png)
+![img_1.png](docs/resources/img_1.png)
 
 
 
@@ -135,7 +131,8 @@ TOKEN=MY_TOKEN docker-compose up --build -d
 Install dependencies from the root directory:
 
 ```sh
-mvn clean install
+./tools_build.sh
+# execute `mvn clean package -DskipTests`
 ```
 
 .jar files (one per plugin) will be moved in `lib` repository after build.
@@ -146,10 +143,10 @@ Once you did the installation a first time (and then you did custom configuratio
 if you only want to start (or stop properly) existing services :
 
 ```sh
-./start.sh
+./tools_start.sh
 # execute `docker-compose start`
 
-./stop.sh
+./tools_stop.sh
 # execute `docker-compose stop`
 ```
 

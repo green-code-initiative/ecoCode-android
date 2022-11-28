@@ -12,19 +12,35 @@ ecoCode is based on evolving catalogs of [good practices](docs/rules), for vario
 
 ## 🌿 SonarQube Plugin
 
-5 technologies are supported by the plugin right now:
-- [Java](src/java-plugin/)
-- [PHP](src/php-plugin/)
-- [Python](src/python-plugin/)
-- [Android](src/android-plugin/)
-- [Eslint](src/ecolinter-plugin)
+1 technology is supported by the plugin `mobile` right now:
+- [Android](android-plugin/)
 
 ![Screenshot](docs/resources/screenshot.PNG)
 
 
 ## 🚀 Getting Started
+### eco-design SonarQube plugin
 
-You can download each plugin separatly or you can directly use a [all-in-one docker-compose](src/INSTALL.md)
+![Ekko logo](docs/resources/5ekko.png)
+
+There is two kind of plugins :
+
+- One for web (PHP, Python, Java), using smells described in the 2nd edition of the repository published in september 2015 : [repository](TODO DDC)
+You can find all the rules [here (in french)](https://docs.google.com/spreadsheets/d/1nujR4EnajnR0NSXjvBW3GytOopDyTfvl3eTk2XGLh5Y/edit#gid=1386834576)
+- One for mobile (Android), using [a set of smells](https://olegoaer.perso.univ-pau.fr/android-energy-smells/) theorised by Olivier Le Goaër for Android : current github repository
+
+### How a SonarQube plugin works
+Code is parsed to be transformed as AST. AST will allow you to access one or more nodes of your code.
+For example, you’ll be able to access of all your `for` loop, to explore content etc.
+
+To better understand AST structure, y a can use [AST Explorer](https://astexplorer.net/)
+
+### Install
+Please follow the [installation documentation](INSTALL.md)
+
+### Links
+ - https://docs.sonarqube.org/latest/analysis/overview/
+
 
 ## 🤝 Contribution
 
@@ -38,7 +54,7 @@ We are listening to you to make the project progress collectively, and maybe wit
 
 WE NEED YOU !
 
-Here the [starter-pack](./hackathon/starter-pack.md)
+Here the [starter-pack](https://github.com/green-code-initiative/ecocode-challenge)
 
 ## 🤓 Main contributors
 
