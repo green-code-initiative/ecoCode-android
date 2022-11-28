@@ -3,18 +3,13 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- 	TODO DDC : parent ajouté : voir si possible de rajouter parent -->
-	<!-- <parent>
+	<parent>
     <groupId>io.ecocode</groupId>
 		<artifactId>ecocode-mobile-parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-  </parent> -->
+  </parent>
 
-	<!-- <artifactId>ecocode-rules</artifactId> -->
-	<!-- <version>1.0-SNAPSHOT</version> -->
-	<groupId>io.ecocode</groupId>
 	<artifactId>ecocode-android</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
 	<packaging>sonar-plugin</packaging>
 
 	<name>ecoCode Android plugin</name>
@@ -27,8 +22,7 @@
 		<sslr.version>1.21</sslr.version>
 		<gson.version>2.6.2</gson.version>
 
-		<sonar.version>8.2.0.32929</sonar.version>
-		<sonarjava.version>6.3.0.21585</sonarjava.version>
+		<sonarjava.version>6.14.0.25463</sonarjava.version>
 		<sonar.analyzerCommons.version>1.13.0.662</sonar.analyzerCommons.version>
 
 		<sonar.host.url>https://sonarqube.snapp.fr</sonar.host.url>
@@ -40,7 +34,6 @@
 		<dependency>
 			<groupId>org.sonarsource.sonarqube</groupId>
 			<artifactId>sonar-plugin-api</artifactId>
-			<version>${sonar.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -56,7 +49,7 @@
 		<dependency>
 			<groupId>org.sonarsource.sonarqube</groupId>
 			<artifactId>sonar-plugin-api-impl</artifactId>
-			<version>${sonar.version}</version>
+			<version>${sonarqube.version}</version>
 		</dependency>
 
 		<dependency>
@@ -244,7 +237,7 @@
 				</configuration>
 			</plugin>
 
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.6.0</version>
@@ -252,7 +245,7 @@
 					<source>11</source>
 					<target>11</target>
 				</configuration>
-			</plugin>
+			</plugin> -->
 
 			<plugin>
 				<groupId>org.sonarsource.scanner.maven</groupId>

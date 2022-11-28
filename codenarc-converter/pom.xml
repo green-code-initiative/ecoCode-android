@@ -3,8 +3,6 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <!-- <groupId>fr.cnumr</groupId>
-    <artifactId>ecocode</artifactId> -->
     <groupId>io.ecocode</groupId>
 	  <artifactId>ecocode-mobile-parent</artifactId>
     <version>0.1.0-SNAPSHOT</version>
@@ -51,9 +49,6 @@
     <dependency>
       <groupId>org.sonarsource.sonarqube</groupId>
       <artifactId>sonar-plugin-api</artifactId>
-      <!--      <version>8.9.0.43852</version>-->
-      <!--      TODO  was 8.9-->
-      <version>8.0</version>
     </dependency>
     <dependency>
       <groupId>org.codenarc</groupId>
