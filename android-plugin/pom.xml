@@ -3,9 +3,18 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<!-- 	TODO DDC : parent ajouté : voir si possible de rajouter parent -->
+	<!-- <parent>
+    <groupId>io.ecocode</groupId>
+		<artifactId>ecocode-mobile-parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+  </parent> -->
+
+	<!-- <artifactId>ecocode-rules</artifactId> -->
+	<!-- <version>1.0-SNAPSHOT</version> -->
 	<groupId>io.ecocode</groupId>
-	<artifactId>ecocode-rules</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<artifactId>ecocode-android</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
 	<packaging>sonar-plugin</packaging>
 
 	<name>ecoCode Android plugin</name>
@@ -13,10 +22,11 @@
 	<inceptionYear>2020</inceptionYear>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
 		<sslr.version>1.21</sslr.version>
 		<gson.version>2.6.2</gson.version>
 
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<sonar.version>8.2.0.32929</sonar.version>
 		<sonarjava.version>6.3.0.21585</sonarjava.version>
 		<sonar.analyzerCommons.version>1.13.0.662</sonar.analyzerCommons.version>
