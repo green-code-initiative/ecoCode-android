@@ -1,9 +1,0 @@
-!.gitignore
-.*
-node_modules
-yarn.lock
-target/
-node/
-*.iml
-/lib/*.jar
-bin

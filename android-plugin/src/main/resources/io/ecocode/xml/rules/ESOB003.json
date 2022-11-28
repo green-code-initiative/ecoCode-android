@@ -1,0 +1,16 @@
+{
+  "title": "Sobriety: Dark UI (Bright Colors)",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "1h"
+  },
+  "tags": [
+    "sobriety",
+    "environment",
+    "ecocode",
+    "android"
+  ],
+  "defaultSeverity": "Major"
+}

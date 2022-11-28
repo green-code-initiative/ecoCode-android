@@ -1,0 +1,16 @@
+{
+  "title": "Optimized API: Fused Location",
+  "type": "CODE_SMELL",
+  "status": "ready",
+  "remediation": {
+    "func": "Constant\/Issue",
+    "constantCost": "20min"
+  },
+  "tags": [
+    "optimized-api",
+    "environment",
+    "ecocode",
+    "android"
+  ],
+  "defaultSeverity": "Major"
+}
