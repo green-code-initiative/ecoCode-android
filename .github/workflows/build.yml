@@ -32,11 +32,11 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Prepare CodeNarc dependency
-        working-directory: ./src
+        working-directory: .
         run: |
           ./tool_prepare-codenarc
       - name: Build and analyze
-        working-directory: ./src
+        working-directory: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
