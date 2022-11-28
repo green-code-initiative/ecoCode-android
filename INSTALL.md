@@ -9,11 +9,11 @@
 Here is a preview of project tree :
 
 ```
-Ecocode              # Root directory of "native" linter
+Ecocode                 # Root directory of "native" linter
 |
-+--android-plugin    # Android
++--android-plugin       # Android
 |
-+--python-plugin     # codenarc-converter
++--codenarc-converter   # codenarc-converter
 |
 \--docker-compose.yml   # Docker compose file installing available analyzer // TODO
 ```
@@ -48,9 +48,9 @@ You can build the project code by running the following command in the `src` dir
 Maven will download the required dependencies.
 
 ```sh
-./build.sh
+./tool_build.sh
 
-# execute `mvn clean install`
+# execute `mvn clean package -DskipTests`
 ```
 
 Each plugin is generated in its own `<plugin>/target` directory, but they are also copied to the `lib` directory.
