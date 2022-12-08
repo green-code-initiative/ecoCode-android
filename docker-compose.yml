@@ -2,6 +2,7 @@ version: "3.3"
 services:
   sonar:
     image: sonarqube:9.3-community
+    container_name: sonar_mobile
     ports:
       - "9000:9000"
     networks:
@@ -23,7 +24,7 @@ services:
 
   db:
     image: postgres:12
-    container_name: postgresql
+    container_name: postgresql_mobile
     networks:
       - sonarnet
     volumes:
