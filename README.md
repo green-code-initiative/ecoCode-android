@@ -1,3 +1,7 @@
+![Logo](5ekko.png)
+
+---
+
 Mobile apps running on top of battery-limited devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode mobile`, the mobile-specific version of the ecoCode project. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
 
 ecoCode mobile is based on evolving catalogs of [best practices](https://olegoaer.perso.univ-pau.fr/android-energy-smells/), for Android and iOS (soon). A SonarQube plugin then implement these catalogs as rules for scanning your projects.
