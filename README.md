@@ -14,15 +14,11 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://olegoae
 
 <sub>The ecoCode look&amp;feel depicted above is not part of this open source project</sub>
 
-## Partners
+## 🤝 Partners
 [![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
-[![Collectif Conception Numérique Responsable](android-plugin/docs/logoCCNR.png)](https://collectif.greenit.fr)
 
-## License
-
-Licensed under the [GNU Lesser General Public License, Version 3.0](https://www.gnu.org/licenses/lgpl.txt)
 
 ## How to cite this work?
 
