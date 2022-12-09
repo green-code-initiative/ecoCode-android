@@ -27,7 +27,7 @@ Licensed under the [GNU Lesser General Public License, Version 3.0](https://www.
 ## How to cite this work?
 
 If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex (to appear):
-```
+```bibtex
 @inproceedings{DBLP:conf/ase/LeGoaer2022,
   author    = {Olivier Le Goaer and Julien Hertout},
   title     = {ecoCode: a SonarQube Plugin to Remove Energy Smells from Android Projects},
