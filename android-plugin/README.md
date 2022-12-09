@@ -110,26 +110,3 @@ For XML rules:
   Please do not add / or modifiy rules here since the code is generated. To update or add a rule, please reach us though our mail
   <contact@ecocode.io>, prior to submitting any code change.
 - XML rules’ tests can be found in: [./src/test/java/io/ecocode/xml](./src/test/java/io/ecocode/xml). One file = one rule.
-
-## Partners
-[![Snapp’](docs/logoSnapp.png)](https://www.snapp.fr)
-[![Université de Pau](docs/logoUnivPau.png)](https://www.univ-pau.fr/)
-[![Région Nouvelle-Aquitaine](docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
-[![Collectif Conception Numérique Responsable](docs/logoCCNR.png)](https://collectif.greenit.fr)
-
-## License
-
-Licensed under the [GNU Lesser General Public License, Version 3.0](https://www.gnu.org/licenses/lgpl.txt)
-
-## How to cite this work?
-
-If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex (to appear):
-```
-@inproceedings{DBLP:conf/ase/LeGoaer2022,
-  author    = {Olivier Le Goaer and Julien Hertout},
-  title     = {ecoCode: a SonarQube Plugin to Remove Energy Smells from Android Projects},
-  booktitle = {{ACM/IEEE} International Conference on Automated Software Engineering,
-               {ASE} '22, Michigan, USA - October 10 - 14, 2022},
-  year      = {2022}
-}
-```
