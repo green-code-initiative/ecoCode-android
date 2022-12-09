@@ -10,13 +10,15 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://olegoae
 1 mobile technology is supported by the plugin right now:
 - [Android](android-plugin/)
 
-![Screenshot](docs/resources/screenshot.PNG)
+![Screenshot](android-plugin/docs/resources/screenshot.png)
+
+<sub>The ecoCode look&amp;feel depicted above is not part of this open source project</sub>
 
 ## Partners
-[![Snapp’](docs/logoSnapp.png)](https://www.snapp.fr)
-[![Université de Pau](docs/logoUnivPau.png)](https://www.univ-pau.fr/)
-[![Région Nouvelle-Aquitaine](docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
-[![Collectif Conception Numérique Responsable](docs/logoCCNR.png)](https://collectif.greenit.fr)
+[![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
+[![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
+[![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
+[![Collectif Conception Numérique Responsable](android-plugin/docs/logoCCNR.png)](https://collectif.greenit.fr)
 
 ## License
 
