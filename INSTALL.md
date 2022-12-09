@@ -1,33 +1,36 @@
-
-### Prerequisites
+Installation documentation
+==========================
+Requirements
+------------
 
 - Docker
-- Docker-compose 3.9
+- Docker-compose
 
-## Project structure
+Project structure
+-----------------
 
 Here is a preview of project tree :
 
-```
-Ecocode                 # Root directory of "native" linter
+```txt
+Ecocode                 # Root directory
 |
 +--android-plugin       # Android
 |
 +--codenarc-converter   # codenarc-converter
 |
-\--docker-compose.yml   # Docker compose file installing available analyzer // TODO
+\--docker-compose.yml   # Docker compose file
 ```
 
 You will find more information about the plugins’ architecture in their folders
 
 
-## Howto build the SonarQube ecoCode plugins
+Howto build the SonarQube ecoCode plugins
+-----------------------------------------
 
-### Prerequisites
+### Requirements
 
 - Java >= 11
 - Mvn 3
-
 
 ### Preliminary steps (only Android)
 
@@ -41,7 +44,6 @@ Build CodeNarc (Gradle 6.9.2, Java 11), then add this custom-built CodeNarc to M
 ./tool_prepare-codenarc
 ```
 
-
 ### Build the code
 
 You can build the project code by running the following command in the `src` directory.
@@ -49,41 +51,35 @@ Maven will download the required dependencies.
 
 ```sh
 ./tool_build.sh
-
-# execute `mvn clean package -DskipTests`
 ```
 
 Each plugin is generated in its own `<plugin>/target` directory, but they are also copied to the `lib` directory.
 
+Howto install SonarQube dev environment
+---------------------------------------
 
-
-## Howto install SonarQube dev environment
-
-### Prerequisites
+### Requirements
 
 You must have built the plugins (see the steps above).
 
-
-### Start SonarQube
+### Start SonarQube (if first time)
 
 Run the SonarQube + PostgreSQL stack:
 
-```sh 
-./tool_docker-reinit.sh
-
-# execute `docker-compose up --build -d`
+```sh
+./tool_docker-init.sh
 ```
 
 Check if the containers are up:
 
-```sh 
+```sh
 docker ps
 ```
 
 You should see two lines (one for sonarqube and one for postgres).
 If there is only postgres, check the logs:
 
-```sh 
+```sh
 ./tool_docker-logs.sh
 ```
 
@@ -102,10 +98,9 @@ wsl -d docker-desktop
 sysctl -w vm.max_map_count=262144
 ```
 
-
 Go to http://localhost:9000 and use these credentials:
 
-```
+```txt
 login: admin
 password: admin
 ```
@@ -117,40 +112,40 @@ When you are connected, generate a new token:
 ![img.png](docs/resources/img.png)
 ![img_1.png](docs/resources/img_1.png)
 
-
-
 Start again your services using the token:
 
 ```sh
 TOKEN=MY_TOKEN docker-compose up --build -d
 ```
 
-## Howto install Plugin Ecocode
+### Reinstall SonarQube (if needed)
+
+```sh
+# first clean all containers and resources used
+./tool_docker-clean.sh
+
+# then, install from scratch de SonarQube containers and resources
+./tool_docker-init.sh
+```
+
+Howto install Plugin Ecocode
+----------------------------
 
 Install dependencies from the root directory:
 
 ```sh
 ./tools_build.sh
-# execute `mvn clean package -DskipTests`
 ```
 
-.jar files (one per plugin) will be moved in `lib` repository after build.
+Result : JAR files (one per plugin) will be moved in `lib` repository after build.
 
-## Howto start or stop service (already installed)
+Howto start or stop service (already installed)
+-----------------------------------------------
 
 Once you did the installation a first time (and then you did custom configuration like quality gates, quality profiles, ...),
 if you only want to start (or stop properly) existing services :
 
 ```sh
 ./tools_start.sh
-# execute `docker-compose start`
-
 ./tools_stop.sh
-# execute `docker-compose stop`
 ```
-
-## Links
-
-- Java how-to : https://github.com/SonarSource/sonar-java/blob/master/docs/CUSTOM_RULES_101.md
-- Python how-to : https://github.com/SonarSource/sonar-custom-rules-examples/tree/master/python-custom-rules
-- PHP how-to : https://github.com/SonarSource/sonar-custom-rules-examples/tree/master/php-custom-rules
