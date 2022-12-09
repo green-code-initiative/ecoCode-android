@@ -10,7 +10,7 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://olegoae
 1 mobile technology is supported by the plugin right now:
 - [Android](android-plugin/)
 
-![Screenshot](android-plugin/docs/resources/screenshot.png)
+![Screenshot](android-plugin/docs/screenshot.png)
 
 <sub>The ecoCode look&amp;feel depicted above is not part of this open source project</sub>
 
