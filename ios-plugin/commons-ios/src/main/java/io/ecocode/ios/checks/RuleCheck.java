@@ -34,7 +34,7 @@ public abstract class RuleCheck implements ParseTreeItemVisitor {
     private List<Issue> issues = new ArrayList<>();
 
     private static List<RepositoryRule> rules = new ArrayList<>();
-    public static synchronized RepositoryRule getRepositoryRule(String ruleId, String rulesPath) throws IOException {
+    public static RepositoryRule getRepositoryRule(String ruleId, String rulesPath) throws IOException {
         if (rules.isEmpty()) {
             RepositoryRuleParser repositoryRuleParser = new RepositoryRuleParser();
             rules = repositoryRuleParser.parse(rulesPath);
