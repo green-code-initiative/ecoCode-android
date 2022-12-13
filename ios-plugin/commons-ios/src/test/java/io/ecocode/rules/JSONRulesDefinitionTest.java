@@ -1,5 +1,6 @@
 package io.ecocode.rules;
 
+import io.ecocode.ios.rules.JSONRulesDefinition;
 import org.junit.Test;
 import org.sonar.api.server.rule.RulesDefinition;
 

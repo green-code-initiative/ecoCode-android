@@ -2,7 +2,7 @@ package io.ecocode.swift.checks.idleness;
 
 import io.ecocode.swift.Swift;
 import io.ecocode.swift.antlr.generated.Swift5Parser;
-import io.ecocode.checks.RuleCheck;
+import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 public class IdleTimerDisabledCheck extends RuleCheck {

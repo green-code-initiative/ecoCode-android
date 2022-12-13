@@ -1,4 +1,4 @@
-package io.ecocode.antlr;
+package io.ecocode.ios.antlr;
 
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Token;

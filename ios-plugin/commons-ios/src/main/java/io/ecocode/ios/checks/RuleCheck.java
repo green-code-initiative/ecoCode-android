@@ -1,9 +1,9 @@
-package io.ecocode.checks;
+package io.ecocode.ios.checks;
 
-import io.ecocode.antlr.AntlrContext;
-import io.ecocode.antlr.ParseTreeItemVisitor;
-import io.ecocode.rules.RepositoryRule;
-import io.ecocode.rules.RepositoryRuleParser;
+import io.ecocode.ios.antlr.AntlrContext;
+import io.ecocode.ios.antlr.ParseTreeItemVisitor;
+import io.ecocode.ios.rules.RepositoryRule;
+import io.ecocode.ios.rules.RepositoryRuleParser;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.sensor.SensorContext;
 import org.sonar.api.utils.log.Logger;

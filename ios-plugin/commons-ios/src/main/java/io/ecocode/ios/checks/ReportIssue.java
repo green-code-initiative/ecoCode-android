@@ -1,4 +1,4 @@
-package io.ecocode.checks;
+package io.ecocode.ios.checks;
 
 import javax.annotation.Nullable;
 import java.util.Objects;

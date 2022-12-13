@@ -1,6 +1,6 @@
 package io.ecocode.swift;
 
-import io.ecocode.rules.JSONRulesDefinition;
+import io.ecocode.ios.rules.JSONRulesDefinition;
 
 public class EcoCodeSwiftRulesDefinition extends JSONRulesDefinition {
 

@@ -1,4 +1,4 @@
-package io.ecocode.checks;
+package io.ecocode.ios.checks;
 
 import org.sonar.api.batch.fs.FilePredicate;
 import org.sonar.api.batch.fs.FilePredicates;

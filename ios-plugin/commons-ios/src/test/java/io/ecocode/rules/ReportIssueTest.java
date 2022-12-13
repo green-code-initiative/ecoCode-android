@@ -1,6 +1,6 @@
 package io.ecocode.rules;
 
-import io.ecocode.checks.ReportIssue;
+import io.ecocode.ios.checks.ReportIssue;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,6 +1,5 @@
-package io.ecocode.antlr;
+package io.ecocode.ios.antlr;
 
-import io.ecocode.antlr.AntlrContext;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.sonar.api.batch.sensor.SensorContext;
 

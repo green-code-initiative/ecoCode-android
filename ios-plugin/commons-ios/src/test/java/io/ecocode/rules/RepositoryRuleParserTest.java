@@ -17,6 +17,8 @@
  */
 package io.ecocode.rules;
 
+import io.ecocode.ios.rules.RepositoryRule;
+import io.ecocode.ios.rules.RepositoryRuleParser;
 import org.junit.Test;
 
 import java.util.List;

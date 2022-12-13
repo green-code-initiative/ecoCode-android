@@ -1,8 +1,8 @@
 package io.ecocode.swift.antlr;
 
-import io.ecocode.antlr.AntlrContext;
-import io.ecocode.antlr.SourceLine;
-import io.ecocode.antlr.SourceLinesProvider;
+import io.ecocode.ios.antlr.AntlrContext;
+import io.ecocode.ios.antlr.SourceLine;
+import io.ecocode.ios.antlr.SourceLinesProvider;
 import io.ecocode.swift.antlr.generated.Swift5Lexer;
 import io.ecocode.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.CharStream;

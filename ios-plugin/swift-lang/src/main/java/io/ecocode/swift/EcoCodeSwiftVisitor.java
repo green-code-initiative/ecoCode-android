@@ -1,8 +1,8 @@
 package io.ecocode.swift;
 
-import io.ecocode.antlr.AntlrContext;
-import io.ecocode.antlr.ParseTreeItemVisitor;
-import io.ecocode.checks.RuleCheck;
+import io.ecocode.ios.antlr.AntlrContext;
+import io.ecocode.ios.antlr.ParseTreeItemVisitor;
+import io.ecocode.ios.checks.RuleCheck;
 import io.ecocode.swift.checks.idleness.IdleTimerDisabledCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.sonar.api.batch.sensor.SensorContext;

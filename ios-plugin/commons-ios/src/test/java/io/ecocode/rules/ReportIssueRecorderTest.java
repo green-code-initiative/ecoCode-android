@@ -1,7 +1,7 @@
 package io.ecocode.rules;
 
-import io.ecocode.checks.ReportIssue;
-import io.ecocode.checks.ReportIssueRecorder;
+import io.ecocode.ios.checks.ReportIssue;
+import io.ecocode.ios.checks.ReportIssueRecorder;
 import org.junit.Test;
 import org.sonar.api.batch.fs.internal.DefaultInputFile;
 import org.sonar.api.batch.fs.internal.TestInputFileBuilder;

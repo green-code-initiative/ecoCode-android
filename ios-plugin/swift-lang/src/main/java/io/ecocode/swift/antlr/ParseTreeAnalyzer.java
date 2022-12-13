@@ -1,7 +1,7 @@
 package io.ecocode.swift.antlr;
 
-import io.ecocode.antlr.AntlrContext;
-import io.ecocode.antlr.ParseTreeItemVisitor;
+import io.ecocode.ios.antlr.AntlrContext;
+import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import org.sonar.api.batch.fs.FilePredicate;
 import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.fs.InputFile.Type;

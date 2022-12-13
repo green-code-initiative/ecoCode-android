@@ -1,7 +1,7 @@
 package io.ecocode.swift.antlr;
 
-import io.ecocode.antlr.AntlrContext;
-import io.ecocode.antlr.ParseTreeItemVisitor;
+import io.ecocode.ios.antlr.AntlrContext;
+import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.sonar.api.batch.sensor.SensorContext;
