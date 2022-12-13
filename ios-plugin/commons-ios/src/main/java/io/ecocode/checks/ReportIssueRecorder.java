@@ -7,7 +7,6 @@ import org.sonar.api.batch.fs.InputFile;
 import org.sonar.api.batch.sensor.SensorContext;
 import org.sonar.api.batch.sensor.issue.NewIssue;
 import org.sonar.api.batch.sensor.issue.NewIssueLocation;
-import org.sonar.api.batch.sensor.issue.internal.DefaultIssueLocation;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
@@ -37,7 +36,7 @@ public class ReportIssueRecorder {
                     .newIssue()
                     .forRule(RuleKey.of(repository, issue.getRuleId()));
             // The location of the issue to be record
-            NewIssueLocation sonarIssueLocation = new DefaultIssueLocation()
+            NewIssueLocation sonarIssueLocation = sonarIssue.newLocation()
                     .message(issue.getMessage());
 
             final String filePath = issue.getFilePath();
