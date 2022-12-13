@@ -10,21 +10,19 @@ ecoCode iOS SonarQube plugin is an "eco-responsibility" static code analyzer for
 
 ## Main commands
 
-#### Local plugin deployment
+#### Local deployment using Docker
 
-In order to start the plugin, SONARQUBE_HOME environment variable must be set
+**This implies to have a machine ready to run containerized applications.** Please refer to Docker documentation: https://www.docker.com/.
 
-If variable is already set, use:
+The project uses a 8.6 docker instance of SonarQube to run.
+
+Pop docker containers by using:
+
 ```bash
-$ mvn install
+docker-compose up --build -d && docker ps
 ```
 
-If variable is not set, it can be set inline:
-```bash
-$ SONARQUBE_HOME=~/path/to/sonarqube mvn install
-```
-
-When started locally SonarQube UI is available at http://localhost:9000
+The tests instance of SonarQube with the plugin will then be available at: http://localhost:9000
 
 #### Packaging
 
