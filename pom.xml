@@ -159,6 +159,7 @@
 	<modules>
 		<module>codenarc-converter</module>
 		<module>android-plugin</module>
+		<module>ios-plugin</module>
 	</modules>
 	
 </project>
