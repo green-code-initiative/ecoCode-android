@@ -4,7 +4,7 @@ ecoCode iOS SonarQube plugin is an "eco-responsibility" static code analyzer for
 
 ## Requirements
 
-- A recent Java JDK version
+- Java JDK 11+
 - Maven 3.8 or later
 - A local SonarQube instance for local testing
 
