@@ -15,7 +15,7 @@
 
     <modules>
         <module>swift-lang</module>
-        <module>commons</module>
+        <module>commons-ios</module>
         <module>sonar-ios-plugin</module>
     </modules>
 

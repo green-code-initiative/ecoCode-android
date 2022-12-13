@@ -6,7 +6,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>commons</artifactId>
+    <artifactId>commons-ios</artifactId>
 
     <dependencies>
 
