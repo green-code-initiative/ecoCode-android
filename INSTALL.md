@@ -29,7 +29,7 @@ Howto build the SonarQube ecoCode plugins
 
 ### Requirements
 
-- Java >= 11
+- Java >= 11.0.17
 - Mvn 3
 
 ### Preliminary steps (only Android)
