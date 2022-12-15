@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
 - documentation upgrade (internal)
 - optimization/refactoring on pom.xml dependencies (internal)
 
