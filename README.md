@@ -1,4 +1,4 @@
-![Logo](5ekko.png)
+![Logo](docs/resources/5ekko.png)
 
 ---
 
