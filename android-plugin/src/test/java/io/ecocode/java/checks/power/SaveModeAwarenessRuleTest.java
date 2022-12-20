@@ -1,17 +1,17 @@
 package io.ecocode.java.checks.power;
 
 import org.junit.Test;
-import org.sonar.java.checks.verifier.JavaCheckVerifier;
+import org.sonar.java.checks.verifier.CheckVerifier;
 
 public class SaveModeAwarenessRuleTest {
 
     @Test
     public void verify() {
-        JavaCheckVerifier.newVerifier().onFile("src/test/files/power/SaveModeAwarenessCheckIntentFilter.java")
+        CheckVerifier.newVerifier().onFile("src/test/files/power/SaveModeAwarenessCheckIntentFilter.java")
                 .withCheck(new SaveModeAwarenessRule())
                 .verifyIssues();
 
-        JavaCheckVerifier.newVerifier().onFile("src/test/files/power/SaveModeAwarenessCheckPowerManager.java")
+        CheckVerifier.newVerifier().onFile("src/test/files/power/SaveModeAwarenessCheckPowerManager.java")
                 .withCheck(new SaveModeAwarenessRule())
                 .verifyIssues();
     }

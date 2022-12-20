@@ -43,9 +43,11 @@
 		<project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
 
 		<sonarqube.version>9.4.0.54424</sonarqube.version>
-		<sonarjava.version>6.14.0.25463</sonarjava.version>
-		<sonar.analyzerCommons.version>1.13.0.662</sonar.analyzerCommons.version>
-		<sonar-packaging.version>1.20.0.405</sonar-packaging.version>
+		<sonarjava.version>7.14.0.30229</sonarjava.version>
+		<sonar.analyzerCommons.version>2.1.0.1111</sonar.analyzerCommons.version>
+		<sonar-packaging.version>1.21.0.505</sonar-packaging.version>
+		<sonar.skipDependenciesPackaging>true</sonar.skipDependenciesPackaging>
+		<maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
 
 		<sonar.organization>cnumr-1</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
