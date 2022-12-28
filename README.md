@@ -16,7 +16,7 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
-<sub>The custom GUI depicted above is not part of this open source project</sub>
+<sub>The custom GUI depicted above is not part of this open source project. Reserved to educational purpose only.</sub>
 
 ## 🤝 Partners
 [![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
