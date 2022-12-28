@@ -1,4 +1,6 @@
-![Logo](docs/resources/5ekko.png)
+<p align="center">
+  <img src="docs/resources/5ekko.png"/>
+</p>
 
 ---
 
