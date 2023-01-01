@@ -9,9 +9,8 @@
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>io.ecocode</groupId>
     <artifactId>ios-plugin</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <!--    <version>0.1.0-SNAPSHOT</version>-->
     <packaging>pom</packaging>
 
     <name>ecoCode iOS plugin</name>
