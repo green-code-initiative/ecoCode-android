@@ -34,7 +34,7 @@
                 <configuration>
                     <pluginKey>ecoCode-ios-rules</pluginKey>
                     <pluginName>ecoCode iOS rules</pluginName>
-                    <pluginClass>io.ecocode.EcoCodeIOSPlugin</pluginClass>
+                    <pluginClass>io.ecocode.ios.EcoCodeIOSPlugin</pluginClass>
                     <sonarLintSupported>true</sonarLintSupported>
                     <sonarQubeMinVersion>7.9</sonarQubeMinVersion>
                     <requirePlugins>java:${sonarApple.version}</requirePlugins>

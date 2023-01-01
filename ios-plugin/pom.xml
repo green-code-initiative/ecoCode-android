@@ -128,21 +128,6 @@
         <plugins>
 
             <plugin>
-                <groupId>org.sonarsource.sonar-packaging-maven-plugin</groupId>
-                <artifactId>sonar-packaging-maven-plugin</artifactId>
-                <version>1.17</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <pluginKey>ecoCode-ios-rules</pluginKey>
-                    <pluginName>ecoCode iOS rules</pluginName>
-                    <pluginClass>io.ecocode.EcoCodeIOSPlugin</pluginClass>
-                    <sonarLintSupported>true</sonarLintSupported>
-                    <sonarQubeMinVersion>7.9</sonarQubeMinVersion>
-                    <requirePlugins>java:${sonarApple.version}</requirePlugins>
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
