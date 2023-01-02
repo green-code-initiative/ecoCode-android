@@ -1,10 +1,12 @@
-![Logo](docs/resources/5ekko.png)
+<p align="center">
+  <img src="docs/resources/5ekko.png"/>
+</p>
 
 ---
 
 Mobile apps running on top of battery-limited devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode mobile`, the mobile-specific version of the ecoCode project. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
 
-ecoCode mobile is based on evolving catalogs of [best practices](https://olegoaer.perso.univ-pau.fr/android-energy-smells/), for Android and iOS (soon). A SonarQube plugin then implement these catalogs as rules for scanning your projects.
+ecoCode mobile is based on evolving catalogs of [best practices for Android](https://olegoaer.perso.univ-pau.fr/android-energy-smells/), and iOS (soon). A SonarQube plugin then implement these catalogs as rules for scanning your projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (in french) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf) (in english).
 
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -16,7 +18,7 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://olegoae
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
-<sub>The ecoCode look&amp;feel depicted above is not part of this open source project</sub>
+<sub>The custom GUI depicted above is not part of this open source project. Reserved to educational purpose only.</sub>
 
 ## 🤝 Partners
 [![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
