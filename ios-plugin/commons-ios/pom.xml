@@ -6,7 +6,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>commons-ios</artifactId>
+    <artifactId>ecocode-commons-ios</artifactId>
 
     <dependencies>
 

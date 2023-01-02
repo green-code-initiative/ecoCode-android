@@ -8,7 +8,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>sonar-ios-plugin</artifactId>
+    <artifactId>ecodecode-sonar-ios-plugin</artifactId>
 
     <packaging>sonar-plugin</packaging>
 
@@ -16,7 +16,7 @@
 
         <dependency>
             <groupId>io.ecocode</groupId>
-            <artifactId>swift-lang</artifactId>
+            <artifactId>ecocode-swift-lang</artifactId>
             <version>0.1.0-SNAPSHOT</version>
         </dependency>
 

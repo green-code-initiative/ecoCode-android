@@ -15,8 +15,8 @@ services:
                         SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
                 volumes:
                         - type: bind
-                          source: ./sonar-ios-plugin/target/sonar-ios-plugin-0.1.0-SNAPSHOT.jar
-                          target: /opt/sonarqube/extensions/plugins/sonar-ios-plugin-0.1.0-SNAPSHOT.jar
+                          source: ./sonar-ios-plugin/target/ecodecode-sonar-ios-plugin-0.1.0-SNAPSHOT.jar
+                          target: /opt/sonarqube/extensions/plugins/ecodecode-sonar-ios-plugin-0.1.0-SNAPSHOT.jar
                         - "extensions:/opt/sonarqube/extensions"
                         - "logs:/opt/sonarqube/logs"
                         - "data:/opt/sonarqube/data"
