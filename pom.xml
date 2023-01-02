@@ -48,6 +48,7 @@
 		<sonar-packaging.version>1.21.0.505</sonar-packaging.version>
 		<sonar.skipDependenciesPackaging>true</sonar.skipDependenciesPackaging>
 		<maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
+		<sonar-plugin-api-impl.version>9.7.1.62043</sonar-plugin-api-impl.version>
 
 		<sonar.organization>cnumr-1</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -80,7 +81,7 @@
 			<dependency>
 				<groupId>org.sonarsource.sonarqube</groupId>
 				<artifactId>sonar-plugin-api-impl</artifactId>
-				<version>${sonarqube.version}</version>
+				<version>${sonar-plugin-api-impl.version}</version>
 			</dependency>
 
 			<!-- JAVA -->
