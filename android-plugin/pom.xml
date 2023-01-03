@@ -259,6 +259,7 @@
 										<exclude>META-INF/**</exclude>
 										<exclude>javax/annotation/**</exclude>
 										<exclude>module-info.class</exclude>
+										<exclude>org/sonar/api/batch/sensor/**</exclude>
 									</excludes>
 								</filter>
 								<filter>
