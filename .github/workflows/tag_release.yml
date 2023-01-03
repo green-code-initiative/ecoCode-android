@@ -69,6 +69,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{needs.build.outputs.upload_url}}
-          asset_path: lib/ecocode-android-plugin-${{ github.ref_name }}.jar
-          asset_name: ecocode-android-plugin-${{ github.ref_name }}.jar
+          asset_path: lib/ecocode-android-${{ github.ref_name }}.jar
+          asset_name: ecocode-android-${{ github.ref_name }}.jar
           asset_content_type: application/zip

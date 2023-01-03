@@ -7,7 +7,7 @@ on:
       - '*.md'
       - '.github/**/*.yml'
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [ opened, synchronize, reopened ]
 jobs:
   build:
     name: Build
@@ -40,10 +40,10 @@ jobs:
           ./tool_prepare-codenarc
       - name: Build and analyze
         working-directory: .
-# waiting for new SonarQube secrets (Jules)
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#        run: mvn -e -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=cnumr_ecoCode -Dsonar.exclusions=**/codenarc-converter/**,**/*.groovy,**/android-plugin/src/test/**,**/*.dummy
-# following line to delete when sonarqube secrets ok
+        # waiting for new SonarQube secrets (Jules)
+        #        env:
+        #          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+        #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        #        run: mvn -e -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=cnumr_ecoCode -Dsonar.exclusions=**/codenarc-converter/**,**/*.groovy,**/android-plugin/src/test/**,**/*.dummy
+        # following line to delete when sonarqube secrets ok
         run: mvn -e -B clean compile verify
