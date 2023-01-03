@@ -1,13 +1,15 @@
-# Contributing Guidelines
+Contributing Guidelines
+=======================
 
 Contributions are welcome!
 
 **Before spending lots of time on something, ask for feedback on your idea first.**
 Contact us at <contact@ecocode.io> to be sure that we are interested with your contribution idea.
- 
+
 To avoid frustration, please discuss before submitting any contributions.
 
-## Coding recommendations
+Coding recommendations
+----------------------
 
 ### Make your changes minimal
 
