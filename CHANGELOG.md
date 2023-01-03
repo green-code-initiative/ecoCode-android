@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- [#13](https://github.com/green-code-initiative/ecoCode-mobile/pull/13) Upgrade some versions + sonar version from 9.3 to 9.8
+
 ### Changed
 
 - documentation upgrade (internal)
