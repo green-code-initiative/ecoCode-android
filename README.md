@@ -19,14 +19,14 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 <sub>The custom GUI depicted above is not part of this open source project. Reserved to educational purpose only.</sub>
 
 🤝 Partners
------------
+------------
 
 [![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
 
-How to cite this work ?
------------------------
+📢 Cite this work
+------------------
 
 If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex (to appear):
 
