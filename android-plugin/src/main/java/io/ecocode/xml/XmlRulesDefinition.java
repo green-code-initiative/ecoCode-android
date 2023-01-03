@@ -19,7 +19,12 @@
  */
 package io.ecocode.xml;
 
+import org.sonar.api.SonarEdition;
+import org.sonar.api.SonarQubeSide;
+import org.sonar.api.SonarRuntime;
+import org.sonar.api.internal.SonarRuntimeImpl;
 import org.sonar.api.server.rule.RulesDefinition;
+import org.sonar.api.utils.Version;
 import org.sonarsource.analyzer.commons.RuleMetadataLoader;
 
 public final class XmlRulesDefinition implements RulesDefinition {
@@ -27,8 +32,8 @@ public final class XmlRulesDefinition implements RulesDefinition {
     @Override
     public void define(Context context) {
         NewRepository repository = context.createRepository(Xml.REPOSITORY_KEY, Xml.KEY).setName(Xml.REPOSITORY_NAME);
-
-        RuleMetadataLoader ruleMetadataLoader = new RuleMetadataLoader(Xml.XML_RESOURCE_PATH, Xml.PROFILE_PATH);
+        SonarRuntime sonarRuntime = SonarRuntimeImpl.forSonarQube(Version.create(9, 8), SonarQubeSide.SCANNER, SonarEdition.DEVELOPER);
+        RuleMetadataLoader ruleMetadataLoader = new RuleMetadataLoader(Xml.XML_RESOURCE_PATH, Xml.PROFILE_PATH,sonarRuntime);
 
         // add the new checks
         ruleMetadataLoader.addRulesByAnnotatedClass(repository, XmlCheckList.getXmlChecks());
