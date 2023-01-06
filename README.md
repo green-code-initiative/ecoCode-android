@@ -28,7 +28,7 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 📢 Cite this work
 ------------------
 
-If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex (to appear):
+If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex entry:
 
 ```bibtex
 @inproceedings{10.1145/3551349.3559518,
