@@ -24,6 +24,7 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 [![Snapp’](android-plugin/docs/logoSnapp.png)](https://www.snapp.fr)
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
+[![Solocal / PagesJaunes](android-plugin/docs/logoSolocal.png)](https://www.pagesjaunes.fr)
 
 📢 Cite this work
 ------------------
