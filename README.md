@@ -31,12 +31,21 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 If you use ecoCode in an academic work we would be really glad if you cite our seminal paper using the following bibtex (to appear):
 
 ```bibtex
-@inproceedings{DBLP:conf/ase/LeGoaer2022,
-  author    = {Olivier Le Goaer and Julien Hertout},
-  title     = {ecoCode: a SonarQube Plugin to Remove Energy Smells from Android Projects},
-  booktitle = {{ACM/IEEE} International Conference on Automated Software Engineering,
-               {ASE} '22, Michigan, USA - October 10 - 14, 2022},
-  year      = {2022}
+@inproceedings{10.1145/3551349.3559518,
+  author = {Le Goaer, Olivier and Hertout, Julien},
+  title = {EcoCode: A SonarQube Plugin to Remove Energy Smells from Android Projects},
+  year = {2023},
+  isbn = {9781450394758},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3551349.3559518},
+  doi = {10.1145/3551349.3559518},
+  booktitle = {37th IEEE/ACM International Conference on Automated Software Engineering},
+  articleno = {157},
+  numpages = {4},
+  keywords = {android, energy, smells, debt, quality, battery},
+  location = {Rochester, MI, USA},
+  series = {ASE22}
 }
 ```
 
