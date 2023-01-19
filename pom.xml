@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.ecocode</groupId>
 	<artifactId>ecocode-mobile-parent</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>ecoCode Mobile Sonar Plugins Project</name>
-	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" => https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
+	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" =&gt; https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
 	<url>https://github.com/green-code-initiative/ecocode</url>
 	<organization>
 		<name>green-code-initiative</name>
@@ -45,17 +43,18 @@
 
 		<sonarqube.version>9.4.0.54424</sonarqube.version>
 		<sonarjava.version>7.15.0.30507</sonarjava.version>
-		<sonar.analyzerCommons.version>2.1.0.1111</sonar.analyzerCommons.version>
-		<sonar-packaging.version>1.21.0.505</sonar-packaging.version>
-		<sonar.skipDependenciesPackaging>true</sonar.skipDependenciesPackaging>
-		<maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
-		<sonar-plugin-api-impl.version>9.7.1.62043</sonar-plugin-api-impl.version>
 
-		<sonar.organization>cnumr-1</sonar.organization>
+		<sonar.organization>green-code-initiative</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 
 		<!-- Don't forget to update this version -->
 		<jacoco.version>0.8.8</jacoco.version>
+
+		<sonar-plugin-api-impl.version>9.7.1.62043</sonar-plugin-api-impl.version>
+		<sonar.analyzerCommons.version>2.1.0.1111</sonar.analyzerCommons.version>
+		<sonar-packaging.version>1.21.0.505</sonar-packaging.version>
+		<sonar.skipDependenciesPackaging>true</sonar.skipDependenciesPackaging>
+		<maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
     
 		<junit.version>4.13.2</junit.version>
 		<junit.jupiter.version>5.9.1</junit.jupiter.version>
