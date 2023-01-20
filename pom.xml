@@ -59,7 +59,8 @@
 		<junit.jupiter.version>5.9.1</junit.jupiter.version>
 		<assertJ.version>3.23.1</assertJ.version>
 
-		<sonar.exclusions>file:**/src/main/java/**/generated/**/*.java</sonar.exclusions>
+		<sonar.exclusions>**/src/main/java/**/generated/**/*.java</sonar.exclusions>
+		<sonar.coverage.exclusions>**/src/main/java/**/generated/**/*.java</sonar.coverage.exclusions>
 
 	</properties>
 
