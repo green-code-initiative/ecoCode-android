@@ -35,8 +35,6 @@
     <properties>
 
         <sslr.version>1.21</sslr.version>
-
-        <sonar.version>8.2.0.32929</sonar.version>
         <sonar.analyzerCommons.version>1.13.0.662</sonar.analyzerCommons.version>
         <sonar.apacheCommons.version>2.6</sonar.apacheCommons.version>
         <sonarApple.version>0.1.2</sonarApple.version>
@@ -49,7 +47,7 @@
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-plugin-api</artifactId>
-            <version>${sonar.version}</version>
+            <version>${sonarqube.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -57,7 +55,7 @@
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-plugin-api-impl</artifactId>
-            <version>${sonar.version}</version>
+            <version>${sonarqube.version}</version>
         </dependency>
 
         <dependency>
@@ -89,7 +87,7 @@
         <dependency>
             <groupId>org.sonarsource.sonarqube</groupId>
             <artifactId>sonar-testing-harness</artifactId>
-            <version>${sonar.version}</version>
+            <version>${sonarqube.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
