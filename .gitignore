@@ -1,7 +1,7 @@
-.*
-
 !.gitignore
-!.github/workflows
+!.github/**/*.*
+
+.*
 
 target
 *.iml
