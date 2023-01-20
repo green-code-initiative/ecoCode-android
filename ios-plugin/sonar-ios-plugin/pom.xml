@@ -31,11 +31,11 @@
                 <artifactId>sonar-packaging-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <pluginKey>ecoCode-ios-rules</pluginKey>
-                    <pluginName>ecoCode iOS rules</pluginName>
+                    <pluginKey>${project.artifactId}</pluginKey>
+                    <pluginName>${project.name}</pluginName>
                     <pluginClass>io.ecocode.ios.EcoCodeIOSPlugin</pluginClass>
                     <sonarLintSupported>true</sonarLintSupported>
-                    <sonarQubeMinVersion>7.9</sonarQubeMinVersion>
+                    <sonarQubeMinVersion>${sonarqube.version}</sonarQubeMinVersion>
                     <requirePlugins>java:${sonarApple.version}</requirePlugins>
                 </configuration>
             </plugin>
