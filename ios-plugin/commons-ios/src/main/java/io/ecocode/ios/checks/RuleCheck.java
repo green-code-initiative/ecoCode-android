@@ -12,6 +12,7 @@ import org.sonar.api.utils.log.Loggers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.lang.String.format;
 
@@ -39,7 +40,12 @@ public abstract class RuleCheck implements ParseTreeItemVisitor {
             RepositoryRuleParser repositoryRuleParser = new RepositoryRuleParser();
             rules = repositoryRuleParser.parse(rulesPath);
         }
-        return rules.stream().filter(r -> r.getKey().equals(ruleId)).findFirst().get();
+        Optional<RepositoryRule> rule = rules.stream().filter(r -> r.getKey().equals(ruleId)).findFirst();
+        if (rule.isPresent()) {
+            return rule.get();
+        } else {
+            return null;
+        }
     }
 
     public RuleCheck(String ruleId, String rulesPath, String repositoryKey) {
