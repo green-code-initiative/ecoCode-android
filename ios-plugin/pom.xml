@@ -40,6 +40,8 @@
         <antlr.version>4.10</antlr.version>
         <mockito.version>4.4.0</mockito.version>
 
+        <sonar.exclusions>file:**/src/main/java/**/generated/**/*.java</sonar.exclusions>
+
     </properties>
 
     <dependencies>
@@ -131,14 +133,13 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-                    <!-- Attached to Maven test phase -->
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
