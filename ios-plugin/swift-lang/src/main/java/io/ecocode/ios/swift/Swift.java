@@ -1,13 +1,13 @@
 package io.ecocode.ios.swift;
 
-public interface Swift {
+public final class Swift {
 
-    String KEY = "swift";
-    String PROFILE_NAME = "ecoCode";
-    String REPOSITORY_NAME = "ecoCode";
-    String REPOSITORY_KEY = "ecoCode-swift";
-    String PROFILE_PATH = "ecocode_swift_profile.json";
+    public static final String KEY = "swift";
+    public static final String PROFILE_NAME = "ecoCode";
+    public static final String REPOSITORY_NAME = "ecoCode";
+    public static final String REPOSITORY_KEY = "ecoCode-swift";
+    public static final String PROFILE_PATH = "ecocode_swift_profile.json";
 
-    String RULES_PATH = "/ecocode-swift-rules.json";
+    public static final String RULES_PATH = "/ecocode-swift-rules.json";
 
 }

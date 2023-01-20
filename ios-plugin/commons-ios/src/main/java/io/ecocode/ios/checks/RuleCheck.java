@@ -31,7 +31,8 @@ public abstract class RuleCheck implements ParseTreeItemVisitor {
         }
         protected String ruleId;
         protected int startIndex;
-    };
+    }
+
     private List<Issue> issues = new ArrayList<>();
 
     private static List<RepositoryRule> rules = new ArrayList<>();
@@ -48,7 +49,7 @@ public abstract class RuleCheck implements ParseTreeItemVisitor {
         }
     }
 
-    public RuleCheck(String ruleId, String rulesPath, String repositoryKey) {
+    protected RuleCheck(String ruleId, String rulesPath, String repositoryKey) {
         this.ruleId = ruleId;
         this.rulesPath = rulesPath;
         this.repositoryKey = repositoryKey;

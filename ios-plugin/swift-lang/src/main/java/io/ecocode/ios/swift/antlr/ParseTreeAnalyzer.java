@@ -14,8 +14,6 @@ import java.nio.charset.Charset;
 
 public class ParseTreeAnalyzer {
 
-    private static final int EXECUTOR_TIMEOUT = 10000;
-
     private static final Logger LOGGER = Loggers.get(ParseTreeAnalyzer.class);
 
     private final String languageKey;

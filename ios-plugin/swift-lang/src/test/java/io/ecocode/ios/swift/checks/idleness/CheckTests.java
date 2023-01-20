@@ -17,6 +17,6 @@ public class CheckTests {
     @Test
     public void idleTimerDisabled_no_trigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/IdleTimerDisabled_no_trigger.swift");
-        assertThat(context.allIssues()).hasSize(0);
+        assertThat(context.allIssues()).isEmpty();
     }
 }
