@@ -2,6 +2,8 @@ package io.ecocode.ios.swift;
 
 public final class Swift {
 
+    private Swift() {}
+
     public static final String KEY = "swift";
     public static final String PROFILE_NAME = "ecoCode";
     public static final String REPOSITORY_NAME = "ecoCode";
