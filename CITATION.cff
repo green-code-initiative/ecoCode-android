@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+preferred-citation:
+  type: conference-paper
+  conference:
+    name: "Automated Software Engineering"
+  collection-title: "Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering"
+  publisher: ACM
+  authors:
+  - family-names: "Le Goaër"
+    given-names: "Olivier"
+    orcid: "https://orcid.org/0000-0001-5405-1688"
+  - family-names: "Hertout"
+    given-names: "Julien"
+  title: "EcoCode: A SonarQube Plugin to Remove Energy Smells from Android Projects"
+  doi: 10.1145/3551349.3559518
+  year: 2022

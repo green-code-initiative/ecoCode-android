@@ -1,13 +1,17 @@
-# ecoCode Android SonarQube plugin
+ecoCode Android SonarQube plugin
+================================
+
 ![Logo Ekko](docs/ekko-sonar.png)
 
 ecoCode Android SonarQube plugin is an "eco-responsibility" static code analyzer for native Android projects written in Java (Kotlin unsupported yet). Its aim is to detect code smells to indicate weither the source code can be improved to reduce their environmental and social impact.
 
-## Build and deploy the plugin
+Build and deploy the plugin
+---------------------------
 
 ### Prerequisites
 
-## Maven
+Maven
+-----
 
 This project is driven by maven so this is a required tool.
 
@@ -82,7 +86,8 @@ docker-compose up --build -d && docker ps
 
 The tests instance of SonarQube with the plugin will then be available at: http://localhost:9000  (admin / admin)
 
-## Plugin usage
+Plugin usage
+------------
 
 The plugin contains two sets of rules, one for Java and one for XML. They can be found in the **Quality profiles** section of
 SonarQube (*ecoCode* profiles).
@@ -91,7 +96,8 @@ analysis.
 
 When done, just use SonarQube as you normally do for your classical Android clean code analysis.
 
-## Plugin development
+Plugin development
+------------------
 
 ### Plugin architecture
 
