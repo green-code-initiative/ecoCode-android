@@ -20,6 +20,10 @@ package io.ecocode.ios.swift.checks.idleness;
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
 import org.sonar.api.batch.sensor.internal.SensorContextTester;
+import org.sonar.api.batch.sensor.issue.Issue;
+import org.sonar.api.batch.sensor.issue.IssueLocation;
+
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,6 +33,13 @@ public class CheckTests {
     public void idleTimerDisabled_trigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/IdleTimerDisabled_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
+        Optional<Issue> issue = context.allIssues().stream().findFirst();
+        issue.ifPresent(i -> {
+            assertThat(i.ruleKey().rule()).isEqualTo("EIDL001");
+            assertThat(i.ruleKey().repository()).isEqualTo("ecoCode-swift");
+            IssueLocation location = i.primaryLocation();
+            assertThat(location.textRange().start().line()).isEqualTo(11);
+        });
     }
 
     @Test

@@ -22,10 +22,13 @@ import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 
+/**
+ * Check the use of "UIApplication.shared.isIdleTimerDisabled" and triggers when set to true.
+ */
 public class IdleTimerDisabledCheck extends RuleCheck {
 
     public IdleTimerDisabledCheck() {
-        super("EIDL001", Swift.RULES_PATH, Swift.KEY);
+        super("EIDL001", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
     }
 
     @Override
