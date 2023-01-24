@@ -36,6 +36,7 @@
                     <pluginClass>io.ecocode.ios.EcoCodeIOSPlugin</pluginClass>
                     <sonarQubeMinVersion>${sonarqube.version}</sonarQubeMinVersion>
                     <skipDependenciesPackaging>false</skipDependenciesPackaging>
+                    <jreMinVersion>${java.version}</jreMinVersion>
                 </configuration>
             </plugin>
 
