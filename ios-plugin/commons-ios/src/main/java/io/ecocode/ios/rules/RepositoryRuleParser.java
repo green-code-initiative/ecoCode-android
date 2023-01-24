@@ -1,6 +1,6 @@
 /*
- * SonarQube Apple Plugin - Enables analysis of Swift and Objective-C projects into SonarQube.
- * Copyright © 2022 inside|app (contact@insideapp.fr)
+ * ecoCode iOS plugin - Help the earth, adopt this green plugin for your applications
+ * Copyright © 2022 CNumR (https://www.ecocode.io/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
