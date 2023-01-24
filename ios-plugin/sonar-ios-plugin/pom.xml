@@ -34,9 +34,9 @@
                     <pluginKey>${project.artifactId}</pluginKey>
                     <pluginName>${project.name}</pluginName>
                     <pluginClass>io.ecocode.ios.EcoCodeIOSPlugin</pluginClass>
-                    <sonarLintSupported>true</sonarLintSupported>
                     <sonarQubeMinVersion>${sonarqube.version}</sonarQubeMinVersion>
                     <requirePlugins>java:${sonarApple.version}</requirePlugins>
+                    <skipDependenciesPackaging>false</skipDependenciesPackaging>
                 </configuration>
             </plugin>
 
