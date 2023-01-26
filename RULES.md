@@ -38,3 +38,9 @@ The set of rules comes from the detailed [Social Smells catalog](https://olegoae
 | SINC001 | Aging devices   | Gradle  |  |
 
 # iOS-specific Rules
+
+As the support of Swift code scanner is a brand new feature, we don't have defined code smells catalog for iOS yet. However, a good starting point is to mimic the catalog for Android as both mobile platforms share commonalities.
+
+| # | **Rule Name**      |     **Scanner**     |      **Observation**     |
+| ---|:----------------|:-------------:|:-------------:|
+| XXX | XXX      | Swift |  |
