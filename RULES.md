@@ -37,7 +37,7 @@ The set of rules comes from the detailed [Social Smells catalog](https://olegoae
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 | ---|:----------------|:-------------:|:-------------:|
 | SPRI001 | Crashlytics automatic opt-in       | Java, Xml |  |
-| SPRI002 | Google Tracker | Java |  |
+| SPRI002 | Google Tracker | Java | [see PR](https://github.com/green-code-initiative/ecoCode-mobile/pull/1) |
 | SPRI003 | Hidden Tracker Risk      | Gradle |  |
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
