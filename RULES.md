@@ -1,6 +1,6 @@
 # Android-specific Rules
 
-If you are a mobile developer, you can contribute to our [Android plugin](./android-plugin/) code scanner. Android-specific rules relies on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure.
+Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure.
 
 ### 🍃 Environment
 
@@ -39,7 +39,7 @@ The set of rules comes from the detailed [Social Smells catalog](https://olegoae
 
 # iOS-specific Rules
 
-As the support of Swift code scanner is a brand new feature, we don't have defined code smells catalog for iOS yet. However, a good starting point is to mimic the catalog for Android as both mobile platforms share commonalities.
+As the support of Swift code scanning is a brand new feature, we don't have defined code smells catalog for iOS yet. However, a good starting point is to mimic the catalog for Android as both mobile platforms share commonalities.
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 | ---|:----------------|:-------------:|:-------------:|
