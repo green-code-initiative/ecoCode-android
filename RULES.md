@@ -2,8 +2,6 @@
 
 If you are a mobile developer, you can contribute to our [Android plugin](./android-plugin/) code scanner. Android-specific rules relies on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure.
 
-Before submitting an Android-specific SonarQube custom rule, please take a look at our [naming conventions](https://doc.rules.ecocode.io/#how-to-specify-rules). Idealy, take also a look at the [helpers fonctions](./android-plugin/src/main/java/io/ecocode/java/checks/helpers) we wrote to avoid doing things the hard way.
-
 ### 🍃 Environment
 
 The set of rules comes from the detailed [Energy Smells catalog](https://olegoaer.perso.univ-pau.fr/android-energy-smells/). 3/4 of them have been already implemented in the plugin. Table of unimplemented rules below:
