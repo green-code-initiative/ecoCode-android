@@ -17,7 +17,7 @@ The set of rules comes from the detailed [Energy Smells catalog](https://olegoae
 | EBAT001 | Service@Boot-time    | Java, Xml  | Likely detectable in Xml only |
 | EREL004 | Same dependencies    | Gradle | Requires a knowledge base |
 | EREL005 | Duplicate dependencies    | Gradle | Requires a knowledge base |
-| EREL007 | Clear cache    | Java | Method `deleteRecursively()` seems Kotlin-specific |
+| EREL007 | Clear cache    | Java | Method `deleteRecursively()` is Kotlin-only |
 | EREL008 | Convert to WebP | File System |  |
 | EREL009 | Shrink Resources    | Gradle |  |
 | EREL010 | Disable Obfuscation    | Gradle |  |
@@ -31,10 +31,10 @@ The set of rules comes from the detailed [Social Smells catalog](https://olegoae
 | ---|:----------------|:-------------:|:-------------:|
 | SPRI001 | Crashlytics automatic opt-in       | Java, Xml |  |
 | SPRI002 | Google Tracker | Java | Partially implemented. See [PR#1](https://github.com/green-code-initiative/ecoCode-mobile/pull/1) |
-| SPRI003 | Hidden Tracker Risk      | Gradle |  |
+| SPRI003 | Hidden Tracker Risk      | Gradle | Threshold to be decided |
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
-| SGDP001 | Google consent | Java |  |
+| SGDP001 | Google consent | Java | Good smell! |
 | SINC001 | Aging devices   | Gradle  |  |
 
 # iOS-specific Rules
