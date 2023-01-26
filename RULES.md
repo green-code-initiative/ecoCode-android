@@ -15,8 +15,8 @@ The set of rules comes from the detailed [Energy Smells catalog](https://olegoae
 | ESOB015 | Animation-free | Java, Xml, File System |  |
 | EPOW008 | Constrainted Worker | Java |  |
 | EBAT001 | Service@Boot-time    | Java, Xml  | Likely detectable in Xml only |
-| EREL004 | Same dependencies    | Gradle |  |
-| EREL005 | Duplicate dependencies    | Gradle | Requires an up-to-date, custom listing |
+| EREL004 | Same dependencies    | Gradle | Requires a knowledge base |
+| EREL005 | Duplicate dependencies    | Gradle | Requires a knowledge base |
 | EREL007 | Clear cache    | Java | Method `deleteRecursively()` seems Kotlin-specific |
 | EREL008 | Convert to WebP | File System |  |
 | EREL009 | Shrink Resources    | Gradle |  |
