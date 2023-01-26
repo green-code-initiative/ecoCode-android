@@ -1,6 +1,6 @@
 /*
  * ecoCode iOS plugin - Help the earth, adopt this green plugin for your applications
- * Copyright © 2022 CNumR (https://www.ecocode.io/)
+ * Copyright © 2022 Green code Initiative (https://www.ecocode.io/)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
