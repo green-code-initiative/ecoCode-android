@@ -34,5 +34,5 @@ The set of rules comes from the detailed [Social Smells catalog](https://olegoae
 | SPRI003 | Hidden Tracker Risk      | Gradle | Threshold to be decided |
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
-| SGDP001 | Google consent | Java | Good smell! |
+| SGDP001 | Google consent | Java | "Good smell" syndrome here |
 | SINC001 | Aging devices   | Gradle  |  |
