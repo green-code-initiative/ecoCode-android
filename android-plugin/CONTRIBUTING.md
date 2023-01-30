@@ -30,7 +30,7 @@ Plugin-specific recommendations
 ----------------------
 
 ### Commit to rule development
-Choose a rule within the [table of unimplemented android-specific rules](RULES.md). When submitting a *Pull Request* with your code, give it the following name: `[<id here>] <name of the rule here>`, along with the label `android` to ease the work of reviewers.
+Choose a rule within the [table of unimplemented android-specific rules](RULES.md). When submitting a *Pull Request* with your code, give it the following name: `[<id here>] <name of the rule here>`, along with both labels `android` and `rule` to ease the work of reviewers.
 
 ### Naming conventions
 Before submitting an Android-specific SonarQube custom rule, please take a look at our [naming conventions](https://doc.rules.ecocode.io/#how-to-specify-rules). 
