@@ -25,7 +25,7 @@ The set of rules comes from the detailed [Energy Smells catalog](https://olegoae
 
 ### 🤝 Social
 
-The set of rules comes from the detailed [Social Smells catalog](https://olegoaer.perso.univ-pau.fr/android-social-smells/index.html) (work in progress). 0 rules have been implemented so far in the plugin. Table of unimplemented rules below:
+The set of rules comes from the detailed [Social Smells catalog](https://olegoaer.perso.univ-pau.fr/android-social-smells/index.html) (work in progress). 0 rule has been implemented so far in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 | ---|:----------------|:-------------:|:-------------:|
