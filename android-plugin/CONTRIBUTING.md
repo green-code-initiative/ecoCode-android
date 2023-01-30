@@ -29,4 +29,11 @@ This will help to make your contribution accepted as we like to keep a clean lin
 Plugin-specific recommendations
 ----------------------
 
-Before submitting an Android-specific SonarQube custom rule, please take a look at our [naming conventions](https://doc.rules.ecocode.io/#how-to-specify-rules). Idealy, take also a look at the [helpers fonctions](./src/main/java/io/ecocode/java/checks/helpers) we wrote to avoid doing things the hard way.
+### Commit to rule development
+Choose a rule within the [table of unimplemented android-specific rules](RULES.md). When submitting a *Pull Request* with your code, give it the following name: `[<id here>] <name of the rule here>`, along with the label `android` to ease the work of reviewers.
+
+### Naming conventions
+Before submitting an Android-specific SonarQube custom rule, please take a look at our [naming conventions](https://doc.rules.ecocode.io/#how-to-specify-rules). 
+
+### Avoid doing things the hard way
+Idealy, take also a look at the [helpers fonctions](./src/main/java/io/ecocode/java/checks/helpers).
