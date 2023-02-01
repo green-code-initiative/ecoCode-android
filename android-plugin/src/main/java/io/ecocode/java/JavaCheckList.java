@@ -19,18 +19,19 @@
  */
 package io.ecocode.java;
 
-import io.ecocode.java.checks.batch.JobCoalesceRule;
-import io.ecocode.java.checks.batch.SensorCoalesceRule;
-import io.ecocode.java.checks.bottleneck.InternetInTheLoopRule;
-import io.ecocode.java.checks.bottleneck.UncompressedDataTransmissionRule;
-import io.ecocode.java.checks.bottleneck.WifiMulticastLockRule;
-import io.ecocode.java.checks.idleness.*;
-import io.ecocode.java.checks.leakage.*;
-import io.ecocode.java.checks.optimized_api.BluetoothLowEnergyRule;
-import io.ecocode.java.checks.optimized_api.FusedLocationRule;
-import io.ecocode.java.checks.power.SaveModeAwarenessRule;
-import io.ecocode.java.checks.power.ChargeAwarenessRule;
-import io.ecocode.java.checks.sobriety.*;
+import io.ecocode.java.checks.energy.batch.JobCoalesceRule;
+import io.ecocode.java.checks.energy.batch.SensorCoalesceRule;
+import io.ecocode.java.checks.energy.bottleneck.InternetInTheLoopRule;
+import io.ecocode.java.checks.energy.bottleneck.UncompressedDataTransmissionRule;
+import io.ecocode.java.checks.energy.bottleneck.WifiMulticastLockRule;
+import io.ecocode.java.checks.energy.idleness.*;
+import io.ecocode.java.checks.energy.leakage.*;
+import io.ecocode.java.checks.energy.optimized_api.BluetoothLowEnergyRule;
+import io.ecocode.java.checks.energy.optimized_api.FusedLocationRule;
+import io.ecocode.java.checks.energy.power.SaveModeAwarenessRule;
+import io.ecocode.java.checks.energy.power.ChargeAwarenessRule;
+import io.ecocode.java.checks.energy.sobriety.*;
+import io.ecocode.java.checks.social.GoogleTrackerRule;
 import org.sonar.plugins.java.api.JavaCheck;
 
 import java.util.ArrayList;
@@ -45,12 +46,19 @@ public final class JavaCheckList {
 
     public static List<Class<? extends JavaCheck>> getChecks() {
         List<Class<? extends JavaCheck>> checks = new ArrayList<>();
-        checks.addAll(getJavaChecks());
+        checks.addAll(getJavaEnergyChecks());
+        checks.addAll(getJavaSocialChecks());
         checks.addAll(getJavaTestChecks());
         return Collections.unmodifiableList(checks);
     }
 
-    public static List<Class<? extends JavaCheck>> getJavaChecks() {
+    public static List<Class<? extends JavaCheck>> getJavaSocialChecks(){
+        return Collections.unmodifiableList(Arrays.asList(
+                GoogleTrackerRule.class
+        ));
+    }
+
+    public static List<Class<? extends JavaCheck>> getJavaEnergyChecks() {
         return Collections.unmodifiableList(Arrays.asList(
                 FusedLocationRule.class,
                 BluetoothLowEnergyRule.class,

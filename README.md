@@ -33,7 +33,7 @@ If you use ecoCode in an academic work we would be really glad if you cite our s
 
 ```bibtex
 @inproceedings{10.1145/3551349.3559518,
-  author = {Le Goaer, Olivier and Hertout, Julien},
+  author = {Le Goaer Olivier, Hertout Julien and Berque Justin},
   title = {EcoCode: A SonarQube Plugin to Remove Energy Smells from Android Projects},
   year = {2023},
   isbn = {9781450394758},

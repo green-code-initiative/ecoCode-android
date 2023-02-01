@@ -65,6 +65,7 @@ public class EcoCodeRulesPlugin implements Plugin {
             XmlRulesDefinition.class,
             XmlEcoCodeProfile.class,
             XmlSensor.class);
+    // === Add Groovy rules extension ===
     context
             .addExtensions(Groovy.getExtensions())
             .addExtensions(GroovySensor.getExtensions())
