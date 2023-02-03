@@ -17,12 +17,15 @@
  */
 package io.ecocode.ios.rules;
 
+import org.apache.commons.io.IOUtils;
 import org.sonar.api.rules.RuleType;
 import org.sonar.api.server.rule.RulesDefinition;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public abstract class JSONRulesDefinition implements RulesDefinition {
@@ -63,12 +66,20 @@ public abstract class JSONRulesDefinition implements RulesDefinition {
                     LOGGER.warn(String.format("Rule %s has no severity, using MAJOR as default", r.getKey()));
                 }
 
+                // Read description from JSON
+                // But overrides it .html description of the rule is found in resources
+                String description = r.getDescription();
+                InputStream dis =  getClass().getResourceAsStream(String.format("/%s.html", r.getKey()));
+                if (dis != null) {
+                    description = IOUtils.toString(dis, StandardCharsets.UTF_8);
+                }
+
                 NewRule nr = repository.createRule(r.getKey())
                         .setName(r.getName())
                         .setSeverity(severity)
                         .setType(RuleType.valueOf(type))
                         .setTags(r.getTags().toArray(new String[0]))
-                        .setHtmlDescription(r.getDescription());
+                        .setHtmlDescription(description);
 
                 if (r.getDebt() != null) {
                     nr.setDebtRemediationFunction(nr.debtRemediationFunctions().constantPerIssue(r.getDebt().getOffset()));

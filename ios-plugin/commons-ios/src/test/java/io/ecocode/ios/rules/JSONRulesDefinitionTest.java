@@ -40,7 +40,8 @@ public class JSONRulesDefinitionTest {
         assertThat(repository.language()).isEqualTo("lang");
         assertThat(repository.rules()).isNotEmpty();
         assertThat(repository.rules().get(0).tags()).isNotEmpty();
-
+        assertThat(repository.rules().get(0).htmlDescription()).isEqualTo("<p>Test description from HTML file</p>");
+        assertThat(repository.rules().get(1).htmlDescription()).isEqualTo("This is rule 2.");
 
     }
 }

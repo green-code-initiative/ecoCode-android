@@ -26,6 +26,8 @@ The new rule must be declared into 2 files :
 - `swift-lang/src/resources/ecocode-swift_profile.json` 
 - `swift-lang/src/resources/ecocode-swift-rules.json`
 
+> Note: if a rich HTML description of the rule is required. Use a separated .html file put aside `swift-lang/src/resources/ecocode-swift-rules.json` and name it after the rule key. For example: `RULE_KEY.html`. When an specific HTML description file is provided for a rule, it overrides the description provided into the `ecocode-swift-rules.json`.
+
 ### Implementing a check
 
 In order to implement a check for the rule, create a Check class inherited from `RuleCheck` in `src/main/java/io/ecocode/ios/swift/checks`.

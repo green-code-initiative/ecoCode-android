@@ -42,7 +42,7 @@ public class RepositoryRuleParserTest {
         assertThat(repositoryRule1.getDebt()).isNotNull();
         assertThat(repositoryRule1.getDebt().getFunction()).isEqualTo("CONSTANT_ISSUE");
         assertThat(repositoryRule1.getDebt().getOffset()).isEqualTo("5min");
-        assertThat(repositoryRule1.getTags().size()).isEqualTo(2);
+        assertThat(repositoryRule1.getTags()).hasSize(2);
         assertThat(repositoryRule1.getTags().get(0)).isEqualTo("tag1");
         assertThat(repositoryRule1.getTags().get(1)).isEqualTo("tag2");
 
@@ -54,7 +54,7 @@ public class RepositoryRuleParserTest {
         assertThat(repositoryRule2.getDebt()).isNotNull();
         assertThat(repositoryRule2.getDebt().getFunction()).isEqualTo("CONSTANT_ISSUE");
         assertThat(repositoryRule2.getDebt().getOffset()).isEqualTo("15min");
-        assertThat(repositoryRule2.getTags().size()).isEqualTo(1);
+        assertThat(repositoryRule2.getTags()).hasSize(1);
         assertThat(repositoryRule2.getTags().get(0)).isEqualTo("tag1");
     }
 }
