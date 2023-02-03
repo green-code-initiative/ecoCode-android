@@ -53,7 +53,7 @@ public class RepositoryRuleParser {
                         (String) jsonRule.get("severity"),
                         (String) jsonRule.get("description"),
                         (String) jsonRule.get("type"),
-                        debt);
+                        debt, (List<String>)jsonRule.get("tags"));
                 repositoryRules.add(repositoryRule);
             }
         }

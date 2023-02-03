@@ -7,7 +7,11 @@
     "debt": {
       "function": "CONSTANT_ISSUE",
       "offset": "5min"
-    }
+    },
+    "tags": [
+      "tag1",
+      "tag2"
+    ]
   },
   {
     "key": "rule2",
@@ -17,6 +21,9 @@
     "debt": {
       "function": "CONSTANT_ISSUE",
       "offset": "15min"
-    }
+    },
+    "tags": [
+      "tag1"
+    ]
   }
 ]

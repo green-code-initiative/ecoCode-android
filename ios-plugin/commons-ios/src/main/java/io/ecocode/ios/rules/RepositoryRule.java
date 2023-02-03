@@ -17,6 +17,8 @@
  */
 package io.ecocode.ios.rules;
 
+import java.util.List;
+
 public final class RepositoryRule {
 
     private final String key;
@@ -26,13 +28,16 @@ public final class RepositoryRule {
     private final String type;
     private final RepositoryRuleDebt debt;
 
-    public RepositoryRule(final String key, final String name, final String severity, final String description, final String type, final RepositoryRuleDebt debt) {
+    private final List<String> tags;
+
+    public RepositoryRule(final String key, final String name, final String severity, final String description, final String type, final RepositoryRuleDebt debt, final List<String> tags) {
         this.key = key;
         this.name = name;
         this.severity = severity;
         this.description = description;
         this.type = type;
         this.debt = debt;
+        this.tags = tags;
     }
 
     public String getKey() {
@@ -58,4 +63,6 @@ public final class RepositoryRule {
     public RepositoryRuleDebt getDebt() {
         return debt;
     }
+
+    public List<String> getTags() {return  tags;}
 }

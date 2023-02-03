@@ -39,6 +39,7 @@ public class JSONRulesDefinitionTest {
         assertThat(repository.name()).isEqualTo("rep_name");
         assertThat(repository.language()).isEqualTo("lang");
         assertThat(repository.rules()).isNotEmpty();
+        assertThat(repository.rules().get(0).tags()).isNotEmpty();
 
 
     }

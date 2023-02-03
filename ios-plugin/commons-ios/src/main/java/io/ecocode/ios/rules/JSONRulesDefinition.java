@@ -67,6 +67,7 @@ public abstract class JSONRulesDefinition implements RulesDefinition {
                         .setName(r.getName())
                         .setSeverity(severity)
                         .setType(RuleType.valueOf(type))
+                        .setTags(r.getTags().toArray(new String[0]))
                         .setHtmlDescription(r.getDescription());
 
                 if (r.getDebt() != null) {
