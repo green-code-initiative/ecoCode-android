@@ -10,7 +10,7 @@
 	<name>ecoCode Mobile Sonar Plugins Project</name>
 	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" =&gt; https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
 	<organization>
-		<name>CNumR</name>
+		<name>Green code Initiative</name>
 		<url>https://collectif.greenit.fr</url>
 	</organization>
 	<licenses>
@@ -58,6 +58,9 @@
 		<junit.version>4.13.2</junit.version>
 		<junit.jupiter.version>5.9.1</junit.jupiter.version>
 		<assertJ.version>3.23.1</assertJ.version>
+
+		<sonar.exclusions>**/codenarc-converter/**,**/*.groovy,**/android-plugin/src/test/**,**/*.dummy,**/generated/**/*.*</sonar.exclusions>
+		<sonar.coverage.exclusions>**/generated/**/*.*</sonar.coverage.exclusions>
 
 	</properties>
 
@@ -165,6 +168,7 @@
 	<modules>
 		<module>codenarc-converter</module>
 		<module>android-plugin</module>
+		<module>ios-plugin</module>
 	</modules>
 	
 </project>

@@ -1,0 +1,18 @@
+[
+    {
+        "key": "EIDL001",
+        "name": "Idle timer disabled",
+        "severity": "MAJOR",
+        "description": "Do not disable idle timer, unless absolutely necessary.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "5min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "idleness"
+        ],
+        "type": "CODE_SMELL"
+    }
+]
