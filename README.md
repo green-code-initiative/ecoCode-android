@@ -10,9 +10,10 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 🌿 SonarQube Plugin
 -------------------
 
-1 mobile technology is supported by the plugin right now:
+2 mobile technologies are supported by the plugin right now:
 
 - [Android](android-plugin/)
+- [iOS](ios-plugin) <sub>no rules yet</sub>
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
@@ -25,6 +26,9 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
 [![Solocal / PagesJaunes](android-plugin/docs/logoSolocal.png)](https://www.pagesjaunes.fr)
+[![inside|app](ios-plugin/docs/logoInsideApp.jpg)](https://www.insideapp.fr/)
+
+
 
 📢 Cite this work
 ------------------
