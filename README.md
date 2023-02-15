@@ -57,7 +57,7 @@ If you use ecoCode in an academic work we would be really glad if you cite our s
 🛒 Distribution
 ---------------
 
-Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode/releases).
+Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode-mobile/releases).
 
 🧩 Plugins version compatibility
 ------------------
