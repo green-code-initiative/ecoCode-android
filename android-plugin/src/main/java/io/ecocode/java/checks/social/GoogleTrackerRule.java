@@ -20,7 +20,6 @@
 package io.ecocode.java.checks.social;
 
 import io.ecocode.java.checks.helpers.TreeHelper;
-import org.sonar.api.issue.Issue;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
@@ -69,33 +68,26 @@ public class GoogleTrackerRule extends BaseTreeVisitor implements JavaFileScanne
     }
 
     private void handleResult(JavaFileScannerContext context, GoogleTrackerImports googleTrackerImport) {
-
-        //TODO FIX if firebase import is after google import in the same file
         if (googleTrackerImport.hasTrackerImports()) {
-            googleTrackerImport.allAnalyticsImport = new ArrayList<>();
-            googleTrackerImport.allAnalyticsImport.addAll(googleTrackerImport.getGoogleTrackerImports());
-
-            googleTrackerImport.allAnalyticsImport.addAll(googleTrackerImport.getFirebaseTrackerImports());
-
             List<AnalyticsIssue> issues = new ArrayList<>();
             if (googleTrackerImport.hasGoogleTrackerImports()) {
                 for (ImportTree importTree : googleTrackerImport.getGoogleTrackerImports()) {
-                    issues.add(new AnalyticsIssue(importTree,ERROR_MESSAGE_GGL_TRACKER));
+                    issues.add(new AnalyticsIssue(importTree, ERROR_MESSAGE_GGL_TRACKER));
                 }
             }
 
             if (googleTrackerImport.hasFirebaseTrackerImports()) {
                 for (ImportTree importTree : googleTrackerImport.getFirebaseTrackerImports()) {
-                    issues.add(new AnalyticsIssue(importTree,ERROR_MESSAGE_FIREBASE_TRACKER));
+                    issues.add(new AnalyticsIssue(importTree, ERROR_MESSAGE_FIREBASE_TRACKER));
                 }
             }
             for (AnalyticsIssue issue : issues) {
-                context.reportIssue(this,issue.tree,issue.desc);
+                context.reportIssue(this, issue.tree, issue.desc);
             }
         }
     }
 
-    public static class AnalyticsIssue {
+    private static class AnalyticsIssue {
         private final ImportTree tree;
         private final String desc;
 
@@ -103,30 +95,21 @@ public class GoogleTrackerRule extends BaseTreeVisitor implements JavaFileScanne
             this.tree = tree;
             this.desc = desc;
         }
-
-        public ImportTree getTree() {
-            return tree;
-        }
-
-        public String getDesc() {
-            return desc;
-        }
     }
 
     private static class GoogleTrackerImports {
-        private static final String IMPORT_STR_GGL_TRCK = "com.google.android.gms.analytics";
-        private static final String IMPORT_STR_FIREBASE_TRCK = "com.google.firebase.analytics";
+        private static final String STR_GOOGLE_ANALYTICS_IMPORT = "com.google.android.gms.analytics";
+        private static final String STR_FIREBASE_ANALYTICS_IMPORT = "com.google.firebase.analytics";
 
-        private final List<ImportTree> gglTrListTree = new ArrayList<>();
-        private final List<ImportTree> firebaseTrListTree = new ArrayList<>();
-        private List<ImportTree> allAnalyticsImport;
+        private final List<ImportTree> googleTrackerListTree = new ArrayList<>();
+        private final List<ImportTree> firebaseTrackerListTree = new ArrayList<>();
 
         public List<ImportTree> getGoogleTrackerImports() {
-            return gglTrListTree;
+            return googleTrackerListTree;
         }
 
         public List<ImportTree> getFirebaseTrackerImports() {
-            return firebaseTrListTree;
+            return firebaseTrackerListTree;
         }
 
         public boolean hasTrackerImports() {
@@ -134,19 +117,19 @@ public class GoogleTrackerRule extends BaseTreeVisitor implements JavaFileScanne
         }
 
         public boolean hasGoogleTrackerImports() {
-            return !gglTrListTree.isEmpty();
+            return !googleTrackerListTree.isEmpty();
         }
 
         public boolean hasFirebaseTrackerImports() {
-            return !firebaseTrListTree.isEmpty();
+            return !firebaseTrackerListTree.isEmpty();
         }
 
         public void collectTrackerImport(ImportTree importTree) {
             String importName = TreeHelper.fullQualifiedName(importTree.qualifiedIdentifier());
-            if (importName.startsWith(IMPORT_STR_GGL_TRCK)) {
-                gglTrListTree.add(importTree);
-            } else if (importName.startsWith(IMPORT_STR_FIREBASE_TRCK)) {
-                firebaseTrListTree.add(importTree);
+            if (importName.startsWith(STR_GOOGLE_ANALYTICS_IMPORT)) {
+                googleTrackerListTree.add(importTree);
+            } else if (importName.startsWith(STR_FIREBASE_ANALYTICS_IMPORT)) {
+                firebaseTrackerListTree.add(importTree);
             }
         }
     }

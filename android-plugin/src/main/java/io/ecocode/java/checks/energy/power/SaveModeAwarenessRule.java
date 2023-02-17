@@ -19,9 +19,7 @@
  */
 package io.ecocode.java.checks.energy.power;
 
-import java.util.List;
-import java.util.Optional;
-
+import com.google.common.collect.ImmutableList;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
 import org.sonar.check.Rule;
@@ -31,7 +29,8 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 
-import com.google.common.collect.ImmutableList;
+import java.util.List;
+import java.util.Optional;
 
 /**
  * Checks the use of the BATTERY_CHANGED propriety in intentFilter or the use of the isPowerSaveMode() method
@@ -39,7 +38,7 @@ import com.google.common.collect.ImmutableList;
 @Rule(key = "EPOW006", name = "ecocodeSaveModeAwareness")
 public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
     private static final Logger LOG = Loggers.get(SaveModeAwarenessRule.class);
-    
+
     private static final String ACTION_BATTERY_CHANGED = "android.intent.action.BATTERY_CHANGED";
     private static final String INTENT_FILTER = "android.content.IntentFilter";
     private static final String ADVICE_MESSAGE = "Taking into account when the device is entering or exiting the power save mode is a good practice.";
@@ -71,13 +70,22 @@ public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
             if (tree.is(Tree.Kind.METHOD_INVOCATION)) {
                 MethodInvocationTree mit = (MethodInvocationTree) tree;
                 if ((addActionMatcher.matches(mit) || createIntentFilterMatcher.matches(mit))
-                        && !mit.arguments().isEmpty()
-                        && mit.arguments().get(0).asConstant().isPresent()
-                        && mit.arguments().get(0).symbolType().toString().equals("String")
-                        && mit.arguments().get(0).asConstant().get().equals(ACTION_BATTERY_CHANGED)) {
-                    reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
-                } else if (isPowerSaveModeMatcher.matches(mit)) {
-                    reportIssue(mit, ADVICE_MESSAGE);
+                        && !mit.arguments().isEmpty()) {
+                    mit.arguments().get(0).asConstant().ifPresentOrElse(o -> {
+                        if (o instanceof String) {
+                            if (o.equals(ACTION_BATTERY_CHANGED)) {
+                                reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
+                            }
+                        }
+                    }, () -> {
+                        if (isPowerSaveModeMatcher.matches(mit)) {
+                            reportIssue(mit, ADVICE_MESSAGE);
+                        }
+                    });
+                } else {
+                    if (isPowerSaveModeMatcher.matches(mit)) {
+                        reportIssue(mit, ADVICE_MESSAGE);
+                    }
                 }
             }
         } catch (Exception e) {
