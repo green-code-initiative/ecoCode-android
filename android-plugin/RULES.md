@@ -25,12 +25,11 @@ The set of rules comes from the detailed [Energy Smells catalog](https://olegoae
 
 ### 🤝 Social
 
-The set of rules comes from the detailed [Social Smells catalog](https://olegoaer.perso.univ-pau.fr/android-social-smells/index.html) (work in progress). 0 rule has been implemented so far in the plugin. Table of unimplemented rules below:
+The set of rules comes from the detailed [Social Smells catalog](https://olegoaer.perso.univ-pau.fr/android-social-smells/index.html) (work in progress). 1 rule has been implemented so far in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 | ---|:----------------|:-------------:|:-------------:|
 | SPRI001 | Crashlytics automatic opt-in       | Java, Xml |  |
-| SPRI002 | Google Tracker | Java | Partially implemented. See [PR#1](https://github.com/green-code-initiative/ecoCode-mobile/pull/1) |
 | SPRI003 | Hidden Tracker Risk      | Gradle | Threshold to be decided |
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
