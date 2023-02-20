@@ -1,10 +1,10 @@
 # Android-specific Rules
 
-Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure.
+Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile).
 
 ### 🍃 Environment
 
-The set of rules comes from the detailed [Energy Smells catalog](https://olegoaer.perso.univ-pau.fr/android-energy-smells/). 3/4 of them have been already implemented in the plugin. Table of unimplemented rules below:
+3/4 of them have been already implemented in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
@@ -25,7 +25,7 @@ The set of rules comes from the detailed [Energy Smells catalog](https://olegoae
 
 ### 🤝 Social
 
-The set of rules comes from the detailed [Social Smells catalog](https://olegoaer.perso.univ-pau.fr/android-social-smells/index.html) (work in progress). 1 rule has been implemented so far in the plugin. Table of unimplemented rules below:
+1 rule has been implemented so far in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 | ---|:----------------|:-------------:|:-------------:|
