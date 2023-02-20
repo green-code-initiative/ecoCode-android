@@ -33,5 +33,5 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | SPRI003 | Hidden Tracker Risk      | Gradle | Threshold to be decided |
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
-| SGDP001 | Google consent | Java | "Good smell" syndrome here |
+| SGDP001 | Google consent | Java | "Good smell" spotted here |
 | SINC001 | Aging devices   | Gradle  |  |
