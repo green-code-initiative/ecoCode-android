@@ -2,7 +2,7 @@
 
 Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile).
 
-### 🍃 Environment
+### Environment
 
 3/4 of them have been already implemented in the plugin. Table of unimplemented rules below:
 
@@ -23,7 +23,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EREL010 | Disable Obfuscation    | Gradle |  |
 
 
-### 🤝 Social
+### Social
 
 1 rule has been implemented so far in the plugin. Table of unimplemented rules below:
 
