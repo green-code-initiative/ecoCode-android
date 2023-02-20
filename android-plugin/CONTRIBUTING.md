@@ -8,7 +8,7 @@ Contact us at <contact@ecocode.io> to be sure that we are interested with your c
 
 To avoid frustration, please discuss before submitting any contributions.
 
-Coding recommendations
+General Coding recommendations
 ----------------------
 
 ### Make your changes minimal
@@ -25,3 +25,15 @@ Coding is the easy part. If you want your contribution to be accepted, demonstra
 
 To ease the review, please have a clean, minimal history of commits in your pull request. Your commits should have a single purpose.
 This will help to make your contribution accepted as we like to keep a clean linear history and prefer rebase over merging commits.
+
+Plugin-specific recommendations
+----------------------
+
+### Commit to rule development
+Choose a rule within the [table of unimplemented android-specific rules](RULES.md). When submitting a *Pull Request* with your code, give it the following name: `[<id here>] <name of the rule here>`, along with both labels `android` and `rule` to ease the work of reviewers.
+
+### Naming conventions
+Before submitting an Android-specific SonarQube custom rule, please take a look at our [naming conventions](https://doc.rules.ecocode.io/#how-to-specify-rules). 
+
+### Avoid doing things the hard way
+Idealy, take also a look at the [helpers fonctions](./src/main/java/io/ecocode/java/checks/helpers).
