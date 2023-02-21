@@ -31,7 +31,7 @@ import io.ecocode.java.checks.energy.optimized_api.FusedLocationRule;
 import io.ecocode.java.checks.energy.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.energy.power.ChargeAwarenessRule;
 import io.ecocode.java.checks.energy.sobriety.*;
-import io.ecocode.java.checks.social.GoogleTrackerRule;
+import io.ecocode.java.checks.social.privacy.GoogleTrackerRule;
 import org.sonar.plugins.java.api.JavaCheck;
 
 import java.util.ArrayList;

@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package io.ecocode.java.checks.social;
+package io.ecocode.java.checks.social.privacy;
 
 import io.ecocode.java.checks.helpers.TreeHelper;
 import org.sonar.check.Rule;
