@@ -19,18 +19,18 @@
  */
 package io.ecocode.java;
 
-import io.ecocode.java.checks.energy.batch.JobCoalesceRule;
-import io.ecocode.java.checks.energy.batch.SensorCoalesceRule;
-import io.ecocode.java.checks.energy.bottleneck.InternetInTheLoopRule;
-import io.ecocode.java.checks.energy.bottleneck.UncompressedDataTransmissionRule;
-import io.ecocode.java.checks.energy.bottleneck.WifiMulticastLockRule;
-import io.ecocode.java.checks.energy.idleness.*;
-import io.ecocode.java.checks.energy.leakage.*;
-import io.ecocode.java.checks.energy.optimized_api.BluetoothLowEnergyRule;
-import io.ecocode.java.checks.energy.optimized_api.FusedLocationRule;
-import io.ecocode.java.checks.energy.power.SaveModeAwarenessRule;
-import io.ecocode.java.checks.energy.power.ChargeAwarenessRule;
-import io.ecocode.java.checks.energy.sobriety.*;
+import io.ecocode.java.checks.environment.batch.JobCoalesceRule;
+import io.ecocode.java.checks.environment.batch.SensorCoalesceRule;
+import io.ecocode.java.checks.environment.bottleneck.InternetInTheLoopRule;
+import io.ecocode.java.checks.environment.bottleneck.UncompressedDataTransmissionRule;
+import io.ecocode.java.checks.environment.bottleneck.WifiMulticastLockRule;
+import io.ecocode.java.checks.environment.idleness.*;
+import io.ecocode.java.checks.environment.leakage.*;
+import io.ecocode.java.checks.environment.optimized_api.BluetoothLowEnergyRule;
+import io.ecocode.java.checks.environment.optimized_api.FusedLocationRule;
+import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
+import io.ecocode.java.checks.environment.power.ChargeAwarenessRule;
+import io.ecocode.java.checks.environment.sobriety.*;
 import io.ecocode.java.checks.social.privacy.GoogleTrackerRule;
 import org.sonar.plugins.java.api.JavaCheck;
 
