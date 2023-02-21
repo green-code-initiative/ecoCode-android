@@ -42,11 +42,21 @@ public class JavaRulesDefinitionTest {
         assertThat(repository.language()).isEqualTo(Java.KEY);
         assertThat(repository.rules()).hasSize(JavaCheckList.getChecks().size());
 
-        assertRuleProperties(repository);
+        assertEnergyRuleProperties(repository);
+        assertSocialRuleProperties(repository);
         assertAllRuleParametersHaveDescription(repository);
     }
 
-    private void assertRuleProperties(Repository repository) {
+    private void assertSocialRuleProperties(Repository repository) {
+
+        Rule googleTrackerRule = repository.rule("SPRI002");
+        assertThat(googleTrackerRule).isNotNull();
+        assertThat(googleTrackerRule.name()).isEqualTo("Privacy: Google Tracker");
+        assertThat(googleTrackerRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
+        assertThat(googleTrackerRule.type()).isEqualTo(RuleType.CODE_SMELL);
+    }
+
+    private void assertEnergyRuleProperties(Repository repository) {
 
         Rule sensorCoalesceRule = repository.rule("EBAT002");
         assertThat(sensorCoalesceRule).isNotNull();

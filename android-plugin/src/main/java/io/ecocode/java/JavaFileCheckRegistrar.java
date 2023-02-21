@@ -19,6 +19,7 @@
  */
 package io.ecocode.java;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.sonar.plugins.java.api.CheckRegistrar;
 import org.sonar.plugins.java.api.JavaCheck;
@@ -46,7 +47,12 @@ public class JavaFileCheckRegistrar implements CheckRegistrar {
    * Lists all the main checks provided by the plugin
    */
   public static List<Class<? extends JavaCheck>> checkClasses() {
-    return JavaCheckList.getJavaChecks();
+    List<Class<? extends JavaCheck>> checks = new ArrayList<>();
+
+    checks.addAll(JavaCheckList.getJavaSocialChecks());
+    checks.addAll(JavaCheckList.getJavaEnergyChecks());
+
+    return checks;
   }
 
   /**
