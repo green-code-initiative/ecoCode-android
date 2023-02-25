@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- upgrade SonarQube version to 9.9
+
 ## [0.1.0] - 2023-01-03
 
 ### Added

@@ -3,7 +3,7 @@ services:
   sonar:
     #build:
     #  dockerfile: Dockerfile
-    image: sonarqube:9.8-community
+    image: sonarqube:9.9-community
     container_name: sonar_mobile
     ports:
       - "9000:9000"
