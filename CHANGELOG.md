@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- [#5](https://github.com/green-code-initiative/ecoCode-mobile/pull/5) Add IOS plugin delivery
+
 ### Changed
 
 ## [0.1.0] - 2023-01-03

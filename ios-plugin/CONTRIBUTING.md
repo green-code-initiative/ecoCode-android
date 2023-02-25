@@ -3,6 +3,7 @@
 ## General information
 
 The iOS plugin is split into 3 different modules:
+
 - `swift-lang` is for Swift source files parsing and checks
 - `commons-ios` gather common parsing utils and models that can be reused to implement other languages support
 - `sonar-ios-plugin` the actual SonarQube plugin declaration
@@ -16,6 +17,7 @@ When necessary (in case of Swift language syntax upgrade for example), those sou
 ## Adding new rules
 
 When adding a new rule, the following steps are required:
+
 - Declare the rule
 - Implement a check
 - Add the check to the visitor
@@ -23,6 +25,7 @@ When adding a new rule, the following steps are required:
 ### Declaring the rule
 
 The new rule must be declared into 2 files :
+
 - `swift-lang/src/resources/ecocode-swift_profile.json` 
 - `swift-lang/src/resources/ecocode-swift-rules.json`
 
