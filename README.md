@@ -66,3 +66,11 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 |-----------------|----------------------------|
 | 0.0.+           | SonarQube 8.9.+ LTS to 9.3 |
 | 0.1.+           | SonarQube 9.4.+ LTS to 9.8 |
+
+☕ Plugin Java part compatibility
+------------------
+
+| Plugins Version  | Java version |
+|------------------|--------------|
+| 0.0.+            | 11 / 17      |
+| 0.1.+            | 11 / 17      |
