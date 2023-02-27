@@ -1,9 +1,8 @@
 version: "3.3"
 services:
   sonar:
-    #build:
-    #  dockerfile: Dockerfile
-    image: sonarqube:9.9-community
+    build:
+      dockerfile: Dockerfile
     container_name: sonar_ecocode-mobile
     ports:
       - "9000:9000"
@@ -23,7 +22,6 @@ services:
       - type: bind
         source: ./ios-plugin/sonar-ios-plugin/target/ecodecode-sonar-ios-plugin-0.2.0-SNAPSHOT.jar
         target: /opt/sonarqube/extensions/plugins/ecodecode-sonar-ios-plugin-0.2.0-SNAPSHOT.jar
-      - "extensions:/opt/sonarqube/extensions"
       - "logs:/opt/sonarqube/logs"
       - "data:/opt/sonarqube/data"
 
