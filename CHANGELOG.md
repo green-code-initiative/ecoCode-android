@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [#5](https://github.com/green-code-initiative/ecoCode-mobile/pull/5) Add IOS plugin delivery
 - Add `CONTRIBUTING.md`
 - Add `CODE_STYLE.md`
+- move `INSTALL.md` to common doc in `ecoCode-common` repository
 
 ### Changed
 
