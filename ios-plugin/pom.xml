@@ -14,7 +14,6 @@
 
     <name>ecoCode iOS plugin</name>
     <description>Help the earth, adopt this green plugin for your applications</description>
-    <url>https://github.com/cnumr/ecoCode</url>
     <inceptionYear>2022</inceptionYear>
 
     <modules>
