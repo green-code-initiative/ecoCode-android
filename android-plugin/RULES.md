@@ -13,7 +13,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | ESOB003/ESOB004 | Dark UI      | Java, Xml | Partially implemented (e.g. [1](./src/main/java/io/ecocode/xml/checks/sobriety/DarkUIBrightColorsXmlRule.java), [2](./src/main/java/io/ecocode/xml/checks/sobriety/DarkUIThemeXmlRule.java)) |
 | ESOB009 | Day Night Mode     | File System, Xml | Requires `PostProjectAnalysisTask()` callback |
 | ESOB015 | Animation-free | Java, Xml, File System |  |
-| EPOW008 | Constrainted Worker | Java |  |
+| EPOW008 | Battery-constrained Work | Java |  |
 | EBAT001 | Service@Boot-time    | Java, Xml  | Likely detectable in Xml only |
 | EREL004 | Same dependencies    | Gradle | Requires a knowledge base |
 | EREL005 | Duplicate dependencies    | Gradle | Requires a knowledge base |
