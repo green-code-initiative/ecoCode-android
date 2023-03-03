@@ -1,6 +1,6 @@
 # Android-specific Rules
 
-Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile).
+Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#android-platform).
 
 ### Environment
 
