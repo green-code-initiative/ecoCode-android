@@ -4,7 +4,7 @@ services:
     #build:
     #  dockerfile: Dockerfile
     image: sonarqube:9.9-community
-    container_name: sonar_mobile
+    container_name: sonar_ecocode-mobile
     ports:
       - "9000:9000"
     networks:
@@ -29,7 +29,7 @@ services:
 
   db:
     image: postgres:12
-    container_name: postgresql_mobile
+    container_name: postgresql_ecocode-mobile
     networks:
       - sonarnet
     volumes:
