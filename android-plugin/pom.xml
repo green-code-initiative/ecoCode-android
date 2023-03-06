@@ -251,9 +251,11 @@
 								<filter>
 									<artifact>org.*:*</artifact>
 									<excludes>
-										<exclude>META-INF/**</exclude>
+										<!--TODO: the following commented exccludes avoid a WARNING while building the project.
+										        However, the Groovy analysis crashes at execution if set. -->
+										<!--<exclude>META-INF/**</exclude>
 										<exclude>javax/annotation/**</exclude>
-										<exclude>module-info.class</exclude>
+										<exclude>module-info.class</exclude>-->
 										<exclude>org/sonar/api/batch/sensor/**</exclude>
 									</excludes>
 								</filter>
