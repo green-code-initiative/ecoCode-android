@@ -3,6 +3,7 @@ services:
         sonar:
                 build:
                         dockerfile: Dockerfile
+                container_name: sonar_ecocode_ios
                 ports:
                         - "9000:9000"
                 networks:
@@ -23,7 +24,7 @@ services:
 
         db:
                 image: postgres:12
-                container_name: postgresql
+                container_name: postgresql_ecocode_ios
                 networks:
                         - sonarnet
                 volumes:
