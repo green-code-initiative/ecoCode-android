@@ -23,7 +23,7 @@ services:
 
   db:
     image: postgres:12
-    container_name: postgresql_mobile
+    container_name: postgresql_ecocode_android
     networks:
       - sonarnet
     volumes:
