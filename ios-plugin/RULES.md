@@ -14,7 +14,7 @@ Only one rule have been already implemented in the plugin. Table of unimplemente
 | ESOB001 | Disabled Location Updates Pause | Swift |
 | ESOB002 | Thrifty Geolocation | Swift | |
 | ESOB003 | Motion Sensor Update Rate | Swift | |
-| ESOB004 | Disabled Dark Mode | Plist | Support of Plist (XML) scanning is mandatory |
+| ESOB004 | Disabled Dark Mode | Xml | Plist scanning |
 | ESOB005 | Brightness Override | Swift | |
 | ESOB006 | Torch-free | Swift | |
 
