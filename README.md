@@ -12,8 +12,8 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 
 2 mobile technologies are supported by the plugin right now:
 
-- [Android](android-plugin/)
-- [iOS](ios-plugin) <sub>no rules yet</sub>
+-   [x] [Android](android-plugin/)
+-   [x] [iOS](ios-plugin) <sub>NEW</sub>
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
