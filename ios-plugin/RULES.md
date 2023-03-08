@@ -1,0 +1,23 @@
+# iOS-specific Rules
+
+iOS-specific rules rely on a multi-scope scanning, including Swift source files, Plist files and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#ios-platform).
+
+### Environment
+
+Only one rule have been already implemented in the plugin. Table of unimplemented rules below:
+
+| # | **Rule Name**      |     **Scanner**     |      **Observation**     |
+|---|:----------------|:-------------:|:-------------:|
+| EIDL002 | Rigid Alarm | Swift | |
+| EPOW001 | Charge Awareness | Swift | |
+| EPOW002 | Save Mode Awareness | Swift | |
+| ESOB001 | Disabled Location Updates Pause | Swift |
+| ESOB002 | Thrifty Geolocation | Swift | |
+| ESOB003 | Motion Sensor Update Rate | Swift | |
+| ESOB004 | Disabled Dark Mode | Plist | Support of Plist (XML) scanning is mandatory |
+| ESOB005 | Brightness Override | Swift | |
+| ESOB006 | Torch-free | Swift | |
+
+### Social
+
+No rule has been implemented so far in the plugin.
