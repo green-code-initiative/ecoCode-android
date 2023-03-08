@@ -11,7 +11,7 @@
     <artifactId>ecodecode-sonar-ios-plugin</artifactId>
     <packaging>sonar-plugin</packaging>
 
-    <name>ecoCode IOS plugin</name>
+    <name>ecoCode iOS plugin</name>
 	<description>Help the earth, adopt this green plugin for your applications</description>
 
     <dependencies>
@@ -29,7 +29,7 @@
                 <artifactId>sonar-packaging-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <pluginKey>${project.artifactId}</pluginKey>
+                    <pluginKey>ecocodeios</pluginKey>
                     <pluginName>${project.name}</pluginName>
                     <pluginClass>io.ecocode.ios.EcoCodeIOSPlugin</pluginClass>
                     <sonarQubeMinVersion>${sonarqube.version}</sonarQubeMinVersion>
