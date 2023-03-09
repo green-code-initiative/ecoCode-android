@@ -3,6 +3,7 @@ services:
   sonar:
     build:
       dockerfile: Dockerfile
+      context: .
     container_name: sonar_ecocode-mobile
     ports:
       - "9000:9000"
