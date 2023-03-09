@@ -99,6 +99,41 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
         assertSingleViolation(SOURCE,8, 'targetSdkVersion')
     }
 
+
+    @Test
+    void test_SdkRange_Short_SingleViolation() {
+        final SOURCE = '''
+           android {
+                compileSdk 32
+
+                defaultConfig {
+                    applicationId "com.example.sampleForSonar"
+                    minSdk 26
+                    targetSdk 31
+                    versionCode 1
+                    versionName "1.0"
+
+                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled false
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
+                    }
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                buildFeatures {
+                    viewBinding true
+                }
+            }
+        '''
+        assertSingleViolation(SOURCE,8, 'targetSdk')
+    }
+
     @Override
     protected SupportedVersionRangeRule createRule() {
         new SupportedVersionRangeRule()

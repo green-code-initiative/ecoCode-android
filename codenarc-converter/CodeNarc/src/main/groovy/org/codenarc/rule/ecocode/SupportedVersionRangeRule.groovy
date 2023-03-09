@@ -22,7 +22,7 @@ import org.codenarc.rule.AbstractAstVisitorRule
 import org.codenarc.util.AstUtil
 
 /**
- * When looking at the minSdkVersion and targetSdkVersion attributes for the <uses-sdk> in the AndroidManifest.xml file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases.
+ * When looking at the minSdkVersion and targetSdkVersion or minSdk and targetSdk attributes for the <uses-sdk> in the AndroidManifest.xml file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases.
  *
  * @author Leboulanger Mickael
  */
@@ -31,7 +31,9 @@ class SupportedVersionRangeRule extends AbstractAstVisitorRule {
     String name = 'SupportedVersionRange'
     int priority = 2
     int minSdkVersion = 0
+    int minSdk = 0
     int targetSdkVersion = 0
+    int targetSdk = 0
     int threshold = 4 // Value used to compare minSdkVersion and targetSdkVersion
     Class astVisitorClass = SupportedVersionRangeAstVisitor
 }
@@ -41,12 +43,18 @@ class SupportedVersionRangeAstVisitor extends AbstractAstVisitor {
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {
         def methodName = ((ConstantExpression) methodCallExpression.getMethod()).getValue()
-        if (methodName == 'minSdkVersion' || methodName == 'targetSdkVersion') {
+        if (methodName == 'minSdkVersion' || methodName == 'targetSdkVersion' || methodName == 'minSdk' || methodName == 'targetSdk') {
             def arguments = AstUtil.getArgumentsValue(methodCallExpression.getArguments())
+
             if (arguments.size() == 1) {
                 rule[methodName] = arguments.get(0)
             }
+
             if ((rule.minSdkVersion && rule.targetSdkVersion) && rule.targetSdkVersion - rule.minSdkVersion > rule.threshold) {
+                addViolation(methodCallExpression, getViolationMessage())
+            }
+
+            if ((rule.minSdk && rule.targetSdk) && rule.targetSdk - rule.minSdk > rule.threshold) {
                 addViolation(methodCallExpression, getViolationMessage())
             }
         }
