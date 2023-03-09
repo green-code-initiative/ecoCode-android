@@ -221,7 +221,7 @@
 				<artifactId>sonar-packaging-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<configuration>
-					<pluginKey>${project.artifactId}</pluginKey>
+					<pluginKey>ecocodeandroid</pluginKey>
 					<pluginName>${project.name}</pluginName>
 					<pluginClass>io.ecocode.EcoCodeRulesPlugin</pluginClass>
 					<sonarLintSupported>true</sonarLintSupported>
