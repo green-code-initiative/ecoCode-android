@@ -43,7 +43,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class GroovySonarWayProfileTest {
 
     @Test
-    public void shouldCreateSonarWayProfile() {
+    public void shouldCreateSonarWayProfile() throws ParserConfigurationException, IOException, SAXException {
         ValidationMessages messages = ValidationMessages.create();
 
         GroovySonarWayProfile profileDef = new GroovySonarWayProfile();
@@ -57,15 +57,11 @@ public class GroovySonarWayProfileTest {
         File profile_default = new File("src/main/resources/org/sonar/plugins/groovy/rules.xml");
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         DocumentBuilder db;
-        try {
-            db = dbf.newDocumentBuilder();
-            Document doc = db.parse(profile_default);
-            doc.getDocumentElement().normalize();
-            NodeList rule = doc.getElementsByTagName("rule");
-            assertThat(activeRules).as("Expected number of rules in profile").hasSize(rule.getLength());
-        } catch (ParserConfigurationException | SAXException | IOException e) {
-            e.printStackTrace();
-        }
+        db = dbf.newDocumentBuilder();
+        Document doc = db.parse(profile_default);
+        doc.getDocumentElement().normalize();
+        NodeList ruleList = doc.getElementsByTagName("rule");
+        assertThat(activeRules).as("Expected number of rules in profile").hasSize(ruleList.getLength());
         assertThat(profile.name()).isEqualTo(Groovy.PROFILE_NAME);
 
         // Check that we use severity from the read rule and not default one.
