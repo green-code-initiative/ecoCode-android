@@ -3,6 +3,6 @@
 .*
 target
 *.iml
-lib/*.jar
+lib
 bin
 dependency-reduced-pom.xml
