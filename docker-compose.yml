@@ -18,11 +18,11 @@ services:
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
     volumes:
       - type: bind
-        source: ./android-plugin/target/ecocode-android-0.2.0-SNAPSHOT.jar
-        target: /opt/sonarqube/extensions/plugins/ecocode-android-0.2.0-SNAPSHOT.jar
+        source: ./android-plugin/target/ecocode-android-1.1.0-SNAPSHOT.jar
+        target: /opt/sonarqube/extensions/plugins/ecocode-android-1.1.0-SNAPSHOT.jar
       - type: bind
-        source: ./ios-plugin/sonar-ios-plugin/target/ecodecode-sonar-ios-plugin-0.2.0-SNAPSHOT.jar
-        target: /opt/sonarqube/extensions/plugins/ecodecode-sonar-ios-plugin-0.2.0-SNAPSHOT.jar
+        source: ./ios-plugin/sonar-ios-plugin/target/ecodecode-sonar-ios-plugin-1.1.0-SNAPSHOT.jar
+        target: /opt/sonarqube/extensions/plugins/ecodecode-sonar-ios-plugin-1.1.0-SNAPSHOT.jar
       - "logs:/opt/sonarqube/logs"
       - "data:/opt/sonarqube/data"
 
