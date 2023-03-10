@@ -11,9 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Fix plugin iOS release
-
 ### Deleted
+
+## [1.0.1] - 2023-03-10
+
+### Changed
+
+- Fix plugin iOS release
 
 ## [1.0.0] - 2023-03-10
 
@@ -56,7 +60,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First official release of ecocode plugins : android plugin
 
-[unreleased]: https://github.com/green-code-initiative/ecoCode/compare/v1.0.0...HEAD
+[unreleased]: https://github.com/green-code-initiative/ecoCode/compare/v1.0.1...HEAD
+
+[1.0.1]: https://github.com/green-code-initiative/ecoCode/releases/tag/v1.0.1
 
 [1.0.0]: https://github.com/green-code-initiative/ecoCode/releases/tag/v1.0.0
 
