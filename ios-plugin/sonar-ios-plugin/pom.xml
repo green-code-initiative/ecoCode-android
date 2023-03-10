@@ -8,7 +8,7 @@
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ecodecode-sonar-ios-plugin</artifactId>
+    <artifactId>ecocode-sonar-ios-plugin</artifactId>
     <packaging>sonar-plugin</packaging>
 
     <name>ecoCode iOS plugin</name>
