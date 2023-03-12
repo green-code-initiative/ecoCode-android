@@ -6,3 +6,5 @@ target
 lib
 bin
 dependency-reduced-pom.xml
+
+tool_start_withtoken.sh
