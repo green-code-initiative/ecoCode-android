@@ -12,8 +12,8 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 
 2 mobile technologies are supported by the plugin right now:
 
--   [x] [Android](android-plugin/)
--   [x] [iOS](ios-plugin) <sub>NEW</sub>
+- [x] [Android](android-plugin/)
+- [x] [iOS](ios-plugin) <sub>NEW</sub>
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
@@ -27,8 +27,6 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
 [![Solocal / PagesJaunes](android-plugin/docs/logoSolocal.png)](https://www.pagesjaunes.fr)
 [![inside|app](ios-plugin/docs/logoInsideApp.jpg)](https://www.insideapp.fr/)
-
-
 
 📢 Cite this work
 ------------------
@@ -66,6 +64,7 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 |-----------------|----------------------------|
 | 0.0.+           | SonarQube 8.9.+ LTS to 9.3 |
 | 0.1.+           | SonarQube 9.4.+ LTS to 9.9 |
+| 1.0.+           | SonarQube 9.4.+ LTS to 9.9 |
 
 ☕ Plugin Java part compatibility
 ------------------
@@ -74,3 +73,4 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 |------------------|--------------|
 | 0.0.+            | 11 / 17      |
 | 0.1.+            | 11 / 17      |
+| 1.0.+            | 11 / 17      |
