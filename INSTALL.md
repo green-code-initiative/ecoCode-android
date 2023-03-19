@@ -1,12 +1,17 @@
-- [Installation notes / requirements](#installation-notes--requirements)
-- [Project structure](#project-structure)
-- [Howto build the SonarQube ecoCode plugins](#howto-build-the-sonarqube-ecocode-plugins)
-  - [Preliminary steps (only Android)](#preliminary-steps-only-android)
+- [Common installation notes / requirements](#common-installation-notes--requirements)
+- [Special points for Mobile plugins](#special-points-for-mobile-plugins)
+  - [Project structure](#project-structure)
+  - [Howto build the SonarQube ecoCode plugins](#howto-build-the-sonarqube-ecocode-plugins)
+    - [Preliminary steps (only Android)](#preliminary-steps-only-android)
+    - [Others steps](#others-steps)
 
-Installation notes / requirements
----------------------------------
+Common installation notes / requirements
+========================================
 
 Please read common [INSTALL.md](https://github.com/green-code-initiative/ecoCode-common/blob/main/doc/INSTALL.md) in `ecoCode-common` repository.
+
+Special points for Mobile plugins
+=================================
 
 Project structure
 -----------------
@@ -44,3 +49,7 @@ Please build CodeNarc (Gradle 6.9.2, Java 11), then add this custom-built CodeNa
 # Windows
 tool_prepare-codenarc.bat
 ```
+
+### Others steps
+
+please check above common installation notes.
