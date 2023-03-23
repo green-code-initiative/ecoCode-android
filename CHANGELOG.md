@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Home page URL for plugins (for display on SonarQube administration page)
+- add `eco-design` tag on all rules on Java, PHP, Python and javascript plugins
+
 ### Changed
 
 ### Deleted
