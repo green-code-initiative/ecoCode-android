@@ -12,6 +12,7 @@
 
     <name>ecoCode iOS plugin</name>
     <description>Help the earth, adopt this green plugin for your applications</description>
+    <url>https://github.com/green-code-initiative/ecoCode-mobile/tree/main/ios-plugin</url>
 
     <dependencies>
         <dependency>
