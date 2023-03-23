@@ -11,7 +11,8 @@
         "tags": [
             "ecocode",
             "environment",
-            "idleness"
+            "idleness",
+            "eco-design"
         ],
         "type": "CODE_SMELL"
     }
