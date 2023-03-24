@@ -10,7 +10,8 @@
     "bottleneck",
     "environment",
     "ecocode",
-    "android"
+    "android",
+    "eco-design"
   ],
   "defaultSeverity": "Minor"
 }

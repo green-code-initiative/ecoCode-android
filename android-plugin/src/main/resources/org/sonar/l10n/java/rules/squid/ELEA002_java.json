@@ -10,7 +10,8 @@
     "leakage",
     "environment",
     "ecocode",
-    "android"
+    "android",
+    "eco-design"
   ],
   "defaultSeverity": "Critical"
 }

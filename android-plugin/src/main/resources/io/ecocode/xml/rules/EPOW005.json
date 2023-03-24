@@ -10,7 +10,8 @@
     "power",
     "environment",
     "ecocode",
-    "android"
+    "android",
+    "eco-design"
   ],
   "defaultSeverity": "Info"
 }
