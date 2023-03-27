@@ -1,4 +1,4 @@
-FROM maven:3-openjdk-11-slim AS builder
+FROM maven:3.8-openjdk-11-slim AS builder
 
 COPY . /usr/src/ecocode
 
