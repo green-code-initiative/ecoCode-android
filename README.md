@@ -30,7 +30,6 @@ docker run -ti --rm \
        -v sq_ecocode_mobile_data:/opt/sonarqube/data \
        -p 9000:9000 \
        --name sonarqube-ecocode-mobile  \
-       --pull \
        ghcr.io/green-code-initiative/sonarqube-ecocode-mobile:latest
 ```
 
