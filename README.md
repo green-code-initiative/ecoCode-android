@@ -19,6 +19,23 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 
 <sub>The custom GUI above is reserved to educational purpose only.</sub>
 
+🚀 Quickstart
+-------------
+
+A SonarQube container image with ecoCode mobile embedded exists !
+
+```bash
+docker run -ti --rm \
+       -v sq_ecocode_mobile_logs:/opt/sonarqube/logs \
+       -v sq_ecocode_mobile_data:/opt/sonarqube/data \
+       -p 9000:9000 \
+       --name sonarqube-ecocode-mobile  \
+       ghcr.io/green-code-initiative/sonarqube-ecocode-mobile:latest
+```
+
+Wait a little bit during first start initialization, and go to [http://localhost:9000](http://localhost:9000). Default credentials are `admin`/`admin`
+
+
 🤝 Partners
 ------------
 
