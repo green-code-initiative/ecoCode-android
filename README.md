@@ -3,20 +3,38 @@
 
 Mobile apps running on top of battery-limited devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode mobile`, the version of ecoCode project fully dedicated to mobile platforms. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
 
-ecoCode mobile is based on evolving catalogs of [best practices for Android](https://olegoaer.perso.univ-pau.fr/android-energy-smells/), and iOS (soon). A SonarQube plugin then implement these catalogs as rules for scanning your projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (in french) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf) (in english).
+ecoCode mobile is based on evolving catalogs of [best practices](https://github.com/cnumr/best-practices-mobile), for Android and iOS. A SonarQube plugin then implements these catalogs as rules for scanning your projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (in french) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf) (in english).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 🌿 SonarQube Plugin
 -------------------
 
-1 mobile technology is supported by the plugin right now:
+2 mobile technologies are supported by the plugin right now:
 
-- [Android](android-plugin/)
+- [x] [Android](android-plugin/)
+- [x] [iOS](ios-plugin) <sub>NEW</sub>
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
-<sub>The custom GUI depicted above is not part of this open source project. Reserved to educational purpose only.</sub>
+<sub>The custom GUI above is reserved to educational purpose only.</sub>
+
+🚀 Quickstart
+-------------
+
+A SonarQube container image with ecoCode mobile embedded exists !
+
+```bash
+docker run -ti --rm \
+       -v sq_ecocode_mobile_logs:/opt/sonarqube/logs \
+       -v sq_ecocode_mobile_data:/opt/sonarqube/data \
+       -p 9000:9000 \
+       --name sonarqube-ecocode-mobile  \
+       ghcr.io/green-code-initiative/sonarqube-ecocode-mobile:latest
+```
+
+Wait a little bit during first start initialization, and go to [http://localhost:9000](http://localhost:9000). Default credentials are `admin`/`admin`
+
 
 🤝 Partners
 ------------
@@ -25,6 +43,7 @@ ecoCode mobile is based on evolving catalogs of [best practices for Android](htt
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
 [![Solocal / PagesJaunes](android-plugin/docs/logoSolocal.png)](https://www.pagesjaunes.fr)
+[![inside|app](ios-plugin/docs/logoInsideApp.jpg)](https://www.insideapp.fr/)
 
 📢 Cite this work
 ------------------
@@ -53,7 +72,7 @@ If you use ecoCode in an academic work we would be really glad if you cite our s
 🛒 Distribution
 ---------------
 
-Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode/releases).
+Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode-mobile/releases).
 
 🧩 Plugins version compatibility
 ------------------
@@ -61,4 +80,14 @@ Ready to use binaries are available [from GitHub](https://github.com/green-code-
 | Plugins Version | SonarQube version          |
 |-----------------|----------------------------|
 | 0.0.+           | SonarQube 8.9.+ LTS to 9.3 |
-| 0.1.+           | SonarQube 9.4.+ LTS to 9.8 |
+| 0.1.+           | SonarQube 9.4.+ LTS to 9.9 |
+| 1.0.+           | SonarQube 9.4.+ LTS to 9.9 |
+
+☕ Plugin Java part compatibility
+------------------
+
+| Plugins Version  | Java version |
+|------------------|--------------|
+| 0.0.+            | 11 / 17      |
+| 0.1.+            | 11 / 17      |
+| 1.0.+            | 11 / 17      |

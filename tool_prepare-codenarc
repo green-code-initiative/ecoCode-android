@@ -8,5 +8,6 @@ cd codenarc-converter/CodeNarc
 ./gradlew build -x test
 
 # Deploy to local repository
-mvn -B install:install-file -Dfile=build/libs/CodeNarc-${codenarcVersion}.jar -DgroupId=org.codenarc -DartifactId=CodeNarc -Dversion=${codenarcVersion} -Dpackaging=jar
+cd ..
+mvn -B install:install-file -Dfile=CodeNarc/build/libs/CodeNarc-${codenarcVersion}.jar -DgroupId=org.codenarc -DartifactId=CodeNarc -Dversion=${codenarcVersion} -Dpackaging=jar
 

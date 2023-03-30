@@ -10,7 +10,8 @@
     "optimized-api",
     "environment",
     "ecocode",
-    "android"
+    "android",
+    "eco-design"
   ],
   "defaultSeverity": "Major"
 }

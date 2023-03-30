@@ -4,7 +4,7 @@
 
 	<groupId>io.ecocode</groupId>
 	<artifactId>ecocode-mobile-parent</artifactId>
-	<version>0.1.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>ecoCode Mobile Sonar Plugins Project</name>
@@ -59,6 +59,9 @@
 		<junit.version>4.13.2</junit.version>
 		<junit.jupiter.version>5.9.1</junit.jupiter.version>
 		<assertJ.version>3.23.1</assertJ.version>
+
+		<sonar.exclusions>**/codenarc-converter/**,**/*.groovy,**/android-plugin/src/test/**,**/*.dummy,**/generated/**/*.*</sonar.exclusions>
+		<sonar.coverage.exclusions>**/generated/**/*.*</sonar.coverage.exclusions>
 
 	</properties>
 
@@ -166,6 +169,7 @@
 	<modules>
 		<module>codenarc-converter</module>
 		<module>android-plugin</module>
+		<module>ios-plugin</module>
 	</modules>
 	
 </project>

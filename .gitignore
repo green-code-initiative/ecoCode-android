@@ -1,10 +1,10 @@
 !.gitignore
 !.github/**/*.*
-
 .*
-
 target
 *.iml
-lib/*.jar
+lib
 bin
 dependency-reduced-pom.xml
+
+tool_start_withtoken.sh

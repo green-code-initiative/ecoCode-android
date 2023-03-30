@@ -1,8 +1,10 @@
 version: "3.3"
 services:
   sonar:
-    image: sonarqube:9.8-community
-    container_name: sonar_mobile
+    build:
+      dockerfile: Dockerfile
+      context: .
+    container_name: sonar_ecocode-mobile
     ports:
       - "9000:9000"
     networks:
@@ -16,15 +18,17 @@ services:
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: 'true'
     volumes:
       - type: bind
-        source: ./android-plugin/target/ecocode-android-0.1.1-SNAPSHOT.jar
-        target: /opt/sonarqube/extensions/plugins/ecocode-android-0.1.1-SNAPSHOT.jar
-      - "extensions:/opt/sonarqube/extensions"
+        source: ./android-plugin/target/ecocode-android-1.0.2-SNAPSHOT.jar
+        target: /opt/sonarqube/extensions/plugins/ecocode-android-1.0.2-SNAPSHOT.jar
+      - type: bind
+        source: ./ios-plugin/sonar-ios-plugin/target/ecocode-sonar-ios-plugin-1.0.2-SNAPSHOT.jar
+        target: /opt/sonarqube/extensions/plugins/ecocode-sonar-ios-plugin-1.0.2-SNAPSHOT.jar
       - "logs:/opt/sonarqube/logs"
       - "data:/opt/sonarqube/data"
 
   db:
     image: postgres:12
-    container_name: postgresql_mobile
+    container_name: postgresql_ecocode-mobile
     networks:
       - sonarnet
     volumes:

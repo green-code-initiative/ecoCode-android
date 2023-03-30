@@ -10,7 +10,8 @@
     "sobriety",
     "environment",
     "ecocode",
-    "android"
+    "android",
+    "eco-design"
   ],
   "defaultSeverity": "Major"
 }

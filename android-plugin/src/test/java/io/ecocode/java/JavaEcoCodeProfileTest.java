@@ -21,7 +21,7 @@ public class JavaEcoCodeProfileTest {
 
         assertThat(profile.language()).isEqualTo(Java.KEY);
         assertThat(profile.name()).isEqualTo(Java.PROFILE_NAME);
-        assertThat(profile.rules()).hasSameSizeAs(JavaCheckList.getJavaChecks());
+        assertThat(profile.rules()).hasSameSizeAs(JavaCheckList.getChecks());
         assertThat(validation.hasErrors()).isFalse();
     }
 }
