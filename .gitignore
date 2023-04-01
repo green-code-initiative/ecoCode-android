@@ -1,10 +1,17 @@
-!.gitignore
-!.github/**/*.*
+# Ignore all files and folders starting with ".", except a few exceptions
 .*
+!.gitignore
+!.gitattributes
+!.github/
+
+# Ignore generated files
 target
-*.iml
 lib
 bin
 dependency-reduced-pom.xml
 
+# Ignore IDE files
+*.iml
+
+# Other ignores
 tool_start_withtoken.sh

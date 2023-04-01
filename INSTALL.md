@@ -44,7 +44,7 @@ Please build CodeNarc (Gradle 6.9.2, Java 11), then add this custom-built CodeNa
 
 ```sh
 # Unix or MacOS
-./tool_prepare-codenarc
+./tool_prepare-codenarc.sh
 
 # Windows
 tool_prepare-codenarc.bat
