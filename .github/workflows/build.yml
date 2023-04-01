@@ -37,7 +37,7 @@ jobs:
       - name: Prepare CodeNarc dependency
         working-directory: .
         run: |
-          ./tool_prepare-codenarc
+          ./tool_prepare-codenarc.sh
       - name: Build and analyze
         working-directory: .
         env:

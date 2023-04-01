@@ -28,7 +28,7 @@ jobs:
         uses: ffurrer2/extract-release-notes@v1
       - name: Prepare CodeNarc dependency
         working-directory: .
-        run: ./tool_prepare-codenarc
+        run: ./tool_prepare-codenarc.sh
       - name: Build project
         run: mvn -e -B clean package -DskipTests
       - name: Create release
