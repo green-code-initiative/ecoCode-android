@@ -1,6 +1,6 @@
 # iOS-specific Rules
 
-iOS-specific rules rely on a multi-scope scanning, including Swift source files, Plist files and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#ios-platform).
+iOS-specific rules rely on a multi-scope scanning, including Swift source files, Plist files and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#-ios-platform).
 
 ### Environment
 
