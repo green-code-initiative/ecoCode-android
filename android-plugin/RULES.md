@@ -34,4 +34,5 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
 | SGDP001 | Google consent | Java | "Good smell" spotted here |
-| SINC001 | Aging devices   | Gradle  |  |
+| SINC001 | Aging devices   | Gradle |  |
+| SINC002 | Grammatical gender | File System | "Good smell" spotted here |
