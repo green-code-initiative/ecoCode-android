@@ -22,6 +22,7 @@ import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import io.ecocode.ios.checks.RuleCheck;
 import io.ecocode.ios.swift.checks.idleness.IdleTimerDisabledCheck;
 import io.ecocode.ios.swift.checks.sobriety.BrightnessOverrideCheck;
+import io.ecocode.ios.swift.checks.power.ChargeAwarenessCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.sonar.api.batch.sensor.SensorContext;
 
@@ -37,6 +38,7 @@ public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
         // Load checks
         checks.add(new IdleTimerDisabledCheck());
         checks.add(new BrightnessOverrideCheck());
+        checks.add(new ChargeAwarenessCheck());
 
     }
 

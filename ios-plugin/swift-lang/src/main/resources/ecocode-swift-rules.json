@@ -32,5 +32,22 @@
             "eco-design"
         ],
         "type": "CODE_SMELL"
+    },
+    {
+        "key": "EPOW001",
+        "name": "Charge Awareness",
+        "severity": "INFO",
+        "description": "Monitoring power changes and customizing behavior depending on battery level is a good practice.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "0min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "power",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
     }
 ]
