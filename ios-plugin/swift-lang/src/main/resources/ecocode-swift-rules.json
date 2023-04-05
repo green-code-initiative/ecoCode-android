@@ -17,7 +17,24 @@
         "type": "CODE_SMELL"
     },
     {
-        "key": "EIDL003",
+        "key": "EPOW001",
+        "name": "Charge Awareness",
+        "severity": "INFO",
+        "description": "Monitoring power changes and customizing behavior depending on battery level is a good practice.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "0min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "power",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
+    },
+    {
+        "key": "ESOB001",
         "name": "Location updates pause disabled",
         "severity": "MAJOR",
         "description": "Do not disable location updates pause, unless absolutely necessary.",
