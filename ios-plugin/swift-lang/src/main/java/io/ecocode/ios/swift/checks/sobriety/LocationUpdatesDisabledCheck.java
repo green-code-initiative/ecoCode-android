@@ -28,7 +28,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
  */
 public class LocationUpdatesDisabledCheck extends RuleCheck {
     public LocationUpdatesDisabledCheck() {
-        super("EIDL003", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
+        super("ESOB001", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
     }
 
     @Override
