@@ -21,7 +21,7 @@ import io.ecocode.ios.antlr.AntlrContext;
 import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import io.ecocode.ios.checks.RuleCheck;
 import io.ecocode.ios.swift.checks.idleness.IdleTimerDisabledCheck;
-import io.ecocode.ios.swift.checks.Brightness.BrightnessOverrideCheck;
+import io.ecocode.ios.swift.checks.sobriety.BrightnessOverrideCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.sonar.api.batch.sensor.SensorContext;
 

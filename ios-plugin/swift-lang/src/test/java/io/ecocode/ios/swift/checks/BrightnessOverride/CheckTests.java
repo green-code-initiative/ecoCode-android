@@ -30,7 +30,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CheckTests {
 
     @Test
-    public void BrightnessOverride_trigger() {
+    public void brightnessOverrideTrigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/BrightnessOverride_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
         Optional<Issue> issue = context.allIssues().stream().findFirst();
@@ -43,7 +43,7 @@ public class CheckTests {
     }
 
     @Test
-    public void idleTimerDisabled_no_trigger() {
+    public void idleTimerDisabledNoTrigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/BrightnessOverride_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
