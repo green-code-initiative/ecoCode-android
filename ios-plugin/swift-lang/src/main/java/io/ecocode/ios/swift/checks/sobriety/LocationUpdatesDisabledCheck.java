@@ -15,43 +15,29 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift;
+package io.ecocode.ios.swift.checks.sobriety;
 
-import io.ecocode.ios.antlr.AntlrContext;
-import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import io.ecocode.ios.checks.RuleCheck;
-import io.ecocode.ios.swift.checks.idleness.IdleTimerDisabledCheck;
-import io.ecocode.ios.swift.checks.sobriety.LocationUpdatesDisabledCheck;
+import io.ecocode.ios.swift.Swift;
+import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.sonar.api.batch.sensor.SensorContext;
 
-import java.util.ArrayList;
-import java.util.List;
 
-public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
-
-    private List<RuleCheck> checks = new ArrayList<>();
-
-    public EcoCodeSwiftVisitor() {
-
-        // Load checks
-        checks.add(new IdleTimerDisabledCheck());
-
-        checks.add(new LocationUpdatesDisabledCheck());
-
+/**
+ * Check the use of "CLLocationManager#pausesLocationUpdatesAutomatically" and triggers when set to false.
+ */
+public class LocationUpdatesDisabledCheck extends RuleCheck {
+    public LocationUpdatesDisabledCheck() {
+        super("EIDL003", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
     }
 
     @Override
     public void apply(ParseTree tree) {
-        for (RuleCheck check : checks) {
-            check.apply(tree);
-        }
-    }
-
-    @Override
-    public void fillContext(SensorContext context, AntlrContext antlrContext) {
-        for (RuleCheck check : checks) {
-            check.fillContext(context, antlrContext);
+        if (tree instanceof Swift5Parser.ExpressionContext) {
+            Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
+            if (id.getText().contains(".pausesLocationUpdatesAutomatically=false")) {
+                this.recordIssue(ruleId, id.getStart().getStartIndex());
+            }
         }
     }
 }

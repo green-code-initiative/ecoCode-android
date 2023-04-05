@@ -1,6 +1,7 @@
 {
   "name": "ecoCode",
   "ruleKeys": [
-    "EIDL001"
+    "EIDL001",
+    "EIDL003"
   ]
 }

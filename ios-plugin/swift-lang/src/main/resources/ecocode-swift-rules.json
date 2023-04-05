@@ -15,5 +15,22 @@
             "eco-design"
         ],
         "type": "CODE_SMELL"
+    },
+    {
+        "key": "EIDL003",
+        "name": "Location updates pause disabled",
+        "severity": "MAJOR",
+        "description": "Do not disable location updates pause, unless absolutely necessary.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "5min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "sobriety",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
     }
 ]
