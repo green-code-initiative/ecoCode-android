@@ -15,21 +15,30 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift;
+package io.ecocode.ios.swift.checks.Brightness;
 
-import org.junit.Test;
-import org.sonar.api.batch.sensor.internal.SensorContextTester;
+import io.ecocode.ios.swift.Swift;
+import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
+import io.ecocode.ios.checks.RuleCheck;
+import org.antlr.v4.runtime.tree.ParseTree;
 
-import static org.assertj.core.api.Assertions.assertThat;
+/**
+ * Check the use of "UIScreen.main.brightness" and triggers when set to 1.
+ */
+public class BrightnessOverrideCheck extends RuleCheck {
 
-public class SwiftSensorTest {
-
-    @Test
-    public void execute() {
-        SensorContextTester sensorContext = TestHelper.testFile("checks/BrightnessOverride_trigger.swift");
-        SwiftSensor sensor = new SwiftSensor();
-        sensor.execute(sensorContext);
-
-        assertThat(sensorContext.allIssues()).hasSize(1);
+    public BrightnessOverrideCheck() {
+        super("ESOB005", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
     }
+
+    @Override
+    public void apply(ParseTree tree) {
+
+    if (tree instanceof Swift5Parser.ExpressionContext) {
+        Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
+        if (id.getText().contains("UIScreen.main.brightness")) {
+            this.recordIssue(ruleId, id.getStart().getStartIndex());
+        }
+    }
+}
 }
