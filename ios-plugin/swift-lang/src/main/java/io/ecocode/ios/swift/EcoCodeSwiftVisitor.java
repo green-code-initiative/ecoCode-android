@@ -20,8 +20,6 @@ package io.ecocode.ios.swift;
 import io.ecocode.ios.antlr.AntlrContext;
 import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import io.ecocode.ios.checks.RuleCheck;
-import io.ecocode.ios.swift.checks.idleness.IdleTimerDisabledCheck;
-import io.ecocode.ios.swift.checks.power.ChargeAwarenessCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.reflections.Reflections;
 import org.sonar.api.batch.sensor.SensorContext;
@@ -71,5 +69,9 @@ public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
         for (RuleCheck check : checks) {
             check.fillContext(context, antlrContext);
         }
+    }
+
+    public List<RuleCheck> getChecks() {
+        return checks;
     }
 }
