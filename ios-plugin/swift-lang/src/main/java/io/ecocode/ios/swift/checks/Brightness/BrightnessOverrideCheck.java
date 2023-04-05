@@ -23,7 +23,7 @@ import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 /**
- * Check the use of "UIScreen.main.brightness" and triggers when set to 1.
+ * Check the use of "UIScreen.main.brightness" and triggers when set.
  */
 public class BrightnessOverrideCheck extends RuleCheck {
 
