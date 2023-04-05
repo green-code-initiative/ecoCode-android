@@ -17,27 +17,9 @@
  */
 package io.ecocode.ios.swift;
 
-import io.ecocode.ios.checks.RuleCheck;
-import org.junit.Test;
-import org.reflections.Reflections;
-import org.sonar.api.batch.sensor.internal.SensorContextTester;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
-import java.util.Set;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
-public class SwiftSensorTest {
-
-    @Test
-    public void execute() {
-        Reflections reflections = new Reflections("io.ecocode.ios.swift.checks");
-
-        Set<Class<? extends RuleCheck>> allClasses = reflections.getSubTypesOf(RuleCheck.class);
-
-        SensorContextTester sensorContext = TestHelper.testFile("checks/IdleTimerDisabled_trigger.swift");
-        SwiftSensor sensor = new SwiftSensor();
-        sensor.execute(sensorContext);
-
-        assertThat(sensorContext.allIssues()).hasSize(allClasses.size());
-    }
+@Retention(RetentionPolicy.RUNTIME)
+public @interface RegisterRule {
 }
