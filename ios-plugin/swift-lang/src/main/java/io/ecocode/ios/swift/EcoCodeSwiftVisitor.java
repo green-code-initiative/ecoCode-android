@@ -39,6 +39,8 @@ public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
         checks.add(new IdleTimerDisabledCheck());
         checks.add(new BrightnessOverrideCheck());
         checks.add(new ChargeAwarenessCheck());
+        checks.add(new MotionSensorUpdateRateCheck());
+
 
     }
 
