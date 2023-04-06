@@ -2,6 +2,7 @@
   "name": "ecoCode",
   "ruleKeys": [
     "EIDL001",
-    "EPOW001"
+    "EPOW001",
+    "ESOB005"
   ]
 }
