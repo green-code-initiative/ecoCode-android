@@ -20,7 +20,7 @@
         "key": "ESOB005",
         "name": "Brightness Override disabled",
         "severity": "MAJOR",
-        "description": "Do not force Brightness in your code , unless absolutely necessary.",
+        "description": "Do not force Brightness in your code, unless absolutely necessary.",
         "debt": {
             "function": "CONSTANT_ISSUE",
             "offset": "5min"
