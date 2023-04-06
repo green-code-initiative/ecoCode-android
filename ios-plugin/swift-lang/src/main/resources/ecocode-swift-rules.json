@@ -51,6 +51,23 @@
     "type": "CODE_SMELL"
   },
   {
+    "key": "ESOB002",
+    "name": "Thrifty Geolocation",
+    "severity": "MAJOR",
+    "description": "Adapt location accuracy and type to applications needs.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "5min"
+    },
+    "tags": [
+      "ecocode",
+      "environment",
+      "sobriety",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
     "key": "ESOB003",
     "name": "Motion Sensor Update Rate",
     "severity": "MAJOR",

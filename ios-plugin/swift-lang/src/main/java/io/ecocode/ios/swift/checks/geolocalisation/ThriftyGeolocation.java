@@ -17,6 +17,7 @@
  */
 package io.ecocode.ios.swift.checks.geolocalisation;
 
+import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
@@ -24,6 +25,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
 
+@RegisterRule
 public class ThriftyGeolocation extends RuleCheck {
 
     Swift5Parser.Import_declarationContext importTree = null;

@@ -17,12 +17,14 @@
  */
 package io.ecocode.ios.swift.checks.motionsensor;
 
+import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
+@RegisterRule
 public class MotionSensorUpdateRateCheck extends RuleCheck {
 
     Swift5Parser.Import_declarationContext importTree = null;
@@ -36,7 +38,6 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
 
     @Override
     public void apply(ParseTree tree) {
-        System.out.println(tree);
         if (tree instanceof Swift5Parser.Import_declarationContext) {
             Swift5Parser.Import_declarationContext id = (Swift5Parser.Import_declarationContext) tree;            
             if(id.getText().contains("CoreMotion")) {
