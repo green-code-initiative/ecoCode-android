@@ -34,6 +34,23 @@
         "type": "CODE_SMELL"
     },
     {
+        "key": "EIDL002",
+        "name": "Rigid Alarm",
+        "severity": "MAJOR",
+        "description": "Setting a tolerance for timers will allow them to fire later than the scheduled fire date.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "1min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "idleness",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
+    },
+    {
         "key": "EPOW001",
         "name": "Charge Awareness",
         "severity": "INFO",
