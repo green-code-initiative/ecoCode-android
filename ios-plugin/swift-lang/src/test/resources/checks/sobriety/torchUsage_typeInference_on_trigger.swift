@@ -10,6 +10,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 
         let device = AVCaptureDevice.default(for: AVMediaType.video)
         device.torchMode = AVCaptureTorchMode.on
+   
         return true
     }
 }

@@ -2,14 +2,10 @@
 <p>Turning on the torch mode programmatically must absolutely be avoided because the flashlight is one of the most energy-intensive component.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-    let device = AVCaptureDevice.default(for: AVMediaType.video)
-    device.torchMode = .on
+    AVCaptureTorchMode.on
 </pre>
 <pre>
-    let device = AVCaptureDevice.default(for: AVMediaType.video)
-    device.setTorchModeOn(level: AVCaptureDevice.maxAvailableTorchLevel / 2.0)
-</pre>
+    "setTorchModeOn(level: Float)"</pre>
 <pre>
-    let device = AVCaptureDevice.default(for: AVMediaType.video)
-    device.torchMode = AVCaptureTorchMode.on
+    "torchMode = .on"
 </pre>
