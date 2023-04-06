@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.BrightnessOverride;
+package io.ecocode.ios.swift.checks.sobriety;
 
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
@@ -27,7 +27,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckTests {
+public class BrightnessOverrideCheckTest {
 
     @Test
     public void brightnessOverrideTrigger() {

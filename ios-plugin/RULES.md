@@ -8,8 +8,6 @@ Only one rule have been already implemented in the plugin. Table of unimplemente
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
-| EIDL002 | Rigid Alarm | Swift | |
-| EPOW002 | Save Mode Awareness | Swift | |
 | ESOB004 | Disabled Dark Mode | Xml | Plist scanning |
 | ESOB006 | Torch-free | Swift | |
 

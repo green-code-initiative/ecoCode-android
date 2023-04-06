@@ -27,7 +27,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckTests {
+public class IdleTimerDisabledCheckTest {
 
     @Test
     public void idleTimerDisabled_trigger() {

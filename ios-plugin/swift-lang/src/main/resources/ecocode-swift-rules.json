@@ -17,10 +17,44 @@
     "type": "CODE_SMELL"
   },
   {
+    "key": "EIDL002",
+    "name": "Rigid Alarm",
+    "severity": "MAJOR",
+    "description": "Setting a tolerance for timers will allow them to fire later than the scheduled fire date.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "1min"
+    },
+    "tags": [
+      "ecocode",
+      "environment",
+      "idleness",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
     "key": "EPOW001",
     "name": "Charge Awareness",
     "severity": "INFO",
     "description": "Monitoring power changes and customizing behavior depending on battery level is a good practice.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "0min"
+    },
+    "tags": [
+      "ecocode",
+      "environment",
+      "power",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
+    "key": "EPOW002",
+    "name": "Save Mode Awareness",
+    "severity": "INFO",
+    "description": "Taking into account when the device is entering or exiting the power save mode is a good practice.",
     "debt": {
       "function": "CONSTANT_ISSUE",
       "offset": "0min"
