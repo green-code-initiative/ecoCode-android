@@ -17,6 +17,7 @@
  */
 package io.ecocode.ios.swift.checks.environment.sobriety;
 
+import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
@@ -25,6 +26,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 /**
  * Check the use of "AVCaptureTorchMode.on", "setTorchModeOn(level: Float)", or "torchMode = .on" and triggers when set to true.
  */
+@RegisterRule
 public class TorchFreeCheck extends RuleCheck {
 
     public TorchFreeCheck() {
