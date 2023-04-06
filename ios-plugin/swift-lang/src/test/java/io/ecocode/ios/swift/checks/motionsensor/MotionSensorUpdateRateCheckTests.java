@@ -1,5 +1,3 @@
-package io.ecocode.ios.swift.checks.geolocalisation;
-
 /*
  * ecoCode iOS plugin - Help the earth, adopt this green plugin for your applications
  * Copyright © 2022 Green code Initiative (https://www.ecocode.io/)
@@ -17,6 +15,7 @@ package io.ecocode.ios.swift.checks.geolocalisation;
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package io.ecocode.ios.swift.checks.motionsensor;
 
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
@@ -28,11 +27,11 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckTests {
+public class MotionSensorUpdateRateCheckTests {
 
     @Test
-    public void Geo_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geolocalisation_trigger.swift");
+    public void motionSensorRate_trigger() {
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/MotionSensorRate_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
         Optional<Issue> issue = context.allIssues().stream().findFirst();
         issue.ifPresent(i -> {
@@ -44,8 +43,8 @@ public class CheckTests {
     }
 
     @Test
-    public void Geo_no_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geo_no_trigger.swift");
+    public void motionSensorRate_no_trigger() {
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/MotionSensorRate_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
 }
