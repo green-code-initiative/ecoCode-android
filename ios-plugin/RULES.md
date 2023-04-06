@@ -11,7 +11,6 @@ Only one rule have been already implemented in the plugin. Table of unimplemente
 | ESOB002 | Thrifty Geolocation | Swift | |
 | ESOB003 | Motion Sensor Update Rate | Swift | |
 | ESOB004 | Disabled Dark Mode | Xml | Plist scanning |
-| ESOB006 | Torch-free | Swift | |
 | ESOB007 | Animation-free | Swift | |
 
 ### Social
