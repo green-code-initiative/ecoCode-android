@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.Geoloc;
+package io.ecocode.ios.swift.checks.motionsensor;
 
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;

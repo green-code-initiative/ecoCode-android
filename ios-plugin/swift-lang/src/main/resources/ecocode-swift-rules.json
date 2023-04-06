@@ -1,86 +1,87 @@
 [
-    {
-        "key": "EIDL001",
-        "name": "Idle timer disabled",
-        "severity": "MAJOR",
-        "description": "Do not disable idle timer, unless absolutely necessary.",
-        "debt": {
-            "function": "CONSTANT_ISSUE",
-            "offset": "5min"
-        },
-        "tags": [
-            "ecocode",
-            "environment",
-            "sobriety",
-            "eco-design"
-        ],
-        "type": "CODE_SMELL"
+  {
+    "key": "EIDL001",
+    "name": "Idle timer disabled",
+    "severity": "MAJOR",
+    "description": "Do not disable idle timer, unless absolutely necessary.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "5min"
     },
-    {
-        "key": "ESOB005",
-        "name": "Brightness Override disabled",
-        "severity": "MAJOR",
-        "description": "Do not force Brightness in your code, unless absolutely necessary.",
-        "debt": {
-            "function": "CONSTANT_ISSUE",
-            "offset": "5min"
-        },
-        "tags": [
-            "ecocode",
-            "environment",
-            "sobriety",
-            "eco-design"
-        ],
-        "type": "CODE_SMELL"
+    "tags": [
+      "ecocode",
+      "environment",
+      "sobriety",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
+    "key": "EPOW001",
+    "name": "Charge Awareness",
+    "severity": "INFO",
+    "description": "Monitoring power changes and customizing behavior depending on battery level is a good practice.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "0min"
     },
-    {
-        "key": "EPOW001",
-        "name": "Charge Awareness",
-        "severity": "INFO",
-        "description": "Monitoring power changes and customizing behavior depending on battery level is a good practice.",
-        "debt": {
-            "function": "CONSTANT_ISSUE",
-            "offset": "0min"
-        },
-        "tags": [
-            "ecocode",
-            "environment",
-            "power",
-            "eco-design"
-        ],
-        "type": "CODE_SMELL"
-    },{
-        "key": "ESOB003",
-        "name": "GEO",
-        "severity": "MAJOR",
-        "description": "GEO",
-        "debt": {
-            "function": "CONSTANT_ISSUE",
-            "offset": "5min"
-        },
-        "tags": [
-            "ecocode",
-            "environment",
-            "idleness",
-            "eco-design"
-        ],
-        "type": "CODE_SMELL"
+    "tags": [
+      "ecocode",
+      "environment",
+      "power",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
+    "key": "ESOB001",
+    "name": "Location updates pause disabled",
+    "severity": "MAJOR",
+    "description": "Do not disable location updates pause, unless absolutely necessary.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "5min"
     },
-    {
-        "key": "ESOB001",
-        "name": "Location updates pause disabled",
-        "severity": "MAJOR",
-        "description": "Do not disable location updates pause, unless absolutely necessary.",
-        "debt": {
-            "function": "CONSTANT_ISSUE",
-            "offset": "5min"
-        },
-        "tags": [
-            "ecocode",
-            "environment",
-            "sobriety",
-            "eco-design"
-        ],
-        "type": "CODE_SMELL"
-    }
+    "tags": [
+      "ecocode",
+      "environment",
+      "sobriety",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
+    "key": "ESOB003",
+    "name": "Motion Sensor Update Rate",
+    "severity": "MAJOR",
+    "description": "Set appropriate motion sensor update rates for the application's needs",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "5min"
+    },
+    "tags": [
+      "ecocode",
+      "environment",
+      "sobriety",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  },
+  {
+    "key": "ESOB005",
+    "name": "Brightness Override disabled",
+    "severity": "MAJOR",
+    "description": "Do not force Brightness in your code, unless absolutely necessary.",
+    "debt": {
+      "function": "CONSTANT_ISSUE",
+      "offset": "5min"
+    },
+    "tags": [
+      "ecocode",
+      "environment",
+      "sobriety",
+      "eco-design"
+    ],
+    "type": "CODE_SMELL"
+  }
 ]

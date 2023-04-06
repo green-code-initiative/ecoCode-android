@@ -1,4 +1,4 @@
-package io.ecocode.ios.swift.checks.Geoloc;
+package io.ecocode.ios.swift.checks.geolocalisation;
 
 /*
  * ecoCode iOS plugin - Help the earth, adopt this green plugin for your applications
@@ -28,12 +28,11 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckTest_geo {
+public class CheckTests {
 
     @Test
     public void Geo_trigger() {
-        System.out.println("you should be triggeredd youuuuuuuu");
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/Geo_trigger.swift");
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geolocalisation_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
         Optional<Issue> issue = context.allIssues().stream().findFirst();
         issue.ifPresent(i -> {
@@ -43,11 +42,10 @@ public class CheckTest_geo {
             assertThat(location.textRange().start().line()).isEqualTo(11);
         });
     }
-/* 
+
     @Test
     public void Geo_no_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/Geo_no_trigger.swift");
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geo_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
-*/
 }

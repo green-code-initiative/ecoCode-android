@@ -1,6 +1,6 @@
 import Foundation
 import SwiftUI
-import CoreMotion
+import CLLocationManager
 
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
@@ -9,8 +9,9 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
 
-        // Should trigger
+        // Should not trigger
         
+        desiredAccuracy
 
         return true
     }
