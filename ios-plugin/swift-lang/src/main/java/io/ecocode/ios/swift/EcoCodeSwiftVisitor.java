@@ -20,28 +20,41 @@ package io.ecocode.ios.swift;
 import io.ecocode.ios.antlr.AntlrContext;
 import io.ecocode.ios.antlr.ParseTreeItemVisitor;
 import io.ecocode.ios.checks.RuleCheck;
-import io.ecocode.ios.swift.checks.idleness.IdleTimerDisabledCheck;
-import io.ecocode.ios.swift.checks.sobriety.LocationUpdatesDisabledCheck;
-import io.ecocode.ios.swift.checks.sobriety.BrightnessOverrideCheck;
-import io.ecocode.ios.swift.checks.power.ChargeAwarenessCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.reflections.Reflections;
 import org.sonar.api.batch.sensor.SensorContext;
+import org.sonar.api.utils.log.Logger;
+import org.sonar.api.utils.log.Loggers;
 
+import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
+    private static final Logger LOGGER = Loggers.get(EcoCodeSwiftVisitor.class);
 
-    private List<RuleCheck> checks = new ArrayList<>();
+    private final List<RuleCheck> checks = new ArrayList<>();
 
     public EcoCodeSwiftVisitor() {
-
         // Load checks
-        checks.add(new IdleTimerDisabledCheck());
-        checks.add(new BrightnessOverrideCheck());
-        checks.add(new ChargeAwarenessCheck());
-        checks.add(new LocationUpdatesDisabledCheck());
+        Reflections reflections = new Reflections("io.ecocode.ios.swift.checks");
 
+        Set<Class<? extends RuleCheck>> allClasses = reflections.getSubTypesOf(RuleCheck.class);
+
+        for (Class<? extends RuleCheck> clazz : allClasses) {
+            Annotation[] annotations = clazz.getAnnotations();
+
+            for (Annotation annotation : annotations) {
+                if (annotation instanceof RegisterRule) {
+                    try {
+                        checks.add(clazz.getDeclaredConstructor().newInstance());
+                    } catch (Exception e) {
+                        LOGGER.warn("Unexpected error while instantiating rule " + clazz, e);
+                    }
+                }
+            }
+        }
     }
 
     @Override
@@ -56,5 +69,9 @@ public class EcoCodeSwiftVisitor implements ParseTreeItemVisitor {
         for (RuleCheck check : checks) {
             check.fillContext(context, antlrContext);
         }
+    }
+
+    public List<RuleCheck> getChecks() {
+        return checks;
     }
 }

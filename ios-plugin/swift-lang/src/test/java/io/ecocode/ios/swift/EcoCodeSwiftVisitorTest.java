@@ -15,32 +15,23 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.sobriety;
+package io.ecocode.ios.swift;
 
-import io.ecocode.ios.swift.RegisterRule;
-import io.ecocode.ios.swift.Swift;
-import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
-import org.antlr.v4.runtime.tree.ParseTree;
+import org.junit.Test;
+import org.reflections.Reflections;
 
-/**
- * Check the use of "UIScreen.main.brightness" and triggers when set.
- */
-@RegisterRule
-public class BrightnessOverrideCheck extends RuleCheck {
+import java.util.Set;
 
-    public BrightnessOverrideCheck() {
-        super("ESOB005", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
+import static org.assertj.core.api.Assertions.assertThat;
+
+public class EcoCodeSwiftVisitorTest {
+    @Test
+    public void analyze() throws Throwable {
+        Reflections reflections = new Reflections("io.ecocode.ios.swift.checks");
+        Set<Class<? extends RuleCheck>> allClasses = reflections.getSubTypesOf(RuleCheck.class);
+
+        EcoCodeSwiftVisitor ecoCodeSwiftVisitor = new EcoCodeSwiftVisitor();
+        assertThat(ecoCodeSwiftVisitor.getChecks()).hasSize(allClasses.size());
     }
-
-    @Override
-    public void apply(ParseTree tree) {
-
-    if (tree instanceof Swift5Parser.ExpressionContext) {
-        Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
-        if (id.getText().contains("UIScreen.main.brightness")) {
-            this.recordIssue(ruleId, id.getStart().getStartIndex());
-        }
-    }
-}
 }

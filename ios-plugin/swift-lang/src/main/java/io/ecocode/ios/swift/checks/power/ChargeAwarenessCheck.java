@@ -17,6 +17,7 @@
  */
 package io.ecocode.ios.swift.checks.power;
 
+import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import io.ecocode.ios.checks.RuleCheck;
@@ -29,6 +30,7 @@ import java.util.List;
  * or `UIDevice.batteryLevelDidChangeNotification` or `UIDevice.batteryStateDidChangeNotification`.
  * If found, reports a (positive) issue.
  */
+@RegisterRule
 public class ChargeAwarenessCheck extends RuleCheck {
 
     public ChargeAwarenessCheck() {

@@ -18,6 +18,7 @@
 package io.ecocode.ios.swift.checks.sobriety;
 
 import io.ecocode.ios.checks.RuleCheck;
+import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -26,6 +27,7 @@ import org.antlr.v4.runtime.tree.ParseTree;
 /**
  * Check the use of "CLLocationManager#pausesLocationUpdatesAutomatically" and triggers when set to false.
  */
+@RegisterRule
 public class LocationUpdatesDisabledCheck extends RuleCheck {
     public LocationUpdatesDisabledCheck() {
         super("ESOB001", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
