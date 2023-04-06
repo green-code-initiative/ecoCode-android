@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.environment.idleness;
+package io.ecocode.ios.swift.checks.idleness;
 
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
@@ -27,7 +27,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class IdleTimerDisabledCheckTests {
+public class IdleTimerDisabledCheckTest {
 
     @Test
     public void idleTimerDisabled_trigger() {

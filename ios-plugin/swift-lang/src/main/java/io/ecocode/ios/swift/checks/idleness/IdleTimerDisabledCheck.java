@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.environment.sobriety;
+package io.ecocode.ios.swift.checks.idleness;
 
 import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
@@ -24,13 +24,13 @@ import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 /**
- * Check the use of "AVCaptureTorchMode.on", "setTorchModeOn(level: Float)", or "torchMode = .on" and triggers when set to true.
+ * Check the use of "UIApplication.shared.isIdleTimerDisabled" and triggers when set to true.
  */
 @RegisterRule
-public class TorchFreeCheck extends RuleCheck {
+public class IdleTimerDisabledCheck extends RuleCheck {
 
-    public TorchFreeCheck() {
-        super("ESOB006", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
+    public IdleTimerDisabledCheck() {
+        super("EIDL001", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
     }
 
     @Override
@@ -38,10 +38,7 @@ public class TorchFreeCheck extends RuleCheck {
 
         if (tree instanceof Swift5Parser.ExpressionContext) {
             Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
-            String expressionText = id.getText();
-            if (expressionText.contains("AVCaptureTorchMode.on") ||
-                expressionText.contains("setTorchModeOn") ||
-                expressionText.contains("torchMode=.on")) {
+            if (id.getText().equals("UIApplication.shared.isIdleTimerDisabled=true")) {
                 this.recordIssue(ruleId, id.getStart().getStartIndex());
             }
         }

@@ -25,7 +25,7 @@ import org.sonar.api.batch.sensor.issue.IssueLocation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TorchFreeCheckTests {
+public class TorchFreeCheckTest {
 
     @Test
     public void should_detect_torch_on_usage() {
