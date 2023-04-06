@@ -43,7 +43,6 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
             if(id.getText().contains("CoreMotion")) {
                 importTree = id;
                 importExist = Boolean.TRUE;
-                
             }
         }
 

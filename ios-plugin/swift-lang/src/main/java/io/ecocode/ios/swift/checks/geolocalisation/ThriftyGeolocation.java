@@ -29,7 +29,7 @@ import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 public class ThriftyGeolocation extends RuleCheck {
 
     Swift5Parser.Import_declarationContext importTree = null;
-    private Boolean GeolocationUpdated = Boolean.FALSE;
+    private Boolean geolocationUpdated = Boolean.FALSE;
     private Boolean importExist = Boolean.FALSE;
 
 
@@ -45,7 +45,6 @@ public class ThriftyGeolocation extends RuleCheck {
             if(id.getText().contains("CLLocationManager")) {
                 importTree = id;
                 importExist = Boolean.TRUE;
-                
             }
         }
 
@@ -53,17 +52,17 @@ public class ThriftyGeolocation extends RuleCheck {
             Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
             if (id.getText().contains("desiredAccuracy")
                     || id.getText().contains("activityType")) {
-                GeolocationUpdated = Boolean.TRUE;
+                geolocationUpdated = Boolean.TRUE;
             }
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>") ){
-        if (importExist == Boolean.TRUE && GeolocationUpdated == Boolean.FALSE) {
+        if (importExist == Boolean.TRUE && geolocationUpdated == Boolean.FALSE) {
             this.recordIssue(ruleId, importTree.getStart().getStartIndex());
             
         }
         importExist=Boolean.FALSE;
-        GeolocationUpdated=Boolean.FALSE;
+        geolocationUpdated =Boolean.FALSE;
         }
     }
 }
