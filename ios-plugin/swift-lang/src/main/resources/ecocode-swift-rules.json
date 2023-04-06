@@ -11,7 +11,24 @@
         "tags": [
             "ecocode",
             "environment",
-            "idleness",
+            "sobriety",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
+    },
+    {
+        "key": "ESOB005",
+        "name": "Brightness Override disabled",
+        "severity": "MAJOR",
+        "description": "Do not force Brightness in your code, unless absolutely necessary.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "5min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "sobriety",
             "eco-design"
         ],
         "type": "CODE_SMELL"
@@ -29,6 +46,23 @@
             "ecocode",
             "environment",
             "power",
+            "eco-design"
+        ],
+        "type": "CODE_SMELL"
+    },
+    {
+        "key": "ESOB001",
+        "name": "Location updates pause disabled",
+        "severity": "MAJOR",
+        "description": "Do not disable location updates pause, unless absolutely necessary.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "5min"
+        },
+        "tags": [
+            "ecocode",
+            "environment",
+            "sobriety",
             "eco-design"
         ],
         "type": "CODE_SMELL"
