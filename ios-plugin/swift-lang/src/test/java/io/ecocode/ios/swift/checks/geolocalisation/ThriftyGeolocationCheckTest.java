@@ -28,7 +28,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ThriftyGeolocationCheckTests {
+public class ThriftyGeolocationCheckTest {
 
     @Test
     public void Geo_trigger() {

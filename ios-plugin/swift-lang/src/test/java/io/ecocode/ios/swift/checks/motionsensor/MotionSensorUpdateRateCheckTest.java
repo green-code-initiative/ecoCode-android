@@ -27,7 +27,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MotionSensorUpdateRateCheckTests {
+public class MotionSensorUpdateRateCheckTest {
 
     @Test
     public void motionSensorRate_trigger() {
