@@ -1,7 +1,6 @@
+import CLLocationManager
 import Foundation
 import SwiftUI
-import CLLocationManager
-
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
@@ -10,7 +9,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
 
         // Should trigger
-        
 
         return true
     }

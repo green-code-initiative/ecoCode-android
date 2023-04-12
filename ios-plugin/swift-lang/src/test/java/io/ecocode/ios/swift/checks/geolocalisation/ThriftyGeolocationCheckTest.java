@@ -29,23 +29,22 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ThriftyGeolocationCheckTest {
-
     @Test
     public void Geo_trigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geolocalisation_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
         Optional<Issue> issue = context.allIssues().stream().findFirst();
         issue.ifPresent(i -> {
-            assertThat(i.ruleKey().rule()).isEqualTo("ESOB003");
+            assertThat(i.ruleKey().rule()).isEqualTo("ESOB002");
             assertThat(i.ruleKey().repository()).isEqualTo("ecoCode-swift");
             IssueLocation location = i.primaryLocation();
-            assertThat(location.textRange().start().line()).isEqualTo(11);
+            assertThat(location.textRange().start().line()).isEqualTo(1);
         });
     }
 
     @Test
     public void Geo_no_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geo_no_trigger.swift");
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/geolocalisation/Geolocalisation_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
 }

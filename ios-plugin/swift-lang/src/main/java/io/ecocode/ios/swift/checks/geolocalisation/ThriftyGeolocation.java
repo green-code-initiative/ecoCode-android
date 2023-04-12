@@ -17,21 +17,18 @@
  */
 package io.ecocode.ios.swift.checks.geolocalisation;
 
+import io.ecocode.ios.checks.RuleCheck;
 import io.ecocode.ios.swift.RegisterRule;
 import io.ecocode.ios.swift.Swift;
 import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
-import io.ecocode.ios.checks.RuleCheck;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
-
 @RegisterRule
 public class ThriftyGeolocation extends RuleCheck {
-
     Swift5Parser.Import_declarationContext importTree = null;
     private Boolean geolocationUpdated = Boolean.FALSE;
     private Boolean importExist = Boolean.FALSE;
-
 
     public ThriftyGeolocation() {
         super("ESOB002", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
@@ -56,13 +53,12 @@ public class ThriftyGeolocation extends RuleCheck {
             }
         }
 
-        if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>") ){
-        if (importExist == Boolean.TRUE && geolocationUpdated == Boolean.FALSE) {
-            this.recordIssue(ruleId, importTree.getStart().getStartIndex());
-            
-        }
-        importExist=Boolean.FALSE;
-        geolocationUpdated =Boolean.FALSE;
+        if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>") ) {
+            if (importExist == Boolean.TRUE && geolocationUpdated == Boolean.FALSE) {
+                this.recordIssue(ruleId, importTree.getStart().getStartIndex());
+            }
+            importExist = Boolean.FALSE;
+            geolocationUpdated = Boolean.FALSE;
         }
     }
 }

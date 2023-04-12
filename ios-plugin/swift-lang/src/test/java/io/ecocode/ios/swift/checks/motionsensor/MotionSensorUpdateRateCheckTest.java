@@ -28,7 +28,6 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MotionSensorUpdateRateCheckTest {
-
     @Test
     public void motionSensorRate_trigger() {
         SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/MotionSensorRate_trigger.swift");
@@ -38,7 +37,7 @@ public class MotionSensorUpdateRateCheckTest {
             assertThat(i.ruleKey().rule()).isEqualTo("ESOB003");
             assertThat(i.ruleKey().repository()).isEqualTo("ecoCode-swift");
             IssueLocation location = i.primaryLocation();
-            assertThat(location.textRange().start().line()).isEqualTo(11);
+            assertThat(location.textRange().start().line()).isEqualTo(1);
         });
     }
 

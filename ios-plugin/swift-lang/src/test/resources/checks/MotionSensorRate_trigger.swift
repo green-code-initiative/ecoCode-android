@@ -1,6 +1,6 @@
+import CoreMotion
 import Foundation
 import SwiftUIw
-import CoreMotion
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
@@ -9,7 +9,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
 
         // Should trigger
-        UIApplication.shared.isIdleTimerDisabled = true
 
         return true
     }
