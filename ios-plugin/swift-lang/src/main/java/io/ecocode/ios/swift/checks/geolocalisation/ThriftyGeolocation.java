@@ -38,7 +38,8 @@ public class ThriftyGeolocation extends RuleCheck {
 
     @Override
     public void apply(ParseTree tree) {
-        if (isImportExisting(tree, "CLLocationManager")) {
+        Boolean isImportExistingBool = isImportExisting(tree, "CLLocationManager");
+        if (Boolean.TRUE.equals(isImportExistingBool)) {
             importTree = (Swift5Parser.Import_declarationContext) tree;
             importExist = Boolean.TRUE;
         }
@@ -46,13 +47,13 @@ public class ThriftyGeolocation extends RuleCheck {
         if (tree instanceof Swift5Parser.ExpressionContext) {
             Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
             if (id.getText().contains("desiredAccuracy")
-                || id.getText().contains("activityType")) {
+                || id.getText().contains("CLActivityType")) {
                 geolocationUpdated = Boolean.TRUE;
             }
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>")) {
-            if (importExist && !geolocationUpdated) {
+            if (Boolean.TRUE.equals(importExist) && !geolocationUpdated) {
                 this.recordIssue(ruleId, importTree.getStart().getStartIndex());
             }
             importExist = Boolean.FALSE;

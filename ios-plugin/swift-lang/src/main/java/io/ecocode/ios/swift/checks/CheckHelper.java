@@ -21,6 +21,7 @@ import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 public class CheckHelper {
+    private CheckHelper(){}
     public static Boolean isImportExisting(ParseTree tree, String importName) {
         if (tree instanceof Swift5Parser.Import_declarationContext) {
             Swift5Parser.Import_declarationContext id = (Swift5Parser.Import_declarationContext) tree;

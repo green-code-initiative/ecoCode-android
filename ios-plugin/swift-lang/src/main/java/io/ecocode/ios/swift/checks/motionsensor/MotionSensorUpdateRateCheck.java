@@ -38,7 +38,8 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
 
     @Override
     public void apply(ParseTree tree) {
-        if (isImportExisting(tree, "CoreMotion")) {
+        Boolean isImportExistingBool = isImportExisting(tree, "CoreMotion");
+        if (Boolean.TRUE.equals(isImportExistingBool)) {
             importTree = (Swift5Parser.Import_declarationContext) tree;
             importExist = Boolean.TRUE;
         }
@@ -54,7 +55,7 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>")) {
-            if (importExist && !sensorRateUpdated) {
+            if (Boolean.TRUE.equals(importExist) && !sensorRateUpdated) {
                 this.recordIssue(ruleId, importTree.getStart().getStartIndex());
             }
             importExist = Boolean.FALSE;

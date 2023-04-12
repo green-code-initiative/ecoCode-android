@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 import CLLocationManager
 
-
 final class AppDelegate: NSObject, UIApplicationDelegate {
     func application(
         _ application: UIApplication,
@@ -10,9 +9,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
 
         // Should not trigger
-        
-        desiredAccuracy
-
+        CLLocationManager.CLActivityType
         return true
     }
 }
