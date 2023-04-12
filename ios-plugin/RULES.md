@@ -4,7 +4,7 @@ iOS-specific rules rely on a multi-scope scanning, including Swift source files,
 
 ### Environment
 
-Only one rule have been already implemented in the plugin. Table of unimplemented rules below:
+Some rules have been already implemented in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
