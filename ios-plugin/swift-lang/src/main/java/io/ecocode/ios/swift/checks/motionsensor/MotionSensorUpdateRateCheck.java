@@ -29,8 +29,8 @@ import static io.ecocode.ios.swift.checks.CheckHelper.isImportExisting;
 @RegisterRule
 public class MotionSensorUpdateRateCheck extends RuleCheck {
     Swift5Parser.Import_declarationContext importTree = null;
-    private Boolean sensorRateUpdated = Boolean.FALSE;
-    private Boolean importExist = Boolean.FALSE;
+    private boolean sensorRateUpdated = false;
+    private boolean importExist = false;
 
     public MotionSensorUpdateRateCheck() {
         super("ESOB003", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
@@ -38,10 +38,9 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
 
     @Override
     public void apply(ParseTree tree) {
-        Boolean isImportExistingBool = isImportExisting(tree, "CoreMotion");
-        if (Boolean.TRUE.equals(isImportExistingBool)) {
+        if (isImportExisting(tree, "CoreMotion")) {
             importTree = (Swift5Parser.Import_declarationContext) tree;
-            importExist = Boolean.TRUE;
+            importExist = true;
         }
 
         if (tree instanceof Swift5Parser.ExpressionContext) {
@@ -50,16 +49,16 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
                 || id.getText().contains("activityType")
                 || id.getText().contains("requestLocation")
                 || id.getText().contains("magnetometerUpdateInterval")) {
-                sensorRateUpdated = Boolean.TRUE;
+                sensorRateUpdated = true;
             }
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>")) {
-            if (Boolean.TRUE.equals(importExist) && !sensorRateUpdated) {
+            if (importExist && !sensorRateUpdated) {
                 this.recordIssue(ruleId, importTree.getStart().getStartIndex());
             }
-            importExist = Boolean.FALSE;
-            sensorRateUpdated = Boolean.FALSE;
+            importExist = false;
+            sensorRateUpdated = false;
         }
     }
 }

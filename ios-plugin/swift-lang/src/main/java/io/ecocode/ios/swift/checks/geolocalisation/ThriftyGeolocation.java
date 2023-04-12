@@ -29,8 +29,8 @@ import static io.ecocode.ios.swift.checks.CheckHelper.isImportExisting;
 @RegisterRule
 public class ThriftyGeolocation extends RuleCheck {
     Swift5Parser.Import_declarationContext importTree = null;
-    private Boolean geolocationUpdated = Boolean.FALSE;
-    protected Boolean importExist = Boolean.FALSE;
+    private boolean geolocationUpdated = false;
+    protected boolean importExist = false;
 
     public ThriftyGeolocation() {
         super("ESOB002", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
@@ -38,26 +38,25 @@ public class ThriftyGeolocation extends RuleCheck {
 
     @Override
     public void apply(ParseTree tree) {
-        Boolean isImportExistingBool = isImportExisting(tree, "CLLocationManager");
-        if (Boolean.TRUE.equals(isImportExistingBool)) {
+        if (isImportExisting(tree, "CLLocationManager")) {
             importTree = (Swift5Parser.Import_declarationContext) tree;
-            importExist = Boolean.TRUE;
+            importExist = true;
         }
 
         if (tree instanceof Swift5Parser.ExpressionContext) {
             Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
             if (id.getText().contains("desiredAccuracy")
                 || id.getText().contains("CLActivityType")) {
-                geolocationUpdated = Boolean.TRUE;
+                geolocationUpdated = true;
             }
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>")) {
-            if (Boolean.TRUE.equals(importExist) && !geolocationUpdated) {
+            if (importExist && !geolocationUpdated) {
                 this.recordIssue(ruleId, importTree.getStart().getStartIndex());
             }
-            importExist = Boolean.FALSE;
-            geolocationUpdated = Boolean.FALSE;
+            importExist = false;
+            geolocationUpdated = false;
         }
     }
 }

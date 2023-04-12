@@ -21,14 +21,10 @@ import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
 
 public class CheckHelper {
-    private CheckHelper(){}
-    public static Boolean isImportExisting(ParseTree tree, String importName) {
-        if (tree instanceof Swift5Parser.Import_declarationContext) {
-            Swift5Parser.Import_declarationContext id = (Swift5Parser.Import_declarationContext) tree;
-            if(id.getText().contains(importName)) {
-                return Boolean.TRUE;
-            }
-        }
-        return Boolean.FALSE;
+    private CheckHelper() {
+    }
+
+    public static boolean isImportExisting(ParseTree tree, String importName) {
+        return (tree instanceof Swift5Parser.Import_declarationContext && tree.getText().contains(importName));
     }
 }
