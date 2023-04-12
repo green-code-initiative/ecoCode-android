@@ -43,10 +43,9 @@ public class ThriftyGeolocation extends RuleCheck {
             importExist = true;
         }
 
-        if (tree instanceof Swift5Parser.ExpressionContext) {
-            Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
-            if (id.getText().contains("desiredAccuracy")
-                || id.getText().contains("CLActivityType")) {
+        if (!geolocationUpdated && tree instanceof Swift5Parser.ExpressionContext) {
+            if (tree.getText().contains("desiredAccuracy")
+                || tree.getText().contains("CLActivityType")) {
                 geolocationUpdated = true;
             }
         }

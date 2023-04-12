@@ -24,6 +24,9 @@ import io.ecocode.ios.swift.antlr.generated.Swift5Parser;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.TerminalNodeImpl;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static io.ecocode.ios.swift.checks.CheckHelper.isImportExisting;
 
 @RegisterRule
@@ -31,6 +34,8 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
     Swift5Parser.Import_declarationContext importTree = null;
     private boolean sensorRateUpdated = false;
     private boolean importExist = false;
+
+    private final List<String> sensorRateUpdateExpressions = Arrays.asList("desiredAccuracy", "activityType", "requestLocation", "magnetometerUpdateInterval");
 
     public MotionSensorUpdateRateCheck() {
         super("ESOB003", Swift.RULES_PATH, Swift.REPOSITORY_KEY);
@@ -43,14 +48,8 @@ public class MotionSensorUpdateRateCheck extends RuleCheck {
             importExist = true;
         }
 
-        if (tree instanceof Swift5Parser.ExpressionContext) {
-            Swift5Parser.ExpressionContext id = (Swift5Parser.ExpressionContext) tree;
-            if (id.getText().contains("desiredAccuracy")
-                || id.getText().contains("activityType")
-                || id.getText().contains("requestLocation")
-                || id.getText().contains("magnetometerUpdateInterval")) {
-                sensorRateUpdated = true;
-            }
+        if (!sensorRateUpdated && tree instanceof Swift5Parser.ExpressionContext) {
+            sensorRateUpdated = sensorRateUpdateExpressions.stream().anyMatch(exp -> tree.getText().contains(exp));
         }
 
         if (tree instanceof TerminalNodeImpl && tree.getText().equals("<EOF>")) {
