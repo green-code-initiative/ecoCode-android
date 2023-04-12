@@ -26,4 +26,13 @@
 
     <application  android:theme="@style/Theme.AppCompat.Light.DarkActionBar"> <!-- Noncompliant {{Using a light theme may have a significant impact on energy consumption on (AM)OLED screens.}} -->
     </application>
+
+    <application  android:theme="@android:style/Theme.Material.Light"> <!-- Noncompliant {{Using a light theme may have a significant impact on energy consumption on (AM)OLED screens.}} -->
+    </application>
+
+    <application  android:theme="@style/Theme.Material3.Light"> <!-- Noncompliant {{Using a light theme may have a significant impact on energy consumption on (AM)OLED screens.}} -->
+    </application>
+
+    <application  android:theme="@style/Theme.MaterialComponents.Light"> <!-- Noncompliant {{Using a light theme may have a significant impact on energy consumption on (AM)OLED screens.}} -->
+    </application>
 </manifest>

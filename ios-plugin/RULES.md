@@ -4,12 +4,12 @@ iOS-specific rules rely on a multi-scope scanning, including Swift source files,
 
 ### Environment
 
-Only one rule have been already implemented in the plugin. Table of unimplemented rules below:
+Some rules have been already implemented in the plugin. Table of unimplemented rules below:
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
 | ESOB004 | Disabled Dark Mode | Xml | Plist scanning |
-| ESOB006 | Torch-free | Swift | |
+| ESOB007 | Animation-free | Swift | |
 
 ### Social
 
