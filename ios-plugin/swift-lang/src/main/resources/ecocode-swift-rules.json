@@ -100,5 +100,22 @@
             "eco-design"
         ],
         "type": "CODE_SMELL"
+    },	
+	{
+        "key": "ESOB006",
+        "name": "Sobriety: Torch Free",
+        "severity": "MAJOR",
+        "description": "Usage of `AVCaptureDevice#torchMode` or `AVCaptureDevice#setTorchModeOn(level:)` must absolutely be avoided. These methods can be used to access the device's flashlight, which can be a potential security risk and should only be used when necessary.",
+        "debt": {
+            "function": "CONSTANT_ISSUE",
+            "offset": "5min"
+        },
+        "tags": [
+          "sobriety",
+          "environment",
+          "ecocode",
+          "eco-design"
+        ],
+        "type": "CODE_SMELL"
     }
 ]
