@@ -9,7 +9,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     ) -> Bool {
 
         // Should not trigger
-        UIApplication.shared.activityType = true
+        motionManager.magnetometerUpdateInterval = 0.1
 
         return true
     }

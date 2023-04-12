@@ -1,5 +1,3 @@
-package io.ecocode.ios.swift.checks.geolocalisation;
-
 /*
  * ecoCode iOS plugin - Help the earth, adopt this green plugin for your applications
  * Copyright © 2022 Green code Initiative (https://www.ecocode.io/)
@@ -17,6 +15,7 @@ package io.ecocode.ios.swift.checks.geolocalisation;
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package io.ecocode.ios.swift.checks.geolocalisation;
 
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
