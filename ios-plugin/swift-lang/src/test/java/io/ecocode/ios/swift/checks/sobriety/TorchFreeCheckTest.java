@@ -29,22 +29,22 @@ public class TorchFreeCheckTest {
 
     @Test
     public void should_detect_torch_on_usage() {
-        assertTorchIssue("checks/sobriety/torchUsage_on_trigger.swift", 12);
+        assertTorchIssue("checks/sobriety/TorchFree_on_trigger.swift", 12);
     }
 
     @Test
     public void should_detect_torch_typeInference_on_usage() {
-        assertTorchIssue("checks/sobriety/torchUsage_typeInference_on_trigger.swift", 12);
+        assertTorchIssue("checks/sobriety/TorchFree_typeInference_on_trigger.swift", 12);
     }
 
     @Test
     public void should_detect_level_torch_usage() {
-        assertTorchIssue("checks/sobriety/torchUsage_level_trigger.swift", 12);
+        assertTorchIssue("checks/sobriety/TorchFree_level_trigger.swift", 12);
     }
 
     @Test
     public void should_not_detect_torch_usage() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/sobriety/no_torchUsage_trigger.swift");
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/sobriety/TorchFree_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
     
