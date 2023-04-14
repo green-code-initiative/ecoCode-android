@@ -8,8 +8,6 @@ Some rules have been already implemented in the plugin. Table of unimplemented r
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
-| ESOB002 | Thrifty Geolocation | Swift | |
-| ESOB003 | Motion Sensor Update Rate | Swift | |
 | ESOB004 | Disabled Dark Mode | Xml | Plist scanning |
 | ESOB007 | Animation-free | Swift | |
 
