@@ -11,6 +11,9 @@
   <artifactId>sonar-codenarc-converter</artifactId>
 
   <name>Sonar CodeNarc Converter</name>
+  <description>Help the earth, adopt this green plugin for your applications</description>
+  <inceptionYear>2020</inceptionYear>
+  <url>https://github.com/green-code-initiative/ecoCode-mobile/tree/main/codenarc-converter</url>
 
   <properties>
     <codenarc.version>2.2.3</codenarc.version>
