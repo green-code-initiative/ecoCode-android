@@ -26,8 +26,7 @@ public class SwiftSensorTest {
 
     @Test
     public void execute() {
-        SensorContextTester sensorContext = TestHelper.testFile("checks/IdleTimerDisabled_trigger.swift");
-        SwiftSensor sensor = new SwiftSensor();
+        SensorContextTester sensorContext = TestHelper.testFile("checks/IdleTimerDisabled_trigger.swift");        SwiftSensor sensor = new SwiftSensor();
         sensor.execute(sensorContext);
 
         assertThat(sensorContext.allIssues()).hasSize(1);

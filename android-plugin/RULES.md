@@ -1,6 +1,6 @@
 # Android-specific Rules
 
-Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#android-platform).
+Android-specific rules rely on a multi-scope scanning, including Java source files, Xml files, Gradle files, and more generally the project structure. The complete list is [accessible here](https://github.com/cnumr/best-practices-mobile#-android-platform).
 
 ### Environment
 
@@ -34,4 +34,5 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
 | SGDP001 | Google consent | Java | "Good smell" spotted here |
-| SINC001 | Aging devices   | Gradle  |  |
+| SINC001 | Aging devices   | Gradle |  |
+| SINC002 | Grammatical gender | File System | "Good smell" spotted here |

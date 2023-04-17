@@ -20,7 +20,7 @@ When adding a new rule, the following steps are required:
 
 - Declare the rule
 - Implement a check
-- Add the check to the visitor
+- Add the @RegisterRule to the class
 
 ### Declaring the rule
 
@@ -39,15 +39,8 @@ Have a look at `swift-lang/src/main/java/io/ecocode/ios/swift/checks/idleness/Id
 
 ### Adding check to the visitor
 
-Once implemented, add the new check to `swift-lang/src/main/java/io/ecocode/ios/swift/EcoCodeSwiftVisitor`.
-
-For example:
-
-```java
-    public EcoCodeSwiftVisitor() {
-        ...
-        // Load checks
-        checks.add(new MyNewCheck());
-        ...
-    }
+```
+@RegisterRule
+public class IdleTimerDisabledCheck extends RuleCheck {
+}
 ```

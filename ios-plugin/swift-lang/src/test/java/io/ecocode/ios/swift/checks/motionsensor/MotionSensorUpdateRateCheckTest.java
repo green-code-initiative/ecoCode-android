@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package io.ecocode.ios.swift.checks.idleness;
+package io.ecocode.ios.swift.checks.motionsensor;
 
 import io.ecocode.ios.swift.checks.CheckTestHelper;
 import org.junit.Test;
@@ -27,24 +27,23 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CheckTests {
-
+public class MotionSensorUpdateRateCheckTest {
     @Test
-    public void idleTimerDisabled_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/IdleTimerDisabled_trigger.swift");
+    public void motionSensorRate_trigger() {
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/MotionSensorRate_trigger.swift");
         assertThat(context.allIssues()).hasSize(1);
         Optional<Issue> issue = context.allIssues().stream().findFirst();
         issue.ifPresent(i -> {
-            assertThat(i.ruleKey().rule()).isEqualTo("EIDL001");
+            assertThat(i.ruleKey().rule()).isEqualTo("ESOB003");
             assertThat(i.ruleKey().repository()).isEqualTo("ecoCode-swift");
             IssueLocation location = i.primaryLocation();
-            assertThat(location.textRange().start().line()).isEqualTo(11);
+            assertThat(location.textRange().start().line()).isEqualTo(1);
         });
     }
 
     @Test
-    public void idleTimerDisabled_no_trigger() {
-        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/IdleTimerDisabled_no_trigger.swift");
+    public void motionSensorRate_no_trigger() {
+        SensorContextTester context = CheckTestHelper.analyzeTestFile("checks/MotionSensorRate_no_trigger.swift");
         assertThat(context.allIssues()).isEmpty();
     }
 }
