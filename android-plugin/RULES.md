@@ -10,7 +10,6 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 |---|:----------------|:-------------:|:-------------:|
 | ELEA001 | Everlasting Service        | Java | Requires `PostProjectAnalysisTask()` callback |
 | EBOT004 | Uncached Data Reception       | Java | Requires `PostProjectAnalysisTask()` callback |
-| ESOB003/ESOB004 | Dark UI      | Xml | Partially implemented (see [1](./src/main/java/io/ecocode/xml/checks/sobriety/DarkUIBrightColorsXmlRule.java), [2](./src/main/java/io/ecocode/xml/checks/sobriety/DarkUIThemeXmlRule.java), [3](https://github.com/green-code-initiative/ecoCode-mobile/issues/32)) |
 | ESOB009 | Day Night Mode     | File System, Xml | Requires `PostProjectAnalysisTask()` callback |
 | ESOB015 | Animation-free | Java, Xml, File System |  |
 | EPOW008 | Battery-constrained Work | Java |  |
