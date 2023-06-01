@@ -16,6 +16,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deleted
 
+- Moved iOS plugin to its [own repository](https://github.com/green-code-initiative/ecoCode-ios).
+
 ## [1.0.1] - 2023-03-10
 
 ### Changed
