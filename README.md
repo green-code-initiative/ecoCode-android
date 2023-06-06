@@ -15,6 +15,8 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 - [x] [Android](android-plugin/)
 - [x] [iOS](ios-plugin) <sub>NEW</sub>
 
+> **_NOTE:_**  iOS plugin has moved to it own repository [here](https://github.com/green-code-initiative/ecoCode-ios).
+
 ![Screenshot](android-plugin/docs/screenshot.png)
 
 <sub>The custom GUI above is reserved to educational purpose only.</sub>
@@ -43,7 +45,6 @@ Wait a little bit during first start initialization, and go to [http://localhost
 [![Université de Pau](android-plugin/docs/logoUnivPau.png)](https://www.univ-pau.fr/)
 [![Région Nouvelle-Aquitaine](android-plugin/docs/logoNA.png)](https://www.nouvelle-aquitaine.fr)
 [![Solocal / PagesJaunes](android-plugin/docs/logoSolocal.png)](https://www.pagesjaunes.fr)
-[![inside|app](ios-plugin/docs/logoInsideApp.jpg)](https://www.insideapp.fr/)
 
 📢 Cite this work
 ------------------

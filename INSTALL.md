@@ -25,8 +25,6 @@ ecoCode-mobile          # Root directory
 |
 +--codenarc-converter   # codenarc-converter
 |
-+--ios-plugin           # IOS
-|
 \--docker-compose.yml   # Docker compose file
 ```
 

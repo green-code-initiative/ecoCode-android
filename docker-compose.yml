@@ -20,9 +20,6 @@ services:
       - type: bind
         source: ./android-plugin/target/ecocode-android-1.0.2-SNAPSHOT.jar
         target: /opt/sonarqube/extensions/plugins/ecocode-android-1.0.2-SNAPSHOT.jar
-      - type: bind
-        source: ./ios-plugin/sonar-ios-plugin/target/ecocode-sonar-ios-plugin-1.0.2-SNAPSHOT.jar
-        target: /opt/sonarqube/extensions/plugins/ecocode-sonar-ios-plugin-1.0.2-SNAPSHOT.jar
       - "logs:/opt/sonarqube/logs"
       - "data:/opt/sonarqube/data"
 
