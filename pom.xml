@@ -3,13 +3,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.ecocode</groupId>
-	<artifactId>ecocode-mobile-parent</artifactId>
+	<artifactId>ecocode-android-parent</artifactId>
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>ecoCode Mobile Sonar Plugins Project</name>
 	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" =&gt; https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
-	<url>https://github.com/green-code-initiative/ecocode-mobile</url>
+	<url>https://github.com/green-code-initiative/ecocode-android</url>
 	<organization>
 		<name>Green code Initiative</name>
 		<url>https://collectif.greenit.fr</url>
@@ -23,12 +23,12 @@
 	</licenses>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/green-code-initiative/ecocode-mobile/issues</url>
+		<url>https://github.com/green-code-initiative/ecocode-android/issues</url>
 	</issueManagement>
 	<scm>
-		<connection>scm:git:https://github.com/green-code-initiative/ecocode-mobile</connection>
-		<developerConnection>scm:git:https://github.com/green-code-initiative/ecocode-mobile</developerConnection>
-		<url>https://github.com/green-code-initiative/ecocode-mobile</url>
+		<connection>scm:git:https://github.com/green-code-initiative/ecocode-android</connection>
+		<developerConnection>scm:git:https://github.com/green-code-initiative/ecocode-android</developerConnection>
+		<url>https://github.com/green-code-initiative/ecocode-android</url>
 		<tag>HEAD</tag>
 	</scm>
 

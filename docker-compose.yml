@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-    container_name: sonar_ecocode-mobile
+    container_name: sonar_ecocode-android
     ports:
       - "9000:9000"
     networks:
@@ -25,7 +25,7 @@ services:
 
   db:
     image: postgres:12
-    container_name: postgresql_ecocode-mobile
+    container_name: postgresql_ecocode-android
     networks:
       - sonarnet
     volumes:

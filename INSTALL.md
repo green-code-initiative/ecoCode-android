@@ -19,7 +19,7 @@ Project structure
 Here is a preview of project tree :
 
 ```txt
-ecoCode-mobile          # Root directory
+ecocode-android          # Root directory
 |
 +--android-plugin       # Android
 |
