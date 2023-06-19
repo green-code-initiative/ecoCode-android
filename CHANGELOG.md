@@ -14,6 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- rename repository `ecoCode-mobile` to `ecoCode-android`
+
 ### Deleted
 
 - Moved iOS plugin to its [own repository](https://github.com/green-code-initiative/ecoCode-ios).
