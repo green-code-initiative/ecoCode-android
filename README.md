@@ -31,8 +31,8 @@ docker run -ti --rm \
        -v sq_ecocode_mobile_logs:/opt/sonarqube/logs \
        -v sq_ecocode_mobile_data:/opt/sonarqube/data \
        -p 9000:9000 \
-       --name sonarqube-ecocode-mobile  \
-       ghcr.io/green-code-initiative/sonarqube-ecocode-mobile:latest
+       --name sonarqube-ecocode-android  \
+       ghcr.io/green-code-initiative/sonarqube-ecocode-android:latest
 ```
 
 Wait a little bit during first start initialization, and go to [http://localhost:9000](http://localhost:9000). Default credentials are `admin`/`admin`
@@ -73,7 +73,7 @@ If you use ecoCode in an academic work we would be really glad if you cite our s
 🛒 Distribution
 ---------------
 
-Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecoCode-mobile/releases).
+Ready to use binaries are available [from GitHub](https://github.com/green-code-initiative/ecocode-android/releases).
 
 🧩 Plugins version compatibility
 ------------------

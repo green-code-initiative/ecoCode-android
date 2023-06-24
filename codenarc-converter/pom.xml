@@ -4,7 +4,7 @@
 
   <parent>
     <groupId>io.ecocode</groupId>
-	  <artifactId>ecocode-mobile-parent</artifactId>
+	  <artifactId>ecocode-android-parent</artifactId>
     <version>1.0.2-SNAPSHOT</version>
   </parent>
 
@@ -13,7 +13,7 @@
   <name>Sonar CodeNarc Converter</name>
   <description>Help the earth, adopt this green plugin for your applications</description>
   <inceptionYear>2020</inceptionYear>
-  <url>https://github.com/green-code-initiative/ecoCode-mobile/tree/main/codenarc-converter</url>
+  <url>https://github.com/green-code-initiative/ecocode-android/tree/main/codenarc-converter</url>
 
   <properties>
     <codenarc.version>2.2.3</codenarc.version>
