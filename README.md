@@ -24,12 +24,12 @@ ecoCode mobile is based on evolving catalogs of [best practices](https://github.
 🚀 Quickstart
 -------------
 
-A SonarQube container image with ecoCode mobile embedded exists !
+A SonarQube container image with ecoCode Android embedded exists !
 
 ```bash
 docker run -ti --rm \
-       -v sq_ecocode_mobile_logs:/opt/sonarqube/logs \
-       -v sq_ecocode_mobile_data:/opt/sonarqube/data \
+       -v sq_ecocode_android_logs:/opt/sonarqube/logs \
+       -v sq_ecocode_android_data:/opt/sonarqube/data \
        -p 9000:9000 \
        --name sonarqube-ecocode-android  \
        ghcr.io/green-code-initiative/sonarqube-ecocode-android:latest
