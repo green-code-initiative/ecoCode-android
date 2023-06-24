@@ -7,7 +7,7 @@
 	<version>1.0.2-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>ecoCode Mobile Sonar Plugins Project</name>
+	<name>ecoCode Android Sonar Plugins Project</name>
 	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" =&gt; https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
 	<url>https://github.com/green-code-initiative/ecocode-android</url>
 	<organization>

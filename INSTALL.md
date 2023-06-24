@@ -1,5 +1,5 @@
 - [Common installation notes / requirements](#common-installation-notes--requirements)
-- [Special points for Mobile plugins](#special-points-for-mobile-plugins)
+- [Special points for Android plugins](#special-points-for-android-plugins)
   - [Project structure](#project-structure)
   - [Howto build the SonarQube ecoCode plugins](#howto-build-the-sonarqube-ecocode-plugins)
     - [Preliminary steps (only Android)](#preliminary-steps-only-android)
@@ -10,7 +10,7 @@ Common installation notes / requirements
 
 Please read common [INSTALL.md](https://github.com/green-code-initiative/ecoCode-common/blob/main/doc/INSTALL.md) in `ecoCode-common` repository.
 
-Special points for Mobile plugins
+Special points for Android plugins
 =================================
 
 Project structure
