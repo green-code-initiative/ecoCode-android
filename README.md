@@ -1,21 +1,14 @@
 ![Logo](docs/resources/5ekko.png)
 ======================================
 
-Mobile apps running on top of battery-limited devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode mobile`, the version of ecoCode project fully dedicated to mobile platforms. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
+Mobile apps running on top of battery-limited, android-powered devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode android`, the version of ecoCode project fully dedicated to the Android platform. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
 
-ecoCode mobile is based on evolving catalogs of [best practices](https://github.com/cnumr/best-practices-mobile), for Android and iOS. A SonarQube plugin then implements these catalogs as rules for scanning your projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (in french) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf) (in english).
+ecoCode android is based on an evolving catalog of [best practices for Android](https://github.com/cnumr/best-practices-mobile#-android-platform). A SonarQube plugin then implements this catalog as rules for scanning your native Android projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (in french) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf) (in english).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 🌿 SonarQube Plugin
 -------------------
-
-2 mobile technologies are supported by the plugin right now:
-
-- [x] [Android](android-plugin/)
-- [x] [iOS](ios-plugin) <sub>NEW</sub>
-
-> **_NOTE:_**  iOS plugin has moved to it own repository [here](https://github.com/green-code-initiative/ecoCode-ios).
 
 ![Screenshot](android-plugin/docs/screenshot.png)
 
