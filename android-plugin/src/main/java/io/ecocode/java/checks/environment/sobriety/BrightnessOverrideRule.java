@@ -23,6 +23,7 @@ import com.google.common.collect.ImmutableList;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.tree.*;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +32,8 @@ import java.util.Optional;
  * Check the assignment of the variable android.view.WindowManager$LayoutParams.screenBrightness with the value
  * "BRIGHTNESS_OVERRIDE_FULL" (1.0f).
  */
-@Rule(key = "ESOB002", name = "ecoCodeBrightness")
+@Rule(key = "EC522")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB002")
 public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
 
     private static final String ERROR_MESSAGE = "Forcing brightness to max value may cause useless energy consumption.";

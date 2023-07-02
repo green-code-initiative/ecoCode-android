@@ -37,7 +37,7 @@ import org.sonar.plugins.java.api.JavaCheck;
 import org.sonar.squidbridge.annotations.RuleTemplate;
 
 /**
- * Declare rule metadata in server repository of rules. 
+ * Declare rule metadata in server repository of rules.
  * That allows to list the rules in the page "Rules".
  */
 public class JavaRulesDefinition implements RulesDefinition {
@@ -84,7 +84,7 @@ public class JavaRulesDefinition implements RulesDefinition {
   }
 
   private void addMetadata(NewRule rule, String metadataKey) {
-    URL resource = JavaRulesDefinition.class.getResource(Java.JAVA_RESOURCE_PATH + "/" + metadataKey + "_java.json");
+    URL resource = JavaRulesDefinition.class.getResource(Java.RULES_SPECIFICATIONS_JAVA_PATH + "/" + metadataKey + ".json");
     if (resource != null) {
       RuleMetatada metatada = gson.fromJson(readResource(resource), RuleMetatada.class);
       rule.setSeverity(metatada.defaultSeverity.toUpperCase(Locale.US));
@@ -100,7 +100,7 @@ public class JavaRulesDefinition implements RulesDefinition {
   }
 
   private static void addHtmlDescription(NewRule rule, String metadataKey) {
-    URL resource = JavaRulesDefinition.class.getResource(Java.JAVA_RESOURCE_PATH + "/" + metadataKey + "_java.html");
+    URL resource = JavaRulesDefinition.class.getResource(Java.RULES_SPECIFICATIONS_JAVA_PATH + "/" + metadataKey + ".html");
     if (resource != null) {
       rule.setHtmlDescription(readResource(resource));
     }

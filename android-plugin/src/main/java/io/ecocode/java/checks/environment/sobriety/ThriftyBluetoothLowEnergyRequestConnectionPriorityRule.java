@@ -21,12 +21,14 @@ package io.ecocode.java.checks.environment.sobriety;
 
 import io.ecocode.java.checks.helpers.constant.ConstantOnMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * On the method `android.bluetooth.BluetoothGatt#requestConnectionPriority(int)`, reports an issue if
  * it is called with a parameter value different from `CONNECTION_PRIORITY_LOW_POWER (2)`.
  */
-@Rule(key = "ESOB008", name = "ecoCodeThriftyBluetoothLowEnergyRequestConnectionPriority")
+@Rule(key = "EC526")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB008")
 public class ThriftyBluetoothLowEnergyRequestConnectionPriorityRule extends ConstantOnMethodCheck {
 
     private static final int CONNECTION_PRIORITY_LOW_POWER = 2;

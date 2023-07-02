@@ -30,6 +30,7 @@ import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.ExpressionTree;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,8 @@ import java.util.List;
  * Check if a method requestLocationUpdates is called from android.location.LocationManager package.
  * If minTime argument value is 0, report an issue on the argument.
  */
-@Rule(key = "ESOB005", name = "ecocodeThriftyGeolocation")
+@Rule(key = "EC523")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB005")
 public class ThriftyGeolocationMinTimeRule extends IssuableSubscriptionVisitor {
 
     private static final String ERROR_MESSAGE = "Location updates should be done with a time greater than 0.";

@@ -21,12 +21,14 @@ package io.ecocode.java.checks.environment.idleness;
 
 import io.ecocode.java.checks.helpers.SpecificMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check the call of the method "newWakeLock" of "android.os.PowerManager".
  * Reports an issue if found.
  */
-@Rule(key = "EIDL004", name = "ecocodeKeepCpuOn")
+@Rule(key = "EC507")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL004")
 public class KeepCpuOnRule extends SpecificMethodCheck {
 
 

@@ -21,12 +21,14 @@ package io.ecocode.java.checks.environment.idleness;
 
 import io.ecocode.java.checks.helpers.constant.FlagOnMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check the call of the method "setRenderMode" of "opengl.GLSurfaceView".
  * If argument value is "1" report issue.
  */
-@Rule(key = "EIDL008", name = "ecocodeContinuousRendering")
+@Rule(key = "EC510")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL008")
 public class ContinuousRenderingRule extends FlagOnMethodCheck {
 
     public ContinuousRenderingRule() {

@@ -24,6 +24,7 @@ import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.*;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,8 @@ import java.util.List;
  * practice should be discouraged at early stage.
  */
 
-@Rule(key = "SPRI002", name = "ecocodeGoogleTracker")
+@Rule(key = "EC532")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "SPRI002")
 public class GoogleTrackerRule extends BaseTreeVisitor implements JavaFileScanner {
 
     private static final String ERROR_MESSAGE_GGL_TRACKER = "Using com.google.android.gms.analytics.* is a potential threat for privacy.";

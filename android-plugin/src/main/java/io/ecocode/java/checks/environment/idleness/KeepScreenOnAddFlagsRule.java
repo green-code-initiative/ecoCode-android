@@ -21,11 +21,13 @@ package io.ecocode.java.checks.environment.idleness;
 
 import io.ecocode.java.checks.helpers.constant.FlagOnMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check the call of "FLAG_KEEP_SCREEN_ON" on the method "addFlags" of "android.view.Window".
  */
-@Rule(key = "EIDL001", name = "ecoCodeKeepScreenOnAddFlagRule")
+@Rule(key = "EC505")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL001")
 public class KeepScreenOnAddFlagsRule extends FlagOnMethodCheck {
 
     public KeepScreenOnAddFlagsRule() {

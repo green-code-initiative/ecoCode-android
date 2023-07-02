@@ -28,6 +28,7 @@ import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.*;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,8 @@ import java.util.Optional;
  * If the argument 0 of the method is true, report the method node.
  * Otherwise report an issue on the new class nodes.
  */
-@Rule(key = "EIDL009", name = "ecocodeKeepVoiceAwake")
+@Rule(key = "EC511")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL009")
 public class KeepVoiceAwakeRule extends IssuableSubscriptionVisitor {
 
     private static final Logger LOG = Loggers.get(KeepVoiceAwakeRule.class);

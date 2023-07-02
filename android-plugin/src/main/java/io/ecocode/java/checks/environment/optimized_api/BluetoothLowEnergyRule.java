@@ -24,6 +24,7 @@ import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.*;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,8 @@ import java.util.List;
  * </li>
  * </ul>
  */
-@Rule(key = "EOPT002", name = "ecoCodeBluetoothLowEnergy")
+@Rule(key = "EC518")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EOPT002")
 public class BluetoothLowEnergyRule extends BaseTreeVisitor implements JavaFileScanner {
 
     private static final String ERROR_MESSAGE = "You are using Bluetooth. Did you take a look at the Bluetooth Low Energy API?";

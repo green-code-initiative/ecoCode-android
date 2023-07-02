@@ -21,13 +21,15 @@ package io.ecocode.java.checks.environment.leakage;
 
 import io.ecocode.java.checks.helpers.OpeningClosingMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check that Camera#release() method is closed after Camera#open().
  *
  * @see OpeningClosingMethodCheck
  */
-@Rule(key = "ELEA002", name = "ecoCodeCameraLeakRule")
+@Rule(key = "EC512")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ELEA002")
 public class CameraLeakRule extends OpeningClosingMethodCheck {
 
     public CameraLeakRule() {

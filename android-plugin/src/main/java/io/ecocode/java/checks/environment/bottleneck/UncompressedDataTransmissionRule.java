@@ -37,16 +37,18 @@ import org.sonar.plugins.java.api.tree.VariableTree;
 import com.google.common.collect.ImmutableList;
 
 import io.ecocode.java.checks.helpers.CheckArgumentComplexTypeUtils;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * If an OutputStream class is created:
  * - if the method getOutputStream from the URLConnection class is called, reports the issue.
  * - if a constructor is called with for parameter getOutputStream, reports the issue if the constructor isn't a GZIPOutputStream.
  */
-@Rule(key = "EBOT003", name = "ecoCodeUncompressedDataTransmission")
+@Rule(key = "EC504")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EBOT003")
 public class UncompressedDataTransmissionRule extends IssuableSubscriptionVisitor {
     private static final Logger LOG = Loggers.get(UncompressedDataTransmissionRule.class);
-    
+
     private static final String ERROR_MESSAGE = "Prefer using GzipOutputStream instead of OutputStream to improve energy efficiency.";
     private static final MethodMatchers matcherUrlConnection = MethodMatchers.create().ofSubTypes("java.net.URLConnection").names("getOutputStream").addWithoutParametersMatcher().build();
     // TODO: 22/03/2022 Change methodMatcher for anything but a "new GZIPOutputStream()", the new being the problem here.

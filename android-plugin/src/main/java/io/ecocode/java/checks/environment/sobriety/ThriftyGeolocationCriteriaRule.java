@@ -32,6 +32,7 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
 
 import com.google.common.collect.ImmutableList;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * - Visit the method invocation nodes.
@@ -49,7 +50,8 @@ import com.google.common.collect.ImmutableList;
  * * **Case 3**:
  * - if the method `setPowerRequirement` of type `android.location.Criteria` is called report an issue on its first argument if it's not `1`.
  */
-@Rule(key = "ESOB006", name = "ecocodeThriftyGeolocationCriteriaRule")
+@Rule(key = "EC524")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB006")
 public class ThriftyGeolocationCriteriaRule extends IssuableSubscriptionVisitor {
 
     // CASE 1
@@ -58,7 +60,7 @@ public class ThriftyGeolocationCriteriaRule extends IssuableSubscriptionVisitor 
     private static final String REPORT_MESSAGE_BEST_PROVIDER = "You should call Criteria.setPowerRequirement(POWER_LOW) to optimize battery usage.";
     // CASE 3
     private static final String REPORT_MESSAGE_SET_POWER_REQUIREMENT = "You should set the power requirement to POWER_LOW to optimize battery usage.";
-    
+
     private final MethodMatchers matcherCriteria = MethodMatchers.create().ofTypes("android.location.Criteria").names("setPowerRequirement").withAnyParameters().build();
     private final MethodMatchers matcherBestProvider = MethodMatchers.create().ofTypes("android.location.LocationManager").names("getBestProvider").withAnyParameters().build();
     private final MethodMatchers matcherRequestLocation = MethodMatchers.create().ofTypes("android.location.LocationManager").names("requestLocationUpdates").withAnyParameters().build();

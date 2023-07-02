@@ -23,12 +23,14 @@ import io.ecocode.java.checks.helpers.constant.ArgumentValueOnMethodCheck;
 import io.ecocode.java.checks.helpers.constant.MethodSpecs;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.Optional;
 
-@Rule(key = "ESOB011", name = "ecocodeVibrationFree")
+@Rule(key = "EC528")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB011")
 public class VibrationFreeRule extends ArgumentValueOnMethodCheck {
-    
+
     private static final String SYSTEM_SERVICE_METHOD = "getSystemService";
 
     public VibrationFreeRule() {

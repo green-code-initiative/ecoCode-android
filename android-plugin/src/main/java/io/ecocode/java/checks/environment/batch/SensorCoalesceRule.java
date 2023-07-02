@@ -28,6 +28,7 @@ import org.sonar.plugins.java.api.tree.Arguments;
 import org.sonar.plugins.java.api.tree.ExpressionTree;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 import java.util.Optional;
@@ -36,7 +37,8 @@ import java.util.Optional;
  * Check the call of the method "registerListener" of "android.hardware.SensorManager" with 4 parameters (the 4th one being the latency).
  * If it isn't present, report issue.
  */
-@Rule(key = "EBAT002", name = "ecoCodeSensorCoalesce")
+@Rule(key = "EC500")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EBAT002")
 public class SensorCoalesceRule extends IssuableSubscriptionVisitor {
 
     private final MethodMatchers sensorListenerMethodMatcher = MethodMatchers.create().ofTypes("android.hardware.SensorManager").names("registerListener").withAnyParameters().build();
