@@ -21,12 +21,14 @@ package io.ecocode.xml.checks.power;
 
 import io.ecocode.xml.checks.helpers.CheckPermissionsRule;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks manifest uses-permissions statement:
  * if the permission "android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" is found, report an issue.
  */
-@Rule(key = "EPOW002", name = "ecocodeCompagnionInBackgroundXml")
+@Rule(key = "EC543")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EPOW002")
 public class CompagnionInBackgroundXmlRule extends CheckPermissionsRule {
 
     private static final String PERMISSION_NAME = "android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND";

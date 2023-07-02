@@ -21,8 +21,10 @@ package io.ecocode.xml.checks.idleness;
 
 import io.ecocode.xml.checks.XPathSimpleCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
-@Rule(key = "EIDL003", name = "ecoKeepScreenOnXml")
+@Rule(key = "EC541")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EIDL003")
 public class KeepScreenOnXmlRule extends XPathSimpleCheck {
 
     private static final String KEEP_SCREEN_ON_XML_ATTRIBUTE = "//*[contains(@keepScreenOn, 'true')]/@keepScreenOn";

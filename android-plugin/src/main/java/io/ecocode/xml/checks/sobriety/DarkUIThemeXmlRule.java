@@ -21,6 +21,7 @@ package io.ecocode.xml.checks.sobriety;
 
 import io.ecocode.xml.checks.XPathSimpleCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks in theme xmls and manifest if the application override a "light" theme:
@@ -43,7 +44,8 @@ import org.sonar.check.Rule;
  *     "@style/Theme.MaterialComponents.Light"</li>
  * </ul>
  */
-@Rule(key = "ESOB004", name = "ecoCodeDarkUITheme")
+@Rule(key = "EC548")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "ESOB004")
 public class DarkUIThemeXmlRule extends XPathSimpleCheck {
 
     private static final String STYLE_HOLO_LIGHT = "/resources/style[starts-with(@parent, \"@android:style/Theme.Holo.Light\")]/@parent";

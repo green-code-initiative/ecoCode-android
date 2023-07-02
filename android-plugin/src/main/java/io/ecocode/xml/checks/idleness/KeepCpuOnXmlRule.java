@@ -21,12 +21,14 @@ package io.ecocode.xml.checks.idleness;
 
 import io.ecocode.xml.checks.helpers.CheckPermissionsRule;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks manifest uses-permissions statement.
  * if the permissions "android.permission.WAKE_LOCK" is found, report an issue.
  */
-@Rule(key = "EIDL005", name = "ecocodeKeepCpuOnXml")
+@Rule(key = "EC542")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EIDL005")
 public class KeepCpuOnXmlRule extends CheckPermissionsRule {
 
     private static final String PERMISSION_NAME = "android.permission.WAKE_LOCK";

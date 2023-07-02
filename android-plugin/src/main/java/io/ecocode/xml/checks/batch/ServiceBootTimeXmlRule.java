@@ -21,11 +21,13 @@ package io.ecocode.xml.checks.batch;
 
 import io.ecocode.xml.checks.XPathSimpleCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks manifest intent-filter statement: if the action is BOOT_COMPLETED, report a bad practice
  */
-@Rule(key = "EBAT001", name = "ecoServiceBootTimeXml")
+@Rule(key = "EC540")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EBAT001")
 public class ServiceBootTimeXmlRule extends XPathSimpleCheck {
 
     private static final String SERVICE_BOOT_TIME_ATTRIBUTE = "//manifest/application/receiver/intent-filter/action/@name[. = \"android.intent.action.BOOT_COMPLETED\"]";

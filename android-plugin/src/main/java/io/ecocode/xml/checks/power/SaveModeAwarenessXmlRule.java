@@ -21,12 +21,14 @@ package io.ecocode.xml.checks.power;
 
 import io.ecocode.xml.checks.XPathSimpleCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks manifest uses-permissions statement:
  * if the permission "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" is found, report an issue.
  */
-@Rule(key = "EPOW007", name = "ecocodeSaveModeAwarenessXml")
+@Rule(key = "EC546")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EPOW007")
 public class SaveModeAwarenessXmlRule extends XPathSimpleCheck {
 
     private static final String ACTION_POWER_CHANGED_XPATH = "//manifest/application/receiver/intent-filter/action/@name[.=\"android.intent.action.BATTERY_CHANGED\"]";
