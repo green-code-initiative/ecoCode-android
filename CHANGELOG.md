@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Home page URL for plugins (for display on SonarQube administration page)
 - add `eco-design` tag on all rules on Java, PHP, Python and javascript plugins
+- [#207](https://github.com/green-code-initiative/ecoCode/issues/207) Add release tag analyzis on SonarCloud
 
 ### Changed
 
