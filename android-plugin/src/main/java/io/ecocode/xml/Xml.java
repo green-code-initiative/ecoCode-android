@@ -21,9 +21,9 @@ package io.ecocode.xml;
 
 public interface Xml { //NOSONAR - we use the interface for constant without inheriting it
     String REPOSITORY_NAME = "ecoCode (Android)";
-    String PROFILE_NAME = "ecoCode";
     String KEY = "xml";
     String REPOSITORY_KEY = "ecocode-android-xml";
     String RULES_SPECIFICATIONS_XML_PATH = "io/ecocode/rules/xml";
-    String PROFILE_PATH = "io/ecocode/xml/rules/ecocode_xml_profile.json";
+    String PROFILE_NAME = "ecoCode (Android)";
+    String PROFILE_PATH = "io/ecocode/android/xml/ecocode_xml_profile.json";
 }
