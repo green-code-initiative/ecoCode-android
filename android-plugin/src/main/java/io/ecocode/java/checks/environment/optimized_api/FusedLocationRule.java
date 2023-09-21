@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.optimized_api;
 
-import com.google.common.collect.ImmutableList;
 import io.ecocode.java.checks.helpers.TreeHelper;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
@@ -47,7 +46,7 @@ public class FusedLocationRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.IMPORT);
+        return List.of(Tree.Kind.IMPORT);
     }
 
     @Override

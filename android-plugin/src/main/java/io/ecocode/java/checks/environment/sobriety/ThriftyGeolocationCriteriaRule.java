@@ -29,7 +29,6 @@ import org.sonar.plugins.java.api.tree.ExpressionTree;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
 
-import com.google.common.collect.ImmutableList;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
@@ -70,7 +69,7 @@ public class ThriftyGeolocationCriteriaRule extends IssuableSubscriptionVisitor 
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override

@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.sobriety;
 
-import com.google.common.collect.ImmutableList;
 import io.ecocode.java.checks.helpers.TreeHelper;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
@@ -49,7 +48,7 @@ public class ThriftyGeolocationMinDistanceRule extends IssuableSubscriptionVisit
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override

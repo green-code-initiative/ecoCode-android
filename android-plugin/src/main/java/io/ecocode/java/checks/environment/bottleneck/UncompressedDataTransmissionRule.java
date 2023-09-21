@@ -32,8 +32,6 @@ import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
 
-import com.google.common.collect.ImmutableList;
-
 import io.ecocode.java.checks.helpers.CheckArgumentComplexTypeUtils;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
@@ -54,7 +52,7 @@ public class UncompressedDataTransmissionRule extends IssuableSubscriptionVisito
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.VARIABLE);
+        return List.of(Tree.Kind.VARIABLE);
     }
 
     @Override
