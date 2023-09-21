@@ -6,11 +6,13 @@ import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.*;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 import java.util.Optional;
 
-@Rule(key = "ESOB014", name = "ecoCodeHighFrameRate")
+@Rule(key = "EC531")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB014")
 public class HighFrameRateRule extends IssuableSubscriptionVisitor {
 
     private static final float FRAME_RATE_60 = 60.0f;

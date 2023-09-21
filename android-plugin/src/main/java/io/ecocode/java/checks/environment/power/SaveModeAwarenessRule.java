@@ -28,6 +28,7 @@ import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,7 +36,8 @@ import java.util.Optional;
 /**
  * Checks the use of the BATTERY_CHANGED propriety in intentFilter or the use of the isPowerSaveMode() method
  */
-@Rule(key = "EPOW006", name = "ecocodeSaveModeAwareness")
+@Rule(key = "EC520")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EPOW006")
 public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
     private static final Logger LOG = Loggers.get(SaveModeAwarenessRule.class);
 

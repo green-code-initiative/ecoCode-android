@@ -21,12 +21,14 @@ package io.ecocode.java.checks.environment.sobriety;
 
 import io.ecocode.java.checks.helpers.constant.ConstantOnMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * On the method `android.bluetooth.le.AdvertiseSettings$Builder#setAdvertiseMode(int)`, report an issue if
  * it is called with parameter value different from `ADVERTISE_MODE_LOW_POWER (0)`.
  */
-@Rule(key = "ESOB007", name = "ecoCodeThriftyBluetoothLowEnergySetAdvertiseMode")
+@Rule(key = "EC525")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB007")
 public class ThriftyBluetoothLowEnergySetAdvertiseModeRule extends ConstantOnMethodCheck {
 
     private static final int CONSTANT_POWER_LOW = 0;

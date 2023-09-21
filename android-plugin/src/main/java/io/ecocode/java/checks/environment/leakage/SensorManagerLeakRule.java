@@ -21,13 +21,15 @@ package io.ecocode.java.checks.environment.leakage;
 
 import io.ecocode.java.checks.helpers.OpeningClosingMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check that SensorManagerLeakRule#unregisterListener() method is closed after SensorManagerLeakRule#registerListener().
  *
  * @see OpeningClosingMethodCheck
  */
-@Rule(key = "ELEA004", name = "ecoCodeSensorManagerLeakRule")
+@Rule(key = "EC514")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ELEA004")
 public class SensorManagerLeakRule extends OpeningClosingMethodCheck {
 
     public SensorManagerLeakRule() {

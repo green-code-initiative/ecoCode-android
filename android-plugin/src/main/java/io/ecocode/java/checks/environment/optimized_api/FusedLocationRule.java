@@ -26,6 +26,7 @@ import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
 import org.sonar.plugins.java.api.tree.ImportTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +37,8 @@ import java.util.List;
  * <li>If the first import is found but not the second, report an issue.</li>
  * </ul>`
  */
-@Rule(key = "EOPT001", name = "ecoCodeFusedLocation")
+@Rule(key = "EC517")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EOPT001")
 public class FusedLocationRule extends IssuableSubscriptionVisitor {
 
     protected static final String WRONG_IMPORT = "android.location";

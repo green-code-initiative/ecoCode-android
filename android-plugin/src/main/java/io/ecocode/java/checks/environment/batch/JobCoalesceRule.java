@@ -26,6 +26,7 @@ import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 
@@ -33,9 +34,10 @@ import java.util.List;
  * Checks the call of "set", "setAlarmClock", "setExact", "setInexactRepeating", "setRepeating" & "setWindow" from "android.app.AlarmManager".
  * Checks also the call of "onPerformSync" & "getSyncAdapterBinder" from "android.content.AbstractThreadedSyncAdapter".
  */
-@Rule(key = "EBAT003", name = "ecocodeJobCoalesce")
+@Rule(key = "EC501")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EBAT003")
 public class JobCoalesceRule extends IssuableSubscriptionVisitor {
-	
+
 	private static final String ALARM_MANAGER_CLASS = "android.app.AlarmManager";
 
     private final MethodMatchers alarmSchedulerMethodMatcher = MethodMatchers.or(

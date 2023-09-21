@@ -23,6 +23,7 @@ package io.ecocode.java.checks.environment.sobriety;
 import io.ecocode.java.checks.helpers.constant.ArgumentValueOnMethodCheck;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.Optional;
 
@@ -30,7 +31,8 @@ import java.util.Optional;
  * Check the call of the method "setTorchMode" from "android.hardware.camera2.CameraManager"
  * with the param 1 set to "true".
  */
-@Rule(key = "ESOB013", name = "ecocodeTorchFree")
+@Rule(key = "EC530")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB013")
 public class TorchFreeRule extends ArgumentValueOnMethodCheck {
 
     public TorchFreeRule() {

@@ -25,6 +25,7 @@ import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 
@@ -32,7 +33,8 @@ import java.util.List;
  * Check the call of the method "acquire" of "android.os.PowerManager$WakeLock".
  * Reports an issue if found without any parameters.
  */
-@Rule(key = "EIDL006", name = "ecocodeDurableWakeLock")
+@Rule(key = "EC508")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL006")
 public class DurableWakeLockRule extends IssuableSubscriptionVisitor {
     private String methodOwnerType = "android.os.PowerManager$WakeLock";
     private String methodName = "acquire";

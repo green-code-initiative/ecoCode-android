@@ -21,11 +21,13 @@ package io.ecocode.java.checks.environment.sobriety;
 
 import io.ecocode.java.checks.helpers.constant.FlagOnMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check the call of "TYPE_ROTATION_VECTOR" on the method "getDefaultSensor" of "android.hardware.SensorManager".
  */
-@Rule(key = "ESOB001", name = "ecocodeThriftyMotionSensor")
+@Rule(key = "EC521")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB001")
 public class ThriftyMotionSensorRule extends FlagOnMethodCheck {
 
     public ThriftyMotionSensorRule() {

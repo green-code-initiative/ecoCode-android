@@ -21,12 +21,14 @@ package io.ecocode.xml.checks.power;
 
 import io.ecocode.xml.checks.XPathSimpleCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Checks manifest intent-filter statement: if the action is ACTION_POWER_CONNECTED, ACTION_POWER_DISCONNECTED,
  * BATTERY_OKAY or BATTERY_LOW report a good practice.
  */
-@Rule(key = "EPOW005", name = "ecocodeBatteryAwarenessXml")
+@Rule(key = "EC545")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "EPOW005")
 public class ChargeAwarenessXmlRule extends XPathSimpleCheck {
 
     private String xPathActionPowerConnected = "//manifest/application/receiver/intent-filter/action/@name[.=\"android.intent.action.ACTION_POWER_CONNECTED\"]";

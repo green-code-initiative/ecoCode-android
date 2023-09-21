@@ -34,6 +34,7 @@ import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 
 import com.google.common.collect.ImmutableList;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Look for `android.content.IntentFilter` constructor declaration or call to `IntentFilter.addAction()` or `
@@ -42,10 +43,11 @@ import com.google.common.collect.ImmutableList;
  * android.intent.action.ACTION_POWER_CONNECTED`, `android.intent.action.BATTERY_LOW` or
  * android.intent.action.BATTERY_OKAY` reports a (positive) issue.
  */
-@Rule(key = "EPOW004", name = "ecocodeChargeAwareness")
+@Rule(key = "EC519")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EPOW004")
 public class ChargeAwarenessRule extends IssuableSubscriptionVisitor {
     private static final Logger LOG = Loggers.get(ChargeAwarenessRule.class);
-    
+
     private static final String ACTION_POWER_DISCONNECTED = "android.intent.action.ACTION_POWER_DISCONNECTED";
     private static final String ACTION_POWER_CONNECTED = "android.intent.action.ACTION_POWER_CONNECTED";
     private static final String ACTION_POWER_BATTERY_LOW = "android.intent.action.BATTERY_LOW";

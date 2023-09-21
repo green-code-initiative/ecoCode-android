@@ -20,11 +20,10 @@
 package io.ecocode.java;
 
 public interface Java { //NOSONAR - we use the interface for constant without inheriting it
-    String REPOSITORY_NAME = "ecoCode";
-    String PROFILE_NAME = "ecoCode";
+    String REPOSITORY_NAME = "ecoCode (Android)";
     String KEY = "java";
-    String REPOSITORY_KEY = "ecoCode-java";
-    // don't change that because the path is hard coded in CheckVerifier
-    String JAVA_RESOURCE_PATH = "/org/sonar/l10n/java/rules/squid"; //NOSONAR - tis URI is the same everywhere
-    String PROFILE_PATH = "org/sonar/l10n/java/rules/squid/ecocode_java_profile.json";
+    String REPOSITORY_KEY = "ecocode-android-java";
+    String RULES_SPECIFICATIONS_JAVA_PATH = "/io/ecocode/rules/java"; //NOSONAR - this URI is the same everywhere
+    String PROFILE_NAME = "ecoCode (Android)";
+    String PROFILE_PATH = "io/ecocode/android/java/ecocode_java_profile.json";
 }

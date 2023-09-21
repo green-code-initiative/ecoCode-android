@@ -21,13 +21,15 @@ package io.ecocode.java.checks.environment.leakage;
 
 import io.ecocode.java.checks.helpers.OpeningClosingMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check that LocationManager#removeUpdates() method is closed after LocationManager#requestLocationUpdates().
  *
  * @see OpeningClosingMethodCheck
  */
-@Rule(key = "ELEA003", name = "ecoCodeLocationLeakRule")
+@Rule(key = "EC513")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ELEA003")
 public class LocationLeakRule extends OpeningClosingMethodCheck {
 
     public LocationLeakRule() {

@@ -21,11 +21,13 @@ package io.ecocode.java.checks.environment.idleness;
 
 import io.ecocode.java.checks.helpers.SpecificMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check the call of the method "setExact" And "setExactAndAllowWhileIdle" and "setRepeating" of "android.app.AlarmManager".
  */
-@Rule(key = "EIDL007", name = "ecocodeRigidAlarm")
+@Rule(key = "EC509")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EIDL007")
 public class RigidAlarmRule extends SpecificMethodCheck {
 
     public RigidAlarmRule() {

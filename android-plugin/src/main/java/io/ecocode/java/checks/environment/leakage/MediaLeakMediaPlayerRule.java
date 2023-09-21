@@ -21,13 +21,15 @@ package io.ecocode.java.checks.environment.leakage;
 
 import io.ecocode.java.checks.helpers.ConstructorBeforeMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check if MediaPlayer's constructor is called, the release method is called afterwards.
  *
  * @see ConstructorBeforeMethodCheck
  */
-@Rule(key = "ELEA006", name = "ecocodeMediaLeakMediaPlayerRule")
+@Rule(key = "EC516")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ELEA006")
 public class MediaLeakMediaPlayerRule extends ConstructorBeforeMethodCheck {
     private static final String ERROR_MESSAGE = "Failing to call release() on a Media Player may lead to continuous battery consumption.";
 

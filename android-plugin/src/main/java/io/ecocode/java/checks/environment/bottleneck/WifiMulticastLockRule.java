@@ -21,13 +21,15 @@ package io.ecocode.java.checks.environment.bottleneck;
 
 import io.ecocode.java.checks.helpers.OpeningClosingMethodCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
  * Check that WifiManager.MulticastLock#release() method is closed after WifiManager.MulticastLock#acquire().
  *
  * @see OpeningClosingMethodCheck
  */
-@Rule(key = "EBOT002", name = "ecoCodeWifiMulticastLock")
+@Rule(key = "EC503")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EBOT002")
 public class WifiMulticastLockRule extends OpeningClosingMethodCheck {
     private static final String ERROR_MESSAGE = "Failing to call WifiManager.MulticastLock#release() can cause a noticeable battery drain.";
 

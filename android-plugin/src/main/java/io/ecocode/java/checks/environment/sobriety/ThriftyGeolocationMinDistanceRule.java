@@ -30,6 +30,7 @@ import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.ExpressionTree;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +39,8 @@ import java.util.List;
  * Check if a method requestLocationUpdates is called from android.location.LocationManager package.
  * If minDistance argument value is 0, report an issue on the argument.
  */
-@Rule(key = "ESOB010", name = "ecocodeThriftyGeolocationMinDistance")
+@Rule(key = "EC527")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "ESOB010")
 public class ThriftyGeolocationMinDistanceRule extends IssuableSubscriptionVisitor {
     private static final String ERROR_MESSAGE = "Location updates should be done with a distance interval greater than 0.";
     private static final Logger LOG = Loggers.get(ThriftyGeolocationMinDistanceRule.class);

@@ -21,6 +21,7 @@ package io.ecocode.xml.checks.sobriety;
 
 import io.ecocode.xml.checks.XPathCheck;
 import org.sonar.check.Rule;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 import org.w3c.dom.Node;
 
 /**
@@ -36,7 +37,8 @@ import org.w3c.dom.Node;
  *      <li>If the value is an hexa value >= to a given brightness threshold throw an issue</li>
  *  </ul>
  */
-@Rule(key = "ESOB003", name = "ecocodeCheckColorXml")
+@Rule(key = "EC547")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-xml", ruleKey = "ESOB003")
 public class DarkUIBrightColorsXmlRule extends XPathCheck {
 
     private static final String[] ATTRIBUTES_TO_CHECK = {

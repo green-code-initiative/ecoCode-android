@@ -25,6 +25,7 @@ import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.semantic.MethodMatchers;
 import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.Tree;
+import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 import java.util.List;
 
@@ -32,7 +33,8 @@ import java.util.List;
  * Check if the method openConnection of the Url class is called inside a loop.
  * Not thrown if openConnection() call is deported into an other method.
  */
-@Rule(key = "EBOT001", name = "ecocodeInternetInTheLoop")
+@Rule(key = "EC502")
+@DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "EBOT001")
 public class InternetInTheLoopRule extends IssuableSubscriptionVisitor {
 
     private static final String ERROR_MESSAGE = "Internet connection should not be opened in loops to preserve the battery.";
