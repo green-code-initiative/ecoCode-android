@@ -114,9 +114,7 @@ public class ThriftyGeolocationCriteriaRule extends IssuableSubscriptionVisitor 
                 ExpressionTree arg = mit.arguments().get(0);
                 Optional<Object> optionalArg = arg.asConstant();
                 try {
-                    if (optionalArg.isPresent() && ((Integer) optionalArg.get()) == 1) {
-                        hasSeenSetPowerRequirement = true;
-                    } else {
+                    if (!(optionalArg.isPresent() && ((Integer) optionalArg.get()) == 1)) {
                         reportIssue(mit, REPORT_MESSAGE_SET_POWER_REQUIREMENT);
                     }
                 } catch (Exception e) {
