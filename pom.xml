@@ -8,10 +8,10 @@
 	<packaging>pom</packaging>
 
 	<name>ecoCode Android Sonar Plugins Project</name>
-	<description>Les règles s'appuient sur l'édition 3 du livre "Ecoconception Web / Les 115 bonnes pratiques" =&gt; https://collectif.greenit.fr/ecoconception-web/115-bonnes-pratiques-eco-conception_web.html</description>
+	<description>Provides rules to reduce the environmental footprint of your Android applications</description>
 	<url>https://github.com/green-code-initiative/ecocode-android</url>
 	<organization>
-		<name>Green code Initiative</name>
+		<name>Green Code Initiative</name>
 		<url>https://collectif.greenit.fr</url>
 	</organization>
 	<licenses>
@@ -162,6 +162,42 @@
 					<version>${jacoco.version}</version>
 				</plugin>
 
+				<!-- License management -->
+				<plugin>
+					<groupId>com.mycila</groupId>
+					<artifactId>license-maven-plugin</artifactId>
+					<version>4.1</version>
+					<configuration>
+						<properties>
+							<project.name>ecoCode Android plugin</project.name>
+							<project.description>Provides rules to reduce the environmental footprint of your Android applications</project.description>
+							<email>contact@ecocode.io</email>
+							<year>2020</year>
+						</properties>
+						<licenseSets>
+							<licenseSet>
+								<header>com/mycila/maven/plugin/license/templates/GPL-3.txt</header>
+								<includes>
+									<include>**/*.java</include>
+								</includes>
+								<!-- Exclude CodeNarc files that already have their own copyright -->
+								<excludes>
+									<exclude>**/java/org/sonar/plugins/groovy/**</exclude>
+									<exclude>**/codenarc-converter/**</exclude>
+								</excludes>
+							</licenseSet>
+						</licenseSets>
+					</configuration>
+					<executions>
+						<execution>
+							<id>validate</id>
+							<goals>
+								<goal>check</goal>
+							</goals>
+							<phase>validate</phase>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
