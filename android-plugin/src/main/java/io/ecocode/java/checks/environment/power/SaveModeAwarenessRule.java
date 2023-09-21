@@ -71,10 +71,8 @@ public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
                 if ((addActionMatcher.matches(mit) || createIntentFilterMatcher.matches(mit))
                         && !mit.arguments().isEmpty()) {
                     mit.arguments().get(0).asConstant().ifPresentOrElse(o -> {
-                        if (o instanceof String) {
-                            if (o.equals(ACTION_BATTERY_CHANGED)) {
-                                reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
-                            }
+                        if (o instanceof String && o.equals(ACTION_BATTERY_CHANGED)) {
+                            reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
                         }
                     }, () -> {
                         if (isPowerSaveModeMatcher.matches(mit)) {
