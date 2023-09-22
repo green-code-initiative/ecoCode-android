@@ -2,6 +2,13 @@
 <!-- markdownlint-disable MD003 MD004 MD007 MD032 -->
 # CodeNarc Change Log
 
+Version 2.2.4    (September 2023)
+--------------------------------------
+Update key of ecoCode rules:
+- Fat App -> EC5001
+- Supported Version Range -> EC5002
+- Disable Obfuscation -> EC5003
+
 Version 2.2.3    (November 2022)
 --------------------------------------
 Added rule
