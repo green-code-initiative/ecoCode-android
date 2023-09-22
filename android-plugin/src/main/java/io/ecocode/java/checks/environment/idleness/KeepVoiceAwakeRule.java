@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.idleness;
 
-import com.google.common.collect.ImmutableList;
 import io.ecocode.java.checks.helpers.CheckArgumentComplexTypeUtils;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
@@ -57,7 +56,7 @@ public class KeepVoiceAwakeRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override
