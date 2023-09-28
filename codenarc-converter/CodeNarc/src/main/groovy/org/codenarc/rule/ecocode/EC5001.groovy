@@ -29,7 +29,7 @@ import org.codenarc.util.AstUtil
  *
  * @author Leboulanger Mickael
  */
-class EC5001Rule extends AbstractAstVisitorRule {
+class EC5001 extends AbstractAstVisitorRule {
 
     String name = 'EC5001'
     int priority = 2

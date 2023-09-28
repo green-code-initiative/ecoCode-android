@@ -23,7 +23,7 @@ import org.codenarc.rule.AbstractRuleTestCase
  *
  * @author Leboulanger Mickael
  */
-class EC5001RuleTest extends AbstractRuleTestCase<EC5001Rule> {
+class EC5001Test extends AbstractRuleTestCase<EC5001> {
 
     @Test
     void test_RuleProperties() {
@@ -212,8 +212,8 @@ class EC5001RuleTest extends AbstractRuleTestCase<EC5001Rule> {
     }
 
     @Override
-    protected EC5001Rule createRule() {
-        new EC5001Rule()
+    protected EC5001 createRule() {
+        new EC5001()
     }
     private String getViolationMessage() {
         return 'Using "multiDexEnabled true" goes against the overall reduction of the weight of the apps and hence must be avoided.'
