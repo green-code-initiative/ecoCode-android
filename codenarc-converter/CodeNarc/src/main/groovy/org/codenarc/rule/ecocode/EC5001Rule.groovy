@@ -29,14 +29,14 @@ import org.codenarc.util.AstUtil
  *
  * @author Leboulanger Mickael
  */
-class FatAppRule extends AbstractAstVisitorRule {
+class EC5001Rule extends AbstractAstVisitorRule {
 
-    String name = 'FatApp'
+    String name = 'EC5001'
     int priority = 2
-    Class astVisitorClass = FatAppAstVisitor
+    Class astVisitorClass = EC5001AstVisitor
 }
 
-class FatAppAstVisitor extends AbstractAstVisitor {
+class EC5001AstVisitor extends AbstractAstVisitor {
 
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {

@@ -5,7 +5,7 @@ title: CodeNarc - Ecocode Rules
 
 # Ecocode Rules  ("*rulesets/ecocode.xml*")
 
-## FatApp Rule
+## EC5001 Rule
 
 *Since CodeNarc 2.2.1*
 
@@ -119,4 +119,3 @@ Example of violations:
         }
     }
 ```
-

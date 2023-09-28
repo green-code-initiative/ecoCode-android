@@ -167,7 +167,7 @@ title: CodeNarc - Rule Index
 * [DuplicateStringLiteral](./codenarc-rules-dry.html#duplicatestringliteral-rule)
 
 ## [Ecocode](./codenarc-rules-ecocode.html)
-* [FatApp](./codenarc-rules-ecocode.html#fatapp-rule)
+* [EC5001](./codenarc-rules-ecocode.html#EC5001-rule)
 * [SupportedVersionRange](./codenarc-rules-ecocode.html#supportedversionrange-rule)
 * [DisableObfuscation](./codenarc-rules-ecocode.html#disableobfuscation-rule)
 

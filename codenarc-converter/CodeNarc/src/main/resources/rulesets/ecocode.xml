@@ -7,7 +7,7 @@
         EcoCode rule set.
     </description>
 
-    <rule class='org.codenarc.rule.ecocode.FatAppRule'/>
+    <rule class='org.codenarc.rule.ecocode.EC5001Rule'/>
     <rule class='org.codenarc.rule.ecocode.SupportedVersionRangeRule'/>
     <rule class='org.codenarc.rule.ecocode.DisableObfuscationRule'/>
 </ruleset>

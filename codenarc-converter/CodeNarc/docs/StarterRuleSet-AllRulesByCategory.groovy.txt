@@ -166,7 +166,7 @@ ruleset {
     DuplicateStringLiteral
 
     // rulesets/ecocode.xml
-    FatApp
+    EC5001
     SupportedVersionRange
     DisableObfuscation
 
