@@ -23,7 +23,7 @@ import org.codenarc.rule.AbstractRuleTestCase
  *
  * @author Leboulanger Mickael
  */
-class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscationRule> {
+class EC5003Test extends AbstractRuleTestCase<EC5003> {
 
     @Test
     void test_RuleProperties() {
@@ -208,8 +208,8 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
     }
 
     @Override
-    protected DisableObfuscationRule createRule() {
-        new DisableObfuscationRule()
+    protected EC5003 createRule() {
+        new EC5003()
     }
     private String getViolationMessage() {
         return 'Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.'

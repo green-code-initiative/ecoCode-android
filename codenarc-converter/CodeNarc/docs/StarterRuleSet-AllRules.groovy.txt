@@ -77,7 +77,6 @@ ruleset {
     CyclomaticComplexity   // Requires the GMetrics jar
     DeadCode 
     DirectConnectionManagement
-    DisableObfuscation
     DoubleCheckedLocking 
     DoubleNegative 
     DuplicateCaseStatement 
@@ -90,6 +89,7 @@ ruleset {
     DuplicateStringLiteral 
     EC5001
     EC5002
+    EC5003
     ElseBlockBraces 
     EmptyCatchBlock 
     EmptyClass

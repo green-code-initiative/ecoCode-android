@@ -27,14 +27,14 @@ import org.codenarc.util.AstUtil
  *
  * @author Berque Justin
  */
-class DisableObfuscationRule extends AbstractAstVisitorRule {
+class EC5003 extends AbstractAstVisitorRule {
 
-    String name = 'DisableObfuscation'
+    String name = 'EC5003'
     int priority = 2
-    Class astVisitorClass = DisableObfuscationAstVisitor
+    Class astVisitorClass = EC5003AstVisitor
 }
 
-class DisableObfuscationAstVisitor extends AbstractAstVisitor {
+class EC5003AstVisitor extends AbstractAstVisitor {
 
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {

@@ -168,7 +168,7 @@ ruleset {
     // rulesets/ecocode.xml
     EC5001
     EC5002
-    DisableObfuscation
+    EC5003
 
     // rulesets/enhanced.xml
     CloneWithoutCloneable 

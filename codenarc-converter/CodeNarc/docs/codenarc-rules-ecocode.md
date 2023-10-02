@@ -83,7 +83,7 @@ android {
 }
 ```
 
-## DisableObfuscation Rule
+## EC5003 Rule
 
 *Since CodeNarc 2.2.3*
 

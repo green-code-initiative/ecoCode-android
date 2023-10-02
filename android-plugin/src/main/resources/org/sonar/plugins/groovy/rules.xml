@@ -86,10 +86,10 @@
 
   <!-- since 2.2.3 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.DisableObfuscationRule</key>
+    <key>EC5003</key>
     <severity>MINOR</severity>
     <name><![CDATA[Disable Obfuscation]]></name>
-    <internalKey><![CDATA[DisableObfuscation]]></internalKey>
+    <internalKey><![CDATA[EC5003]]></internalKey>
     <description><![CDATA[<p>Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.</p>
 <p>Example of violations:</p>
 <pre><code>    android {
