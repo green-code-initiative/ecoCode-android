@@ -23,12 +23,12 @@ import org.junit.Test
  *
  * @author Leboulanger Mickael
  */
-class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersionRangeRule> {
+class EC5002Test extends AbstractRuleTestCase<EC5002> {
 
     @Test
     void test_RuleProperties() {
         assert rule.priority == 2
-        assert rule.name == 'SupportedVersionRange'
+        assert rule.name == 'EC5002'
     }
 
     @Test
@@ -135,7 +135,7 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
     }
 
     @Override
-    protected SupportedVersionRangeRule createRule() {
-        new SupportedVersionRangeRule()
+    protected EC5002 createRule() {
+        new EC5002()
     }
 }

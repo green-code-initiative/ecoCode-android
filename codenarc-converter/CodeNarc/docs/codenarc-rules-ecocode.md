@@ -45,7 +45,7 @@ Example of violations:
     }
 ```
 
-## SupportedVersionRange Rule
+## EC5002 Rule
 
 *Since CodeNarc 2.2.1*
 

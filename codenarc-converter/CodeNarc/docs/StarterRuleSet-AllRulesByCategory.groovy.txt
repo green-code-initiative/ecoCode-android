@@ -167,7 +167,7 @@ ruleset {
 
     // rulesets/ecocode.xml
     EC5001
-    SupportedVersionRange
+    EC5002
     DisableObfuscation
 
     // rulesets/enhanced.xml

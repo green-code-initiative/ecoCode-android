@@ -8,6 +8,6 @@
     </description>
 
     <rule class='org.codenarc.rule.ecocode.EC5001'/>
-    <rule class='org.codenarc.rule.ecocode.SupportedVersionRangeRule'/>
+    <rule class='org.codenarc.rule.ecocode.EC5002'/>
     <rule class='org.codenarc.rule.ecocode.DisableObfuscationRule'/>
 </ruleset>

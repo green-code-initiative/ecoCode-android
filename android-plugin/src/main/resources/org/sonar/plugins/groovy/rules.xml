@@ -46,10 +46,10 @@
 
   <!-- since 2.2.1 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.SupportedVersionRangeRule</key>
+    <key>EC5002</key>
     <severity>MINOR</severity>
     <name><![CDATA[Supported Version Range]]></name>
-    <internalKey><![CDATA[SupportedVersionRange]]></internalKey>
+    <internalKey><![CDATA[EC5002]]></internalKey>
     <description><![CDATA[<p>When looking at the minSdkVersion and targetSdkVersion (or minSdk, targetSdk) attributes for the <uses-sdk> in the AndroidManifest.xml file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases.</p>
 <p>Example of violations:</p>
 <pre><code>android {

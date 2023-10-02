@@ -168,7 +168,7 @@ title: CodeNarc - Rule Index
 
 ## [Ecocode](./codenarc-rules-ecocode.html)
 * [EC5001](./codenarc-rules-ecocode.html#EC5001-rule)
-* [SupportedVersionRange](./codenarc-rules-ecocode.html#supportedversionrange-rule)
+* [EC5002](./codenarc-rules-ecocode.html#EC5002-rule)
 * [DisableObfuscation](./codenarc-rules-ecocode.html#disableobfuscation-rule)
 
 ## [Enhanced](./codenarc-rules-enhanced.html)

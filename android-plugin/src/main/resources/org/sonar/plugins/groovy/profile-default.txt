@@ -1,3 +1,3 @@
 EC5001
-org.codenarc.rule.ecocode.SupportedVersionRangeRule
+EC5002
 org.codenarc.rule.ecocode.DisableObfuscationRule

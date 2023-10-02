@@ -89,6 +89,7 @@ ruleset {
     DuplicateSetValue 
     DuplicateStringLiteral 
     EC5001
+    EC5002
     ElseBlockBraces 
     EmptyCatchBlock 
     EmptyClass
@@ -304,7 +305,6 @@ ruleset {
     StaticMatcherField 
     StaticMethodsBeforeInstanceMethods 
     StaticSimpleDateFormatField
-    SupportedVersionRange
     SwallowThreadDeath 
     SynchronizedMethod 
     SynchronizedOnBoxedPrimitive 
