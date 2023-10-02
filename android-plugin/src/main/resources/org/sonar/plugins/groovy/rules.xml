@@ -4,7 +4,7 @@
 
   <!-- since 2.2.1 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.EC5001</key>
+    <key>EC5001</key>
     <severity>MINOR</severity>
     <name><![CDATA[Fat App]]></name>
     <internalKey><![CDATA[EC5001]]></internalKey>
