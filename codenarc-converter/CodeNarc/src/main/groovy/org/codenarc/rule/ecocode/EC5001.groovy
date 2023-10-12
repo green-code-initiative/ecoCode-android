@@ -15,34 +15,36 @@
  */
 package org.codenarc.rule.ecocode
 
-
+import org.codehaus.groovy.ast.expr.ArgumentListExpression
 import org.codehaus.groovy.ast.expr.ConstantExpression
 import org.codehaus.groovy.ast.expr.MethodCallExpression
+import org.codehaus.groovy.ast.stmt.ExpressionStatement
 import org.codenarc.rule.AbstractAstVisitor
 import org.codenarc.rule.AbstractAstVisitorRule
+import org.codenarc.source.SourceCode
 import org.codenarc.util.AstUtil
 
 /**
- * Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.
+ * Using "multiDexEnabled true" goes against the overall reduction of the weight of the apps and hence must be avoided.
  *
- * @author Berque Justin
+ * @author Leboulanger Mickael
  */
-class DisableObfuscationRule extends AbstractAstVisitorRule {
+class EC5001 extends AbstractAstVisitorRule {
 
-    String name = 'DisableObfuscation'
+    String name = 'EC5001'
     int priority = 2
-    Class astVisitorClass = DisableObfuscationAstVisitor
+    Class astVisitorClass = EC5001AstVisitor
 }
 
-class DisableObfuscationAstVisitor extends AbstractAstVisitor {
+class EC5001AstVisitor extends AbstractAstVisitor {
 
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {
-        if (((ConstantExpression) methodCallExpression.getMethod()).getValue() == 'minifyEnabled') {
+        if (((ConstantExpression) methodCallExpression.getMethod()).getValue() == 'multiDexEnabled') {
             for (Object value : AstUtil.getArgumentsValue(methodCallExpression.getArguments())) {
                 if (value == true)
                     addViolation(methodCallExpression, getViolationMessage())
-                else {
+                else { // TODO get value from variable at runtime
                     this.getSourceCode().getLines().each { string ->
                         if (string.contains(value + ' = true')) {
                             addViolation(methodCallExpression, getViolationMessage())
@@ -55,6 +57,6 @@ class DisableObfuscationAstVisitor extends AbstractAstVisitor {
     }
 
     private String getViolationMessage() {
-        return 'Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.'
+        return 'Using \"multiDexEnabled true\" goes against the overall reduction of the weight of the apps and hence must be avoided.'
     }
 }

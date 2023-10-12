@@ -19,16 +19,16 @@ import org.junit.Test
 import org.codenarc.rule.AbstractRuleTestCase
 
 /**
- * Tests for DisableObfuscationRule
+ * Tests for EC5001 (Fat App Rule)
  *
  * @author Leboulanger Mickael
  */
-class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscationRule> {
+class EC5001Test extends AbstractRuleTestCase<EC5001> {
 
     @Test
     void test_RuleProperties() {
         assert rule.priority == 2
-        assert rule.name == 'DisableObfuscation'
+        assert rule.name == 'EC5001'
     }
 
     @Test
@@ -66,7 +66,7 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
     }
 
     @Test
-    void testDetect_minifyEnabled_true() {
+    void testDetect_multiDexEnabled_true() {
         final SOURCE = '''
            android {
                 compileSdk 32
@@ -77,13 +77,14 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                     targetSdkVersionVersionVersion 32
                     versionCode 1
                     versionName "1.0"
+                    multiDexEnabled true
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 
                 buildTypes {
                     release {
-                        minifyEnabled true
+                        minifyEnabled false
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -96,13 +97,13 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                 }
             }
         '''
-        assertSingleViolation(SOURCE, 17, 'minifyEnabled', getViolationMessage())
+        assertSingleViolation(SOURCE, 11, 'multiDexEnabled', getViolationMessage())
     }
 
     @Test
-    void testDetect_minifyEnabled_variable_true_before() {
+    void testDetect_multiDexEnabled_variable_true_before() {
         final SOURCE = '''
-            def minify = true
+            def multidex = true
             android {
                 compileSdk 32
 
@@ -112,13 +113,14 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                     targetSdkVersionVersion 32
                     versionCode 1
                     versionName "1.0"
+                    multiDexEnabled multidex
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 
                 buildTypes {
                     release {
-                        minifyEnabled minify
+                        minifyEnabled false
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -131,7 +133,7 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                 }
             }
         '''
-        assertSingleViolation(SOURCE, 18, 'minifyEnabled', getViolationMessage())
+        assertSingleViolation(SOURCE, 12, 'multiDexEnabled', getViolationMessage())
     }
 
     @Test
@@ -146,13 +148,14 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                     targetSdkVersion 32
                     versionCode 1
                     versionName "1.0"
+                    multiDexEnabled multidex
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 
                 buildTypes {
                     release {
-                        minifyEnabled minify
+                        minifyEnabled false
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -164,15 +167,15 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                     viewBinding true
                 }
             }
-            def minify = true
+            def multidex = true
         '''
-        assertSingleViolation(SOURCE, 17, 'minifyEnabled', getViolationMessage())
+        assertSingleViolation(SOURCE, 11, 'multiDexEnabled', getViolationMessage())
     }
 
     @Test
-    void testDetect_minifyEnabled_variable_may_be_true() {
+    void testDetect_multiDexEnabled_variable_may_be_true() {
         final SOURCE = '''
-            def minify = false
+            def multidex = false
             android {
                 compileSdk 32
 
@@ -182,13 +185,14 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                     targetSdkVersion 32
                     versionCode 1
                     versionName "1.0"
+                    multiDexEnabled multidex
 
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 
                 buildTypes {
                     release {
-                        minifyEnabled minify
+                        minifyEnabled false
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -201,17 +205,17 @@ class DisableObfuscationRuleTest extends AbstractRuleTestCase<DisableObfuscation
                 }
             }
             if (true) {
-                minify = true
+                multidex = true
             }
         '''
-        assertSingleViolation(SOURCE, 18, 'minifyEnabled', getViolationMessage())
+        assertSingleViolation(SOURCE, 12, 'multiDexEnabled', getViolationMessage())
     }
 
     @Override
-    protected DisableObfuscationRule createRule() {
-        new DisableObfuscationRule()
+    protected EC5001 createRule() {
+        new EC5001()
     }
     private String getViolationMessage() {
-        return 'Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.'
+        return 'Using "multiDexEnabled true" goes against the overall reduction of the weight of the apps and hence must be avoided.'
     }
 }

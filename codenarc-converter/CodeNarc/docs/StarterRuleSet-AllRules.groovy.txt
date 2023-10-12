@@ -77,7 +77,6 @@ ruleset {
     CyclomaticComplexity   // Requires the GMetrics jar
     DeadCode 
     DirectConnectionManagement
-    DisableObfuscation
     DoubleCheckedLocking 
     DoubleNegative 
     DuplicateCaseStatement 
@@ -88,6 +87,9 @@ ruleset {
     DuplicateNumberLiteral 
     DuplicateSetValue 
     DuplicateStringLiteral 
+    EC5001
+    EC5002
+    EC5003
     ElseBlockBraces 
     EmptyCatchBlock 
     EmptyClass
@@ -133,7 +135,6 @@ ruleset {
     ExplicitStackInstantiation
     ExplicitTreeSetInstantiation
     FactoryMethodName
-    FatApp
     FieldName 
     FieldTypeRequired 
     FileCreateTempFile 
@@ -304,7 +305,6 @@ ruleset {
     StaticMatcherField 
     StaticMethodsBeforeInstanceMethods 
     StaticSimpleDateFormatField
-    SupportedVersionRange
     SwallowThreadDeath 
     SynchronizedMethod 
     SynchronizedOnBoxedPrimitive 

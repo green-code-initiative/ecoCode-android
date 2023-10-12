@@ -26,19 +26,19 @@ import org.codenarc.util.AstUtil
  *
  * @author Leboulanger Mickael
  */
-class SupportedVersionRangeRule extends AbstractAstVisitorRule {
+class EC5002 extends AbstractAstVisitorRule {
 
-    String name = 'SupportedVersionRange'
+    String name = 'EC5002'
     int priority = 2
     int minSdkVersion = 0
     int minSdk = 0
     int targetSdkVersion = 0
     int targetSdk = 0
     int threshold = 4 // Value used to compare minSdkVersion and targetSdkVersion
-    Class astVisitorClass = SupportedVersionRangeAstVisitor
+    Class astVisitorClass = EC5002AstVisitor
 }
 
-class SupportedVersionRangeAstVisitor extends AbstractAstVisitor {
+class EC5002AstVisitor extends AbstractAstVisitor {
 
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {

@@ -41,6 +41,8 @@ public class RuleSetVisitor extends AbstractVisitor {
 
     private RuleSet ruleset;
     private final List<RuleDescription> rules = new ArrayList<>();
+    private static final String ECOCODE_RULE_PREFIX = "EC";
+    private static final String ECOCODE_RULE_PACKAGE = "org.codenarc.rule.ecocode.";
 
     public RuleSetVisitor(RuleRegistry registry, HtmlRenderer htmlRenderer, TextContentRenderer textContentRenderer) {
         this.registry = registry;
@@ -84,7 +86,12 @@ public class RuleSetVisitor extends AbstractVisitor {
             Node header = heading.getFirstChild();
             if (header.getClass().isAssignableFrom(Text.class)) {
                 Text t = (Text) header;
-                return registry.getRuleClass(t.getLiteral().split(" ")[0]) != null;
+                String ruleClassName = t.getLiteral().split(" ")[0];
+                if (ruleClassName.startsWith(ECOCODE_RULE_PREFIX)) {
+                    // ecoCode rules does not have their package in the "class" entry
+                    ruleClassName =  ECOCODE_RULE_PACKAGE + ruleClassName.toString();
+                }
+                return registry.getRuleClass(ruleClassName) != null;
             }
         }
         return false;

@@ -5,7 +5,7 @@ title: CodeNarc - Ecocode Rules
 
 # Ecocode Rules  ("*rulesets/ecocode.xml*")
 
-## FatApp Rule
+## EC5001 Rule
 
 *Since CodeNarc 2.2.1*
 
@@ -45,7 +45,7 @@ Example of violations:
     }
 ```
 
-## SupportedVersionRange Rule
+## EC5002 Rule
 
 *Since CodeNarc 2.2.1*
 
@@ -83,7 +83,7 @@ android {
 }
 ```
 
-## DisableObfuscation Rule
+## EC5003 Rule
 
 *Since CodeNarc 2.2.3*
 
@@ -119,4 +119,3 @@ Example of violations:
         }
     }
 ```
-

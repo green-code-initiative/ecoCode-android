@@ -34,9 +34,8 @@ import org.sonar.plugins.groovy.foundation.Groovy;
 
 public class CodeNarcRulesDefinition implements RulesDefinition {
 
-  // TODO: Prefix repository-key with "ecocode-" and make "re-keying" of all contained rules
-  public static final String REPOSITORY_KEY = Groovy.KEY;
-  public static final String REPOSITORY_NAME = "ecoCode";
+  public static final String REPOSITORY_KEY = "ecocode-android-groovy";
+  public static final String REPOSITORY_NAME = Groovy.PROFILE_NAME;
   private static final String COST_FILE_PATH = "/org/sonar/plugins/groovy/cost.csv";
 
   @Override

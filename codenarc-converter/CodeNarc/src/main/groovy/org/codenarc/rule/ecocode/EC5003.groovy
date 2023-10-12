@@ -15,36 +15,34 @@
  */
 package org.codenarc.rule.ecocode
 
-import org.codehaus.groovy.ast.expr.ArgumentListExpression
+
 import org.codehaus.groovy.ast.expr.ConstantExpression
 import org.codehaus.groovy.ast.expr.MethodCallExpression
-import org.codehaus.groovy.ast.stmt.ExpressionStatement
 import org.codenarc.rule.AbstractAstVisitor
 import org.codenarc.rule.AbstractAstVisitorRule
-import org.codenarc.source.SourceCode
 import org.codenarc.util.AstUtil
 
 /**
- * Using "multiDexEnabled true" goes against the overall reduction of the weight of the apps and hence must be avoided.
+ * Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.
  *
- * @author Leboulanger Mickael
+ * @author Berque Justin
  */
-class FatAppRule extends AbstractAstVisitorRule {
+class EC5003 extends AbstractAstVisitorRule {
 
-    String name = 'FatApp'
+    String name = 'EC5003'
     int priority = 2
-    Class astVisitorClass = FatAppAstVisitor
+    Class astVisitorClass = EC5003AstVisitor
 }
 
-class FatAppAstVisitor extends AbstractAstVisitor {
+class EC5003AstVisitor extends AbstractAstVisitor {
 
     @Override
     void visitMethodCallExpression(MethodCallExpression methodCallExpression) {
-        if (((ConstantExpression) methodCallExpression.getMethod()).getValue() == 'multiDexEnabled') {
+        if (((ConstantExpression) methodCallExpression.getMethod()).getValue() == 'minifyEnabled') {
             for (Object value : AstUtil.getArgumentsValue(methodCallExpression.getArguments())) {
                 if (value == true)
                     addViolation(methodCallExpression, getViolationMessage())
-                else { // TODO get value from variable at runtime
+                else {
                     this.getSourceCode().getLines().each { string ->
                         if (string.contains(value + ' = true')) {
                             addViolation(methodCallExpression, getViolationMessage())
@@ -57,6 +55,6 @@ class FatAppAstVisitor extends AbstractAstVisitor {
     }
 
     private String getViolationMessage() {
-        return 'Using \"multiDexEnabled true\" goes against the overall reduction of the weight of the apps and hence must be avoided.'
+        return 'Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.'
     }
 }

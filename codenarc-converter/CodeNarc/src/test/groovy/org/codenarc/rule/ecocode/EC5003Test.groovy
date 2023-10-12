@@ -15,20 +15,20 @@
  */
 package org.codenarc.rule.ecocode
 
-import org.codenarc.rule.AbstractRuleTestCase
 import org.junit.Test
+import org.codenarc.rule.AbstractRuleTestCase
 
 /**
- * Tests for SupportedVersionRangeRule
+ * Tests for DisableObfuscationRule
  *
  * @author Leboulanger Mickael
  */
-class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersionRangeRule> {
+class EC5003Test extends AbstractRuleTestCase<EC5003> {
 
     @Test
     void test_RuleProperties() {
         assert rule.priority == 2
-        assert rule.name == 'SupportedVersionRange'
+        assert rule.name == 'DisableObfuscation'
     }
 
     @Test
@@ -40,7 +40,7 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
                 defaultConfig {
                     applicationId "com.example.sampleForSonar"
                     minSdkVersion 28
-                    targetSdkVersion 31
+                    targetSdkVersion 32
                     versionCode 1
                     versionName "1.0"
 
@@ -66,15 +66,15 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
     }
 
     @Test
-    void test_SdkRange_SingleViolation() {
+    void testDetect_minifyEnabled_true() {
         final SOURCE = '''
            android {
                 compileSdk 32
 
                 defaultConfig {
                     applicationId "com.example.sampleForSonar"
-                    minSdkVersion 26
-                    targetSdkVersion 31
+                    minSdkVersionVersionVersion 28
+                    targetSdkVersionVersionVersion 32
                     versionCode 1
                     versionName "1.0"
 
@@ -83,7 +83,7 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
 
                 buildTypes {
                     release {
-                        minifyEnabled false
+                        minifyEnabled true
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -96,20 +96,20 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
                 }
             }
         '''
-        assertSingleViolation(SOURCE,8, 'targetSdkVersion')
+        assertSingleViolation(SOURCE, 17, 'minifyEnabled', getViolationMessage())
     }
 
-
     @Test
-    void test_SdkRange_Short_SingleViolation() {
+    void testDetect_minifyEnabled_variable_true_before() {
         final SOURCE = '''
-           android {
+            def minify = true
+            android {
                 compileSdk 32
 
                 defaultConfig {
                     applicationId "com.example.sampleForSonar"
-                    minSdk 26
-                    targetSdk 31
+                    minSdkVersionVersion 28
+                    targetSdkVersionVersion 32
                     versionCode 1
                     versionName "1.0"
 
@@ -118,7 +118,7 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
 
                 buildTypes {
                     release {
-                        minifyEnabled false
+                        minifyEnabled minify
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
                     }
                 }
@@ -131,11 +131,87 @@ class SupportedVersionRangeRuleTest extends AbstractRuleTestCase<SupportedVersio
                 }
             }
         '''
-        assertSingleViolation(SOURCE,8, 'targetSdk')
+        assertSingleViolation(SOURCE, 18, 'minifyEnabled', getViolationMessage())
+    }
+
+    @Test
+    void testDetect_multiDexEnabled_variable_true_after() {
+        final SOURCE = '''
+            android {
+                compileSdk 32
+
+                defaultConfig {
+                    applicationId "com.example.sampleForSonar"
+                    minSdkVersion 28
+                    targetSdkVersion 32
+                    versionCode 1
+                    versionName "1.0"
+
+                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled minify
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
+                    }
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                buildFeatures {
+                    viewBinding true
+                }
+            }
+            def minify = true
+        '''
+        assertSingleViolation(SOURCE, 17, 'minifyEnabled', getViolationMessage())
+    }
+
+    @Test
+    void testDetect_minifyEnabled_variable_may_be_true() {
+        final SOURCE = '''
+            def minify = false
+            android {
+                compileSdk 32
+
+                defaultConfig {
+                    applicationId "com.example.sampleForSonar"
+                    minSdkVersion 28
+                    targetSdkVersion 32
+                    versionCode 1
+                    versionName "1.0"
+
+                    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+                }
+
+                buildTypes {
+                    release {
+                        minifyEnabled minify
+                        proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro\'
+                    }
+                }
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_1_8
+                    targetCompatibility JavaVersion.VERSION_1_8
+                }
+                buildFeatures {
+                    viewBinding true
+                }
+            }
+            if (true) {
+                minify = true
+            }
+        '''
+        assertSingleViolation(SOURCE, 18, 'minifyEnabled', getViolationMessage())
     }
 
     @Override
-    protected SupportedVersionRangeRule createRule() {
-        new SupportedVersionRangeRule()
+    protected EC5003 createRule() {
+        new EC5003()
+    }
+    private String getViolationMessage() {
+        return 'Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.'
     }
 }

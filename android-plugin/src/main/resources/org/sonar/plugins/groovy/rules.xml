@@ -4,10 +4,10 @@
 
   <!-- since 2.2.1 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.FatAppRule</key>
+    <key>EC5001</key>
     <severity>MINOR</severity>
     <name><![CDATA[Fat App]]></name>
-    <internalKey><![CDATA[FatApp]]></internalKey>
+    <internalKey><![CDATA[EC5001]]></internalKey>
     <description><![CDATA[<p>Using &quot;multiDexEnabled true&quot; goes against the overall reduction of the weight of the apps and hence must be avoided.</p>
 <p>Example of violations:</p>
 <pre><code>    android {
@@ -46,10 +46,10 @@
 
   <!-- since 2.2.1 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.SupportedVersionRangeRule</key>
+    <key>EC5002</key>
     <severity>MINOR</severity>
     <name><![CDATA[Supported Version Range]]></name>
-    <internalKey><![CDATA[SupportedVersionRange]]></internalKey>
+    <internalKey><![CDATA[EC5002]]></internalKey>
     <description><![CDATA[<p>When looking at the minSdkVersion and targetSdkVersion (or minSdk, targetSdk) attributes for the <uses-sdk> in the AndroidManifest.xml file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases.</p>
 <p>Example of violations:</p>
 <pre><code>android {
@@ -86,10 +86,10 @@
 
   <!-- since 2.2.3 -->
   <rule>
-    <key>org.codenarc.rule.ecocode.DisableObfuscationRule</key>
+    <key>EC5003</key>
     <severity>MINOR</severity>
     <name><![CDATA[Disable Obfuscation]]></name>
-    <internalKey><![CDATA[DisableObfuscation]]></internalKey>
+    <internalKey><![CDATA[EC5003]]></internalKey>
     <description><![CDATA[<p>Using minifyEnabled true will obfuscate code and will have a sligthly negative impact on power consumption at runtime.</p>
 <p>Example of violations:</p>
 <pre><code>    android {
