@@ -31,7 +31,6 @@ import org.sonar.plugins.java.api.tree.MethodInvocationTree;
 import org.sonar.plugins.java.api.tree.NewClassTree;
 import org.sonar.plugins.java.api.tree.Tree;
 
-import com.google.common.collect.ImmutableList;
 import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
 
 /**
@@ -58,7 +57,7 @@ public class ChargeAwarenessRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override

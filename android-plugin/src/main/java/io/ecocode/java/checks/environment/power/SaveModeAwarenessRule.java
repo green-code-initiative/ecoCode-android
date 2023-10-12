@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.power;
 
-import com.google.common.collect.ImmutableList;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
 import org.sonar.check.Rule;
@@ -48,7 +47,7 @@ public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.NEW_CLASS, Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override
@@ -72,10 +71,8 @@ public class SaveModeAwarenessRule extends IssuableSubscriptionVisitor {
                 if ((addActionMatcher.matches(mit) || createIntentFilterMatcher.matches(mit))
                         && !mit.arguments().isEmpty()) {
                     mit.arguments().get(0).asConstant().ifPresentOrElse(o -> {
-                        if (o instanceof String) {
-                            if (o.equals(ACTION_BATTERY_CHANGED)) {
-                                reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
-                            }
+                        if (o instanceof String && o.equals(ACTION_BATTERY_CHANGED)) {
+                            reportIssue(mit.arguments().get(0), ADVICE_MESSAGE);
                         }
                     }, () -> {
                         if (isPowerSaveModeMatcher.matches(mit)) {

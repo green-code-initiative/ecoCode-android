@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.sobriety;
 
-import com.google.common.collect.ImmutableList;
 import io.ecocode.java.checks.helpers.CheckArgumentComplexTypeUtils;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
@@ -43,7 +42,7 @@ public class HighFrameRateRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.METHOD_INVOCATION);
+        return List.of(Tree.Kind.METHOD_INVOCATION);
     }
 
     @Override

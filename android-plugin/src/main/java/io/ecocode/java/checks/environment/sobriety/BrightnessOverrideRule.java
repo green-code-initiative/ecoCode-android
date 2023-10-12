@@ -17,7 +17,6 @@
  */
 package io.ecocode.java.checks.environment.sobriety;
 
-import com.google.common.collect.ImmutableList;
 import org.sonar.check.Rule;
 import org.sonar.plugins.java.api.IssuableSubscriptionVisitor;
 import org.sonar.plugins.java.api.tree.*;
@@ -41,7 +40,7 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
 
     @Override
     public List<Tree.Kind> nodesToVisit() {
-        return ImmutableList.of(Tree.Kind.ASSIGNMENT);
+        return List.of(Tree.Kind.ASSIGNMENT);
     }
 
     @Override

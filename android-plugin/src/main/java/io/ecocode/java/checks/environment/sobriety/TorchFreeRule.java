@@ -43,11 +43,8 @@ public class TorchFreeRule extends ArgumentValueOnMethodCheck {
 
     @Override
     protected void checkConstantValue(Optional<Object> optionalConstantValue, Tree reportTree, Object constantValueToCheck) {
-        try {
-            if (optionalConstantValue.isPresent() && (optionalConstantValue.get().equals(constantValueToCheck) || ((Boolean) optionalConstantValue.get()))) {
-                reportIssue(reportTree, getMessage());
-            }
-        } catch (Exception ignored) {
+        if (optionalConstantValue.isPresent() && (optionalConstantValue.get().equals(constantValueToCheck) || ((Boolean) optionalConstantValue.get()))) {
+            reportIssue(reportTree, getMessage());
         }
     }
 
