@@ -10,12 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Home page URL for plugins (for display on SonarQube administration page)
-- add `eco-design` tag on all rules on Java, PHP, Python and javascript plugins
+- Add `eco-design` tag on all rules
 - [#207](https://github.com/green-code-initiative/ecoCode/issues/207) Add release tag analyzis on SonarCloud
+- [#58](https://github.com/green-code-initiative/ecoCode-android/pull/58) Add Dark UI theme XML rule
 
 ### Changed
 
-- rename repository `ecoCode-mobile` to `ecoCode-android`
+- Rename repository `ecoCode-mobile` to `ecoCode-android`
+- Update the rules naming convention to have the same one as the others ecoCode plugin. Rules identifier now starts by `EC`.
+- Update built-in profile names to `ecoCode (Android)`
 
 ### Deleted
 
