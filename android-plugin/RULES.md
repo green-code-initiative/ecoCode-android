@@ -19,7 +19,6 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EREL007 | Clear cache    | Java | Method `deleteRecursively()` is Kotlin-only |
 | EREL008 | Convert to WebP | File System |  |
 | EREL009 | Shrink Resources    | Gradle |  |
-| EREL010 | Disable Obfuscation    | Gradle |  |
 
 
 ### Social
