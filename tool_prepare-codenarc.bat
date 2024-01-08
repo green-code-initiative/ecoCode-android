@@ -1,5 +1,5 @@
 REM == Define CodeNarc version
-set codenarc_version=2.2.4
+set codenarc_version=2.2.5
 
 REM == Build CodeNarc
 cd codenarc-converter/CodeNarc

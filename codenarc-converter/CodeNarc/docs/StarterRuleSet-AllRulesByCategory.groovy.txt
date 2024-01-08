@@ -167,7 +167,6 @@ ruleset {
 
     // rulesets/ecocode.xml
     EC5001
-    EC5002
     EC5003
 
     // rulesets/enhanced.xml

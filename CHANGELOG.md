@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Deleted
 
+- [#80](https://github.com/green-code-initiative/ecoCode-android/issues/80) Delete rule EC5002 (SDK range) since it not in
+  the [best practices mobile](https://github.com/cnumr/best-practices-mobile) anymore
+
 ## [1.1.0] - 2023-11-17
 
 ### Added

@@ -44,46 +44,6 @@
     <tag>code-smell</tag>
   </rule>
 
-  <!-- since 2.2.1 -->
-  <rule>
-    <key>EC5002</key>
-    <severity>MINOR</severity>
-    <name><![CDATA[Supported Version Range]]></name>
-    <internalKey><![CDATA[EC5002]]></internalKey>
-    <description><![CDATA[<p>When looking at the minSdkVersion and targetSdkVersion (or minSdk, targetSdk) attributes for the <uses-sdk> in the AndroidManifest.xml file, the amplitude of supported platform versions should not be too wide, at the risk of making the app too heavy to handle all cases.</p>
-<p>Example of violations:</p>
-<pre><code>android {
-    compileSdk 32
-
-    defaultConfig {
-        applicationId &quot;com.example.sampleForSonar&quot;
-        minSdkVersion 26
-        targetSdkVersion 31
-        versionCode 1
-        versionName &quot;1.0&quot;
-
-        testInstrumentationRunner &quot;androidx.test.runner.AndroidJUnitRunner&quot;
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    buildFeatures {
-        viewBinding true
-    }
-}
-</code></pre>
-]]></description>
-    <tag>code-smell</tag>
-  </rule>
-
   <!-- since 2.2.3 -->
   <rule>
     <key>EC5003</key>
