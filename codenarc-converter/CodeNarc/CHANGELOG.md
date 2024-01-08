@@ -2,6 +2,11 @@
 <!-- markdownlint-disable MD003 MD004 MD007 MD032 -->
 # CodeNarc Change Log
 
+Version 2.2.5    (January 2024)
+--------------------------------------
+Remove rule:
+- Supported Version Range -> EC5002
+
 Version 2.2.4    (September 2023)
 --------------------------------------
 Update key of ecoCode rules:
