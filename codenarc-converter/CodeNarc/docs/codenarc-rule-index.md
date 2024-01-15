@@ -168,7 +168,6 @@ title: CodeNarc - Rule Index
 
 ## [Ecocode](./codenarc-rules-ecocode.html)
 * [EC5001](./codenarc-rules-ecocode.html#EC5001-rule)
-* [EC5003](./codenarc-rules-ecocode.html#EC5003-rule)
 
 ## [Enhanced](./codenarc-rules-enhanced.html)
 * [CloneWithoutCloneable](./codenarc-rules-enhanced.html#clonewithoutcloneable-rule)

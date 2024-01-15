@@ -90,7 +90,6 @@ title: CodeNarc - Rule Index by Name
 * [DuplicateSetValue](./codenarc-rules-basic.html#duplicatesetvalue-rule)
 * [DuplicateStringLiteral](./codenarc-rules-dry.html#duplicatestringliteral-rule)
 * [EC5001](./codenarc-rules-ecocode.html#EC5001-rule)
-* [EC5003](./codenarc-rules-ecocode.html#EC5003-rule)
 * [ElseBlockBraces](./codenarc-rules-braces.html#elseblockbraces-rule)
 * [EmptyCatchBlock](./codenarc-rules-basic.html#emptycatchblock-rule)
 * [EmptyClass](./codenarc-rules-basic.html#emptyclass-rule)
