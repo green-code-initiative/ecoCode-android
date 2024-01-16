@@ -6,6 +6,7 @@ Version 2.2.5    (January 2024)
 --------------------------------------
 Remove rule:
 - Supported Version Range -> EC5002
+- Disable Obfuscation -> EC5003
 
 Version 2.2.4    (September 2023)
 --------------------------------------
