@@ -254,18 +254,6 @@ public class GroovySensor implements Sensor {
   public static List<Object> getExtensions() {
     return Arrays.asList(
         GroovySensor.class,
-        GroovySonarWayProfile.class,
-        PropertyDefinition.builder(IGNORE_HEADER_COMMENTS)
-            .name("Ignore Header Comments")
-            .description(
-                "If set to \"true\", the file headers (that are usually the same on each file: licensing information for example) are not considered as comments. "
-                    + "Thus metrics such as \"Comment lines\" do not get incremented. "
-                    + "If set to \"false\", those file headers are considered as comments and metrics such as \"Comment lines\" get incremented.")
-            .category(Groovy.NAME)
-            .subCategory("Base")
-            .onQualifiers(Qualifiers.PROJECT)
-            .defaultValue("true")
-            .type(PropertyType.BOOLEAN)
-            .build());
+        GroovySonarWayProfile.class);
   }
 }
