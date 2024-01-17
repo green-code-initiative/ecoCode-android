@@ -27,11 +27,8 @@ import org.sonar.api.Plugin;
 import org.sonar.api.config.PropertyDefinition;
 import org.sonar.api.resources.Qualifiers;
 import org.sonar.plugins.groovy.GroovySensor;
-import org.sonar.plugins.groovy.cobertura.CoberturaSensor;
 import org.sonar.plugins.groovy.codenarc.CodeNarcSensor;
 import org.sonar.plugins.groovy.foundation.Groovy;
-import org.sonar.plugins.groovy.jacoco.JaCoCoExtensions;
-import org.sonar.plugins.groovy.surefire.GroovySurefireSensor;
 
 /**
  * Entry point of your plugin containing your custom rules
