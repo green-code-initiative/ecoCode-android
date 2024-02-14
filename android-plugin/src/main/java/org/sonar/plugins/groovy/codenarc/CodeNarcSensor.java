@@ -18,18 +18,6 @@
  */
 package org.sonar.plugins.groovy.codenarc;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Optional;
-import javax.annotation.CheckForNull;
-import javax.annotation.Nullable;
 import org.apache.commons.io.FileUtils;
 import org.codenarc.CodeNarcRunner;
 import org.codenarc.rule.Violation;
@@ -41,14 +29,20 @@ import org.sonar.api.batch.sensor.SensorContext;
 import org.sonar.api.batch.sensor.SensorDescriptor;
 import org.sonar.api.batch.sensor.issue.NewIssue;
 import org.sonar.api.batch.sensor.issue.NewIssueLocation;
-import org.sonar.api.config.PropertyDefinition;
-import org.sonar.api.resources.Qualifiers;
 import org.sonar.api.rule.RuleKey;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
 import org.sonar.plugins.groovy.codenarc.CodeNarcXMLParser.CodeNarcViolation;
 import org.sonar.plugins.groovy.foundation.Groovy;
 import org.sonar.plugins.groovy.foundation.GroovyFileSystem;
+
+import javax.annotation.CheckForNull;
+import javax.annotation.Nullable;
+import java.io.File;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.*;
+import java.util.Map.Entry;
 
 public class CodeNarcSensor implements Sensor {
 
@@ -225,16 +219,6 @@ public class CodeNarcSensor implements Sensor {
   public static List<Object> getExtensions() {
     return Arrays.asList(
         CodeNarcRulesDefinition.class,
-        CodeNarcSensor.class,
-        PropertyDefinition.builder(CODENARC_REPORT_PATHS)
-            .name("CodeNarc Reports")
-            .description(
-                "Path to the CodeNarc XML reports. Paths may be absolute or relative to the project base directory.")
-            .category(Groovy.NAME)
-            .subCategory("CodeNarc")
-            .onQualifiers(Qualifiers.PROJECT)
-            .multiValues(true)
-            .deprecatedKey(CODENARC_REPORT_PATH)
-            .build());
+        CodeNarcSensor.class);
   }
 }

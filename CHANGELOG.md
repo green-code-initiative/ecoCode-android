@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- The embedded Groovy language analyzer was reconfigured to scan only `.gradle` files since it is the files we are interested in for
+  the Android project configuration rules.
+  The associated language is named `Groovy (Gradle)` instead of just `Groovy`.
+  Since the plugin does not scan `.groovy` files anymore, it can work with a Groovy scanner on the same SonarQube instance.
+
 ### Deleted
 
 - [#80](https://github.com/green-code-initiative/ecoCode-android/issues/80) Delete rule EC5002 (SDK range) since it not in

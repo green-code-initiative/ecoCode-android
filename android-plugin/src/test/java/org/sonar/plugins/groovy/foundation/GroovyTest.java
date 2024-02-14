@@ -29,12 +29,12 @@ public class GroovyTest {
   public void test() {
     MapSettings settings = new MapSettings();
     Groovy language = new Groovy(settings.asConfig());
-    assertThat(language.getKey()).isEqualTo("grvy");
-    assertThat(language.getName()).isEqualTo("Groovy");
-    assertThat(language.getFileSuffixes()).isEqualTo(new String[] {".groovy",".gradle"});
+    assertThat(language.getKey()).isEqualTo("groovy_gradle");
+    assertThat(language.getName()).isEqualTo("Groovy (Gradle)");
+    assertThat(language.getFileSuffixes()).isEqualTo(new String[] {".gradle"});
 
     settings.setProperty(Groovy.FILE_SUFFIXES_KEY, "");
-    assertThat(language.getFileSuffixes()).containsOnly(".groovy",".gradle");
+    assertThat(language.getFileSuffixes()).containsOnly(".gradle");
 
     settings.setProperty(Groovy.FILE_SUFFIXES_KEY, ".groovy, .grvy");
     assertThat(language.getFileSuffixes()).containsOnly(".groovy", ".grvy");
