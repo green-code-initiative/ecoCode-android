@@ -20,6 +20,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EREL007 | Clear cache    | Java | Method `deleteRecursively()` is Kotlin-only |
 | EREL008 | Convert to WebP | File System |  |
 | EREL009 | Shrink Resources    | Gradle |  |
+| ELON001 | Aging devices   | Gradle |  |
 
 
 ### Social
@@ -33,5 +34,4 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | SPRI004 | Tracking Id      | Java |  |
 | SPRI005 | Explain Permission     | Java |  |
 | SGDP001 | Google consent | Java | "Good smell" spotted here |
-| SINC001 | Aging devices   | Gradle |  |
 | SINC002 | Grammatical gender | File System | "Good smell" spotted here |
