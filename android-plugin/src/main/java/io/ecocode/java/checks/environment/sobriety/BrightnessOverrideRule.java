@@ -49,6 +49,20 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
         if (isBrightnessAssignment(assignmentTree)) {
             Tree.Kind assignmentTreeKind = assignmentTree.expression().kind();
             switch (assignmentTreeKind) {
+                case MEMBER_SELECT:
+                    MemberSelectExpressionTree mset = (MemberSelectExpressionTree) assignmentTree.expression();
+                    Optional<Object> identifierTreeConstantMset = mset.identifier().asConstant();
+                    Tree initialTreeToFlag = mset.identifier();
+
+                    mset = findMemberSelect(mset);
+
+                    if(identifierTreeConstantMset.isPresent()){
+                        checkBrightnessAssignmentExpressionValue(initialTreeToFlag,
+                                mset.identifier().symbolType().fullyQualifiedName(),
+                                (Number) identifierTreeConstantMset.get());
+                    }
+
+                    break;
                 case FLOAT_LITERAL:
                     LiteralTree floatLiteralTree = (LiteralTree) assignmentTree.expression();
                     checkBrightnessAssignmentExpressionValue(floatLiteralTree,
@@ -85,6 +99,14 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
                     break;
             }
         }
+    }
+
+    private MemberSelectExpressionTree findMemberSelect(MemberSelectExpressionTree mset) {
+        if(mset.expression().kind() == Tree.Kind.MEMBER_SELECT){
+            mset = (MemberSelectExpressionTree) mset.expression();
+            mset = findMemberSelect(mset);
+        }
+        return mset;
     }
 
     /**
