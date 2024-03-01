@@ -56,10 +56,16 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
 
                     mset = findMemberSelect(mset);
 
-                    if(identifierTreeConstantMset.isPresent()){
-                        checkBrightnessAssignmentExpressionValue(initialTreeToFlag,
-                                mset.identifier().symbolType().fullyQualifiedName(),
-                                (Number) identifierTreeConstantMset.get());
+                    if (identifierTreeConstantMset.isPresent()) {
+                        if (((Number) identifierTreeConstantMset.get()).floatValue() == BRIGHTNESS_FULL_VALUE) {
+                            reportIssue(initialTreeToFlag, ERROR_MESSAGE);
+                        } else if (((Number) identifierTreeConstantMset.get()).intValue() == BRIGHTNESS_FULL_VALUE) {
+                            reportIssue(initialTreeToFlag, ERROR_MESSAGE);
+                        } else {
+                            checkBrightnessAssignmentExpressionValue(initialTreeToFlag,
+                                    mset.identifier().symbolType().fullyQualifiedName(),
+                                    (Number) identifierTreeConstantMset.get());
+                        }
                     }
 
                     break;
@@ -102,7 +108,7 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
     }
 
     private MemberSelectExpressionTree findMemberSelect(MemberSelectExpressionTree mset) {
-        if(mset.expression().kind() == Tree.Kind.MEMBER_SELECT){
+        if (mset.expression().kind() == Tree.Kind.MEMBER_SELECT) {
             mset = (MemberSelectExpressionTree) mset.expression();
             mset = findMemberSelect(mset);
         }
