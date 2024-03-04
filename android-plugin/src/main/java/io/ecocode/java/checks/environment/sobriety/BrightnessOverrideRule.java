@@ -50,6 +50,8 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
             Tree.Kind assignmentTreeKind = assignmentTree.expression().kind();
             switch (assignmentTreeKind) {
                 case MEMBER_SELECT:
+                    //that case check members attributes,
+                    // if we find an expression get the last expression of the memberSelectExpression
                     MemberSelectExpressionTree mset = (MemberSelectExpressionTree) assignmentTree.expression();
                     Optional<Object> identifierTreeConstantMset = mset.identifier().asConstant();
                     Tree initialTreeToFlag = mset.identifier();
@@ -107,6 +109,13 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
         }
     }
 
+    /**
+     *  Check if parameter's Expression is also a member select,
+     *  reassign parent until expression is not a Member select
+     *
+     * @param mset the Member Select Expression to check
+     * @return the last expression
+     */
     private MemberSelectExpressionTree findMemberSelect(MemberSelectExpressionTree mset) {
         if (mset.expression().kind() == Tree.Kind.MEMBER_SELECT) {
             mset = (MemberSelectExpressionTree) mset.expression();
