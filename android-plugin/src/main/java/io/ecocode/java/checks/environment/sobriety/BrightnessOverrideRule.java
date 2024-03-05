@@ -58,7 +58,6 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
                         checkBrightnessAssignmentExpressionValue(initialTreeToFlag,
                                 (Number)identifierTreeConstantMset.get());
                     }
-
                     break;
                 case FLOAT_LITERAL:
                     LiteralTree floatLiteralTree = (LiteralTree) assignmentTree.expression();
@@ -89,25 +88,9 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
                     break;
                 default:
                     // For other tree types we cannot do anything, juste ignore them
-                    System.out.println(assignmentTreeKind);
                     break;
             }
         }
-    }
-
-    /**
-     * Check if parameter's Expression is also a member select,
-     * reassign parent until expression is not a Member select
-     *
-     * @param mset the Member Select Expression to check
-     * @return the last expression
-     */
-    private MemberSelectExpressionTree findMemberSelect(MemberSelectExpressionTree mset) {
-        if (mset.expression().kind() == Tree.Kind.MEMBER_SELECT) {
-            mset = (MemberSelectExpressionTree) mset.expression();
-            mset = findMemberSelect(mset);
-        }
-        return mset;
     }
 
     /**
