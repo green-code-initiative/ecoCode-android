@@ -49,16 +49,24 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
         if (isBrightnessAssignment(assignmentTree)) {
             Tree.Kind assignmentTreeKind = assignmentTree.expression().kind();
             switch (assignmentTreeKind) {
+                case MEMBER_SELECT:
+                    //that case check members attributes, so we need to check tree identifier's value
+                    MemberSelectExpressionTree mset = (MemberSelectExpressionTree) assignmentTree.expression();
+                    Optional<Object> identifierTreeConstantMset = mset.identifier().asConstant();
+                    Tree initialTreeToFlag = mset.identifier();
+                    if (identifierTreeConstantMset.isPresent()) {
+                        checkBrightnessAssignmentExpressionValue(initialTreeToFlag,
+                                (Number)identifierTreeConstantMset.get());
+                    }
+                    break;
                 case FLOAT_LITERAL:
                     LiteralTree floatLiteralTree = (LiteralTree) assignmentTree.expression();
                     checkBrightnessAssignmentExpressionValue(floatLiteralTree,
-                            floatLiteralTree.symbolType().fullyQualifiedName(),
                             Float.valueOf(floatLiteralTree.value()));
                     break;
                 case INT_LITERAL:
                     LiteralTree intLiteralTree = (LiteralTree) assignmentTree.expression();
                     checkBrightnessAssignmentExpressionValue(intLiteralTree,
-                            intLiteralTree.symbolType().fullyQualifiedName(),
                             Integer.valueOf(intLiteralTree.value()));
                     break;
                 case VARIABLE:
@@ -66,7 +74,6 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
                     Optional<Object> variableTreeConstant = variableTree.initializer().asConstant();
                     if (variableTreeConstant.isPresent()) {
                         checkBrightnessAssignmentExpressionValue(variableTree,
-                                variableTree.initializer().symbolType().fullyQualifiedName(),
                                 (Number) variableTreeConstant.get());
                     }
                     break;
@@ -76,7 +83,6 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
                     if (identifierTreeConstant.isPresent()) {
                         // Constant identifier only, other cases are ignored
                         checkBrightnessAssignmentExpressionValue(identifierTree,
-                                identifierTree.symbolType().fullyQualifiedName(),
                                 (Number) identifierTreeConstant.get());
                     }
                     break;
@@ -103,11 +109,10 @@ public class BrightnessOverrideRule extends IssuableSubscriptionVisitor {
         }
     }
 
-    private void checkBrightnessAssignmentExpressionValue(Tree tree, String qualifiedType, Number value) {
+    private void checkBrightnessAssignmentExpressionValue(Tree tree, Number value) {
         int intValue = value.intValue();
         float floatValue = value.floatValue();
-        if (qualifiedType.equals("float") && floatValue == BRIGHTNESS_FULL_VALUE
-                || qualifiedType.equals("int") && intValue == BRIGHTNESS_FULL_VALUE) {
+        if (floatValue == BRIGHTNESS_FULL_VALUE || intValue == BRIGHTNESS_FULL_VALUE) {
             reportIssue(tree, ERROR_MESSAGE);
         }
     }

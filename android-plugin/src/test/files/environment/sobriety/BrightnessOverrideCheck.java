@@ -18,12 +18,11 @@
 package android.view;
 
 public interface WindowManager extends ViewManager {
-
-    public static final float BRIGHTNESS_OVERRIDE_NONE = -1.0f;
-    public static final float BRIGHTNESS_OVERRIDE_OFF = 0.0f;
-    public static final float BRIGHTNESS_OVERRIDE_FULL = 1.0f;
-
     public static class LayoutParams {
+        public static final float BRIGHTNESS_OVERRIDE_NONE = -1.0f;
+        public static final float BRIGHTNESS_OVERRIDE_OFF = 0.0f;
+        public static final float BRIGHTNESS_OVERRIDE_FULL = 1.0f;
+
         public float screenBrightness = BRIGHTNESS_OVERRIDE_NONE;
 
         public void InnerStaticClassMethod() {
@@ -36,6 +35,10 @@ public interface WindowManager extends ViewManager {
 
             float blabla = 1f;
             params.screenBrightness = blabla; // TODO Noncompliant for VARIABLES
+
+            params.screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_FULL; // Noncompliant {{Forcing brightness to max value may cause useless energy consumption.}}
+            params.screenBrightness = LayoutParams.BRIGHTNESS_OVERRIDE_FULL; // Noncompliant {{Forcing brightness to max value may cause useless energy consumption.}}
+            params.screenBrightness = android.view.WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_FULL; // Noncompliant {{Forcing brightness to max value may cause useless energy consumption.}}
         }
     }
 }
