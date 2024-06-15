@@ -3,7 +3,7 @@
 
 Mobile apps running on top of battery-limited, android-powered devices are more than others concerned by the reduction of their environmental footprint. Hence, we created `ecoCode android`, the version of ecoCode project fully dedicated to the Android platform. It provides static code analyzers to highlight code structures that may have a negative ecological impact: energy over-consumption, "fatware", shortening devices' lifespan, etc.
 
-ecoCode android is based on an evolving catalog of [best practices for Android](https://github.com/cnumr/best-practices-mobile#-android-platform). A SonarQube plugin then implements this catalog as rules for scanning your native Android projects. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (:fr:) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf). A hands-on [tutorial](https://olegoaer.perso.univ-pau.fr/green-it-summer-school/ecoCode/lab.html) is also available (:fr:).
+ecoCode android is based on an evolving catalog of [best practices for Android](https://github.com/cnumr/best-practices-mobile#-android-platform). A SonarQube plugin then implements this catalog as rules for scanning your native Android projects **written in Java only**. To learn more, take a look at the [complete presentation](docs/resources/devfest-2022.pdf) (:fr:) or the [presentation in a nutshell](docs/resources/apidays-2022.pdf). A hands-on [tutorial](https://olegoaer.perso.univ-pau.fr/green-it-summer-school/ecoCode/lab.html) and free demo access is also available (:fr:).
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
