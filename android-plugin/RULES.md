@@ -19,7 +19,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EREL005 | Duplicate dependencies    | Gradle | Requires a knowledge base |
 | EREL007 | Clear cache    | Java | Method `deleteRecursively()` is Kotlin-only |
 | EREL008 | Convert to WebP | File System |  |
-| EREL009 | Shrink Resources    | Gradle |  |
+| EREL009 | Shrink and Minify   | Gradle |  |
 | ELON001 | Aging devices   | Gradle |  |
 
 
