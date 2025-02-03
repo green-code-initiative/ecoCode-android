@@ -8,6 +8,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 
 | # | **Rule Name**      |     **Scanner**     |      **Observation**     |
 |---|:----------------|:-------------:|:-------------:|
+| EOPT003 | Lazy Loading | Java |  |
 | ELEA001 | Everlasting Service        | Java | Requires `PostProjectAnalysisTask()` callback |
 | EBOT004 | Uncached Data Reception       | Java | Requires `PostProjectAnalysisTask()` callback |
 | ESOB009 | Day Night Mode     | File System, Xml | Requires `PostProjectAnalysisTask()` callback |
