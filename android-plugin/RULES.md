@@ -20,7 +20,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EREL007 | Clear cache    | Java | Method `deleteRecursively()` is Kotlin-only |
 | EREL008 | Convert to WebP | File System |  |
 | EREL009 | Shrink and Minify    | Gradle |  |
-| ELON001 | Aging devices   | Gradle |  |
+| ELON001 | Aging devices   | Gradle | Value of `minSdkVersion` may be hardcoded, but must be updated regularly |
 
 
 ### Social
