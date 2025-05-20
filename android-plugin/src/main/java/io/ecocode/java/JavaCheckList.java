@@ -26,10 +26,11 @@ import io.ecocode.java.checks.environment.idleness.*;
 import io.ecocode.java.checks.environment.leakage.*;
 import io.ecocode.java.checks.environment.optimized_api.BluetoothLowEnergyRule;
 import io.ecocode.java.checks.environment.optimized_api.FusedLocationRule;
-import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.environment.power.ChargeAwarenessRule;
+import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.environment.sobriety.*;
 import io.ecocode.java.checks.social.privacy.GoogleTrackerRule;
+import io.ecocode.java.checks.social.privacy.TrackingIdRule;
 import org.sonar.plugins.java.api.JavaCheck;
 
 import java.util.ArrayList;
@@ -50,9 +51,10 @@ public final class JavaCheckList {
         return Collections.unmodifiableList(checks);
     }
 
-    public static List<Class<? extends JavaCheck>> getJavaSocialChecks(){
+    public static List<Class<? extends JavaCheck>> getJavaSocialChecks() {
         return Collections.unmodifiableList(Arrays.asList(
-                GoogleTrackerRule.class
+                GoogleTrackerRule.class,
+                TrackingIdRule.class
         ));
     }
 
