@@ -51,6 +51,11 @@ cd /codenarc-converter/CodeNarc
 ./gradlew build -x test 
 ```
 
+```sh
+ cd .\codenarc-converter\CodeNarc\
+
+```
+
 Add custom CodeNarc to Maven dependencies:
 
 ```sh
