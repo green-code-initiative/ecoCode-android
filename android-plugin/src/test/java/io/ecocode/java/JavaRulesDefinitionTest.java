@@ -52,6 +52,12 @@ public class JavaRulesDefinitionTest {
         assertThat(googleTrackerRule.name()).isEqualTo("Privacy: Google Tracker");
         assertThat(googleTrackerRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(googleTrackerRule.type()).isEqualTo(RuleType.CODE_SMELL);
+
+        Rule trackIdRule = repository.rule("SPRI004");
+        assertThat(trackIdRule).isNotNull();
+        assertThat(trackIdRule.name()).isEqualTo("Privacy: Tracking Id");
+        assertThat(trackIdRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
+        assertThat(trackIdRule.type()).isEqualTo(RuleType.CODE_SMELL);
     }
 
     private void assertEnergyRuleProperties(Repository repository) {
