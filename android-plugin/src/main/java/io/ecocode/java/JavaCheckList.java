@@ -26,6 +26,8 @@ import io.ecocode.java.checks.environment.idleness.*;
 import io.ecocode.java.checks.environment.leakage.*;
 import io.ecocode.java.checks.environment.optimized_api.BluetoothLowEnergyRule;
 import io.ecocode.java.checks.environment.optimized_api.FusedLocationRule;
+import io.ecocode.java.checks.environment.optimized_api.LazyLoadingComposeRule;
+import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.environment.power.ChargeAwarenessRule;
 import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.environment.sobriety.*;
@@ -93,7 +95,8 @@ public final class JavaCheckList {
                 JobCoalesceRule.class,
                 SaveModeAwarenessRule.class,
                 ThriftyGeolocationCriteriaRule.class,
-                HighFrameRateRule.class
+                HighFrameRateRule.class,
+                LazyLoadingComposeRule.class
         ));
     }
 

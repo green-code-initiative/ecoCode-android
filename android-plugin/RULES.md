@@ -13,7 +13,7 @@ Android-specific rules rely on a multi-scope scanning, including Java source fil
 | EBOT004 | Uncached Data Reception       | Java | Requires `PostProjectAnalysisTask()` callback |
 | ESOB009 | Day Night Mode     | File System, Xml | Requires `PostProjectAnalysisTask()` callback |
 | ESOB015 | Extraneous Animation | Java, Xml, File System |  |
-| ESOBxxx | Extraneous Init | Java |  |
+| ESOB017 | Extraneous Init | Java |  |
 | ESOB016 | Hardware acceleration | Xml |  |
 | EPOW008 | Battery-constrained Work | Java |  |
 | EBAT001 | Service@Boot-time    | Java, Xml  | Likely detectable in Xml only |

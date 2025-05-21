@@ -1,0 +1,19 @@
+<img src="http://www.neomades.com/extern/partage/ecoCode/3sur5_1x.png">
+<p>When displaying scrollable data on screen, the new Jetpack Compose API 
+    introduced lazy views instead of <code>ListView</code>, <code>GridView</code> and even <code>RecycleView</code>. 
+    These components use the technique of lazy loading, which consists of loading data 
+    <br>only when it arrives at the display area. 
+    Import <code>androidx.compose.foundation.lazy.*</code> to benefit from objects like <code>LazyColumn</code>, <code>LazyRow</code>, 
+    <code>LazyVerticalGrid</code> or <code>LazyHorizontalGrid</code>.
+    
+    </p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+    import ListView; 
+    import GridView;
+    import RecycleView;
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+    import androidx.compose.foundation.lazy.*;
+</pre>
