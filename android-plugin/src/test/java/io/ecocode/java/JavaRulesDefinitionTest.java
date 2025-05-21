@@ -59,9 +59,9 @@ public class JavaRulesDefinitionTest {
         assertThat(trackIdRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(trackIdRule.type()).isEqualTo(RuleType.CODE_SMELL);
 
-        Rule googleConsentRule = repository.rule("SGDP001");
+        Rule googleConsentRule = repository.rule("EC533");
         assertThat(googleConsentRule).isNotNull();
-        assertThat(googleConsentRule.name()).isEqualTo("Privacy: Google Consent");
+        assertThat(googleConsentRule.name()).isEqualTo("GDPR: Google Consent");
         assertThat(googleConsentRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(googleConsentRule.type()).isEqualTo(RuleType.CODE_SMELL);
     }

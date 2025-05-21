@@ -1,17 +1,17 @@
 {
-  "title": "Privacy: Google Consent",
+  "title": "GDPR: Google Consent",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
-    "constantCost": "20min"
+    "constantCost": "0min"
   },
   "tags": [
-    "privacy",
+    "gdpr",
     "social",
     "ecocode",
     "android",
     "eco-design"
   ],
-  "defaultSeverity": "Minor"
+  "defaultSeverity": "Info"
 }
