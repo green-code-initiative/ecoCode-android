@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Changed
-
+- SPRI004: Add rule to avoid use of Tracking Id using TelephonyManager#getDeviceId()
 - The embedded Groovy language analyzer was reconfigured to scan only `.gradle` files since it is the files we are interested in for
   the Android project configuration rules.
   The associated language is named `Groovy (Gradle)` instead of just `Groovy`.
