@@ -1,17 +1,17 @@
 {
-  "title": "GDPR: Google Consent",
+  "title": "Privacy: Tracking Id",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
-    "constantCost": "0min"
+    "constantCost": "20min"
   },
   "tags": [
-    "gdpr",
+    "privacy",
     "social",
     "ecocode",
     "android",
     "eco-design"
   ],
-  "defaultSeverity": "Info"
+  "defaultSeverity": "Minor"
 }

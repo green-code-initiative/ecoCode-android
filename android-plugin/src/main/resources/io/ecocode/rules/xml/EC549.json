@@ -1,17 +1,17 @@
 {
-  "title": "GDPR: Google Consent",
+  "title": "Sobriety: Hardware acceleration",
   "type": "CODE_SMELL",
   "status": "ready",
   "remediation": {
     "func": "Constant\/Issue",
-    "constantCost": "0min"
+    "constantCost": "1min"
   },
   "tags": [
-    "gdpr",
-    "social",
+    "sobriety",
+    "environment",
     "ecocode",
     "android",
     "eco-design"
   ],
-  "defaultSeverity": "Info"
+  "defaultSeverity": "Major"
 }
