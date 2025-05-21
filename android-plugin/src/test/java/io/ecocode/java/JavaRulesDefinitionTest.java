@@ -58,6 +58,12 @@ public class JavaRulesDefinitionTest {
         assertThat(trackIdRule.name()).isEqualTo("Privacy: Tracking Id");
         assertThat(trackIdRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(trackIdRule.type()).isEqualTo(RuleType.CODE_SMELL);
+
+        Rule googleConsentRule = repository.rule("EC533");
+        assertThat(googleConsentRule).isNotNull();
+        assertThat(googleConsentRule.name()).isEqualTo("GDPR: Google Consent");
+        assertThat(googleConsentRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
+        assertThat(googleConsentRule.type()).isEqualTo(RuleType.CODE_SMELL);
     }
 
     private void assertEnergyRuleProperties(Repository repository) {

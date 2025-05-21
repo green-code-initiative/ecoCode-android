@@ -29,6 +29,7 @@ import io.ecocode.java.checks.environment.optimized_api.FusedLocationRule;
 import io.ecocode.java.checks.environment.power.ChargeAwarenessRule;
 import io.ecocode.java.checks.environment.power.SaveModeAwarenessRule;
 import io.ecocode.java.checks.environment.sobriety.*;
+import io.ecocode.java.checks.social.gdpr.GoogleAndroidAdsConsentRule;
 import io.ecocode.java.checks.social.privacy.GoogleTrackerRule;
 import io.ecocode.java.checks.social.privacy.TrackingIdRule;
 import org.sonar.plugins.java.api.JavaCheck;
@@ -54,7 +55,8 @@ public final class JavaCheckList {
     public static List<Class<? extends JavaCheck>> getJavaSocialChecks() {
         return Collections.unmodifiableList(Arrays.asList(
                 GoogleTrackerRule.class,
-                TrackingIdRule.class
+                TrackingIdRule.class,
+                GoogleAndroidAdsConsentRule.class
         ));
     }
 

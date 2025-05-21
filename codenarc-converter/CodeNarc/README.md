@@ -28,7 +28,7 @@ CodeNarc requires
 
 ## AVAILABLE FROM MAVEN CENTRAL REPOSITORY
 
-For projects built using Gradle or Maven, **CodeNarc** is available from the [Maven Central Repository]((https://mvnrepository.com/artifact/org.codenarc/CodeNarc)).
+For projects built using Gradle or Maven, **CodeNarc** is available from the [Maven Central Repository](https://mvnrepository.com/artifact/org.codenarc/CodeNarc).
 
 - groupId = org.codenarc
 - artifactId = CodeNarc
