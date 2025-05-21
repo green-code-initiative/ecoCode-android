@@ -26,6 +26,7 @@ import io.ecocode.xml.checks.idleness.KeepScreenOnXmlRule;
 import io.ecocode.xml.checks.sobriety.DarkUIThemeXmlRule;
 import io.ecocode.xml.checks.power.CompagnionInBackgroundXmlRule;
 import io.ecocode.xml.checks.power.IgnoreBatteryOptimizationsXmlRule;
+import io.ecocode.xml.checks.sobriety.HardwareAccelerationXmlRule;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +46,8 @@ public class XmlCheckList {
                 CompagnionInBackgroundXmlRule.class,
                 ChargeAwarenessXmlRule.class,
                 ServiceBootTimeXmlRule.class,
-                SaveModeAwarenessXmlRule.class
+                SaveModeAwarenessXmlRule.class,
+                HardwareAccelerationXmlRule.class
         );
     }
 
