@@ -1,6 +1,5 @@
-package io.ecocode.java.checks.social.privacy;
+package io.ecocode.java.checks.social.gdpr;
 
-import io.ecocode.java.checks.social.gdpr.GoogleAndroidAdsConsentRule;
 import org.junit.Test;
 import org.sonar.java.checks.verifier.CheckVerifier;
 
@@ -11,7 +10,7 @@ public class GoogleAndroidAdsConsentRuleTest {
         CheckVerifier.newVerifier().onFile("src/test/files/social/privacy/GoogleTrackerGoogleCheck.java")
                 .withCheck(new GoogleAndroidAdsConsentRule())
                 .verifyNoIssues();
-        CheckVerifier.newVerifier().onFile("src/test/files/social/privacy/GoogleAndroidAdsConsentCheck.java")
+        CheckVerifier.newVerifier().onFile("src/test/files/social/gdpr/GoogleAndroidAdsConsentCheck.java")
                 .withCheck(new GoogleAndroidAdsConsentRule())
                 .verifyIssueOnProject("Good Smell : User Consent");
 
