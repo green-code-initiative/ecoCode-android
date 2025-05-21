@@ -1,0 +1,27 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.hardwaretest">
+
+    <application android:label="@string/app_name" android:hardwareAccelerated="false">
+
+        <activity android:name=".SafeActivity" android:hardwareAccelerated="false"/>
+        <activity android:name=".FastActivity" android:hardwareAccelerated="true"/> <!-- Noncompliant {{Hardware acceleration is enabled. Consider disabling it to reduce RAM usage.}} -->
+        <activity android:name=".MainActivity"/>
+        <service android:name=".MyService"/>
+        <activity android:name=".AnotherFastActivity" android:hardwareAccelerated="true"/> <!-- Noncompliant {{Hardware acceleration is enabled. Consider disabling it to reduce RAM usage.}} -->
+        <receiver android:name=".MyReceiver"/>
+        <window android:name=".FancyWindow" android:hardwareAccelerated="true"/> <!-- Noncompliant {{Hardware acceleration is enabled. Consider disabling it to reduce RAM usage.}} -->
+        <view android:name=".DefaultNotAcceleratedView"/>
+
+    </application>
+
+    <activity android:name=".OutOfAppActivity"/> <!-- Noncompliant {{Hardware acceleration is implicitly enabled. Consider disabling it explicitly with android:hardwareAccelerated="false".}} -->
+    <view android:name=".DefaultAcceleratedView"/> <!-- Noncompliant {{Hardware acceleration is implicitly enabled. Consider disabling it explicitly with android:hardwareAccelerated="false".}} -->
+
+    <activity android:name=".OutOfAppActivityExplicit" android:hardwareAccelerated="true"/><!-- Noncompliant {{Hardware acceleration is enabled. Consider disabling it to reduce RAM usage.}} -->
+    <view android:name=".DefaultAcceleratedViewExplicit" android:hardwareAccelerated="true"/><!-- Noncompliant {{Hardware acceleration is enabled. Consider disabling it to reduce RAM usage.}} -->
+
+    <application android:label="@string/alt_app" android:hardwareAccelerated="false">
+        <activity android:name=".AltActivity"/>
+    </application>
+</manifest>
+
