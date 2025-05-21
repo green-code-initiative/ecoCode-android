@@ -28,7 +28,7 @@ import org.sonarsource.analyzer.commons.annotations.DeprecatedRuleKey;
  * Alternatively, you may use android.provider.Settings.Secure.ANDROID_ID.
  */
 
-@Rule(key = "SPRI004")
+@Rule(key = "EC534")
 @DeprecatedRuleKey(repositoryKey = "ecoCode-java", ruleKey = "SPRI004")
 public class TrackingIdRule extends SpecificMethodCheck {
 

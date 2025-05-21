@@ -53,7 +53,7 @@ public class JavaRulesDefinitionTest {
         assertThat(googleTrackerRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
         assertThat(googleTrackerRule.type()).isEqualTo(RuleType.CODE_SMELL);
 
-        Rule trackIdRule = repository.rule("SPRI004");
+        Rule trackIdRule = repository.rule("EC534");
         assertThat(trackIdRule).isNotNull();
         assertThat(trackIdRule.name()).isEqualTo("Privacy: Tracking Id");
         assertThat(trackIdRule.debtRemediationFunction().type()).isEqualTo(Type.CONSTANT_ISSUE);
