@@ -8,11 +8,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-
-- Rule EC533 google ads consent
+- Rule EC550/ESOB015: Extraneous Animation should not be used
+- Rule EC549/ESOB016: Hardware Acceleration should not be activated by default
+- Rule EC533/SGDP001: Google ads consent should be asked 
+- EC534/SPRI004: Add rule to avoid use of Tracking Id using TelephonyManager#getDeviceId()
 
 ### Changed
-- SPRI004: Add rule to avoid use of Tracking Id using TelephonyManager#getDeviceId()
 - The embedded Groovy language analyzer was reconfigured to scan only `.gradle` files since it is the files we are interested in for
   the Android project configuration rules.
   The associated language is named `Groovy (Gradle)` instead of just `Groovy`.
