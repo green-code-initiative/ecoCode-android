@@ -59,22 +59,25 @@ public class XmlRulesDefinitionTest {
         assertThat(chargeAwarenessXmlRule).isNotNull();
         assertThat(chargeAwarenessXmlRule.name()).isEqualTo("Power: Charge Awareness");
 
-        RulesDefinition.Rule DarkUIBrightColorsXmlRule = repository.rule("EC547");
-        assertThat(DarkUIBrightColorsXmlRule).isNotNull();
-        assertThat(DarkUIBrightColorsXmlRule.name()).isEqualTo("Sobriety: Dark UI (Bright Colors)");
-
-        RulesDefinition.Rule DarkUIThemeXmlRule = repository.rule("EC548");
-        assertThat(DarkUIThemeXmlRule).isNotNull();
-        assertThat(DarkUIThemeXmlRule.name()).isEqualTo("Sobriety: Dark UI (Theme)");
-
         RulesDefinition.Rule saveModeAwarenessXml = repository.rule("EC546");
         assertThat(saveModeAwarenessXml).isNotNull();
         assertThat(saveModeAwarenessXml.name()).isEqualTo("Power: Save Mode Awareness");
+
+        RulesDefinition.Rule darkUIBrightColorsXmlRule = repository.rule("EC547");
+        assertThat(darkUIBrightColorsXmlRule).isNotNull();
+        assertThat(darkUIBrightColorsXmlRule.name()).isEqualTo("Sobriety: Dark UI (Bright Colors)");
+
+        RulesDefinition.Rule darkUIThemeXmlRule = repository.rule("EC548");
+        assertThat(darkUIThemeXmlRule).isNotNull();
+        assertThat(darkUIThemeXmlRule.name()).isEqualTo("Sobriety: Dark UI (Theme)");
 
         RulesDefinition.Rule hardwareAccelerationXml = repository.rule("EC549");
         assertThat(hardwareAccelerationXml).isNotNull();
         assertThat(hardwareAccelerationXml.name()).isEqualTo("Sobriety: Hardware acceleration");
 
+        RulesDefinition.Rule extraneousAnimationXmlRule = repository.rule("EC550");
+        assertThat(extraneousAnimationXmlRule).isNotNull();
+        assertThat(extraneousAnimationXmlRule.name()).isEqualTo("Power: Extraneous Animation");
 
         for (RulesDefinition.Rule rule : repository.rules()) {
             for (RulesDefinition.Param param : rule.params()) {

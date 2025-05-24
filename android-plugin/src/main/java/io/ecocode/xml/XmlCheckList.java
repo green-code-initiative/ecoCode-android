@@ -17,6 +17,7 @@
  */
 package io.ecocode.xml;
 
+import io.ecocode.xml.checks.power.ExtraneousAnimationXmlRule;
 import io.ecocode.xml.checks.batch.ServiceBootTimeXmlRule;
 import io.ecocode.xml.checks.power.ChargeAwarenessXmlRule;
 import io.ecocode.xml.checks.power.SaveModeAwarenessXmlRule;
@@ -47,7 +48,8 @@ public class XmlCheckList {
                 ChargeAwarenessXmlRule.class,
                 ServiceBootTimeXmlRule.class,
                 SaveModeAwarenessXmlRule.class,
-                HardwareAccelerationXmlRule.class
+                HardwareAccelerationXmlRule.class,
+                ExtraneousAnimationXmlRule.class
         );
     }
 
